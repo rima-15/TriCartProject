@@ -1,0 +1,103 @@
+
+
+/* Style for breadcrumb */
+.breadcrumb {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 10px 0; /* Add some margin */
+}
+
+.breadcrumb li {
+    display: inline-block; /* Use inline-block for horizontal layout */
+    margin-right: 5px; /* Space between items */
+    color: #68A8CA;
+}
+
+.breadcrumb a {
+    text-decoration: none; /* Remove underline from links */
+    color: #9E9756;; /* Change link color */
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.breadcrumb .separator {
+    color: #9E9756; /* Color for the separator */
+}
+
+
+h2{
+margin-top:150px;
+margin-bottom:100px ;
+text-align: left ;
+color :#68A8CA ;
+margin-left : 40px ;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F0FBFE;
+    height: 100%;
+    justify-content:center ;
+    align-items:center;
+}
+
+
+/* Container for Flexbox */
+.container {
+    display: flex;
+    justify-content: space-between ; /* Done */
+    align-items : center ;
+    gap: 20px;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+    flex-wrap:wrap;/* Done */
+}
+
+/* Styling for Each Box */
+.Box {
+
+    background-color:#FCF8DB;
+    border: 3px solid #9E9756;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on each box */
+.Box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside the box */
+.Box img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0px;
+}
+
+/* Link Styling */
+.Box a {
+    text-decoration: none ;
+    color: #68A8CA;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Paragraph inside the box */
+.Box p {
+    font-size: 14px;
+    color: #9E9756;
+}
