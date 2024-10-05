@@ -40,6 +40,14 @@ border: 3px solid #9E9756;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+/* Hover effect on each product */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 .product button {
 background-color:#FCF8DB;
 border : none;
@@ -62,4 +70,20 @@ margin-top:10px;
 }
 h1{
 color :#68A8CA;
+}
+.sort{
+font-size:18px;
+text-align: left;
+margin:20px;
+color:#68A8CA;
+}
+select{
+padding: 5px;
+font-size:15px;
+border-radius:5px;
+border :1px solid #ddd;
+
+}
+optgroup {
+font-weight: bold;
 }
