@@ -47,6 +47,8 @@ padding: 10px 20px;
 cursor :pointer;
 border-radius:20px;
 margin-top:0px;
+margin-right:-10px;
+
 }
 .product button:hover{
  transform: translateY(-5px);
@@ -57,4 +59,7 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 margin-top:10px;
+}
+h1{
+color :#68A8CA;
 }
