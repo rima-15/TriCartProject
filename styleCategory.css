@@ -28,6 +28,14 @@ background-color: #F0FBFE;
 .breadcrumb .separator {
     color: #9E9756; /* Color for the separator */
 }
+/*style for Container product */
+.products-container{
+display: flex;
+flex-wrap: wrap;
+margin:0 auto;
+gap:20px;
+}
+
 /*style for one product */
 .product {
 background-color:#FCF8DB;
