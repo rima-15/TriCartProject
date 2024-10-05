@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Offers</title>
+    <link href=" " rel ="stylesheet">
+</head>
+<body>
+<nav aria-label="Breadcrumb">
+    <ul class="breadcrumb">
+    <il> <a href="HomePage.html"> Home </a> </il>
+        <il class="separator"> &gt; </il>
+        <il> <a > Seller </a> </il>
+        <il class="separator"> &gt; </il>
+        <il> <a href="OffersPage.html"> Offers Collection </a> </il>
+
+
+
+    </ul>
+</nav>
+<div class="container">
+<div class="OffersCollection">
+    <div class="HeaderOffersCollection">
+        <h1>Offers Collection</h1>
+        <p>Here you can manage and delete existing offers.</p>
+        <button> Delete Selected Offers</button>
+    </div>
+    <div class =" OffersList">
+        <div class = "Offer">
+            <input type="checkbox" name="OfferCheckbox">
+            <p>Offer Name</p>
+            <img src="web_images/offer1.jpeg">
+        </div>
+        <div class = "Offer">
+            <input type="checkbox" name="OfferCheckbox">
+            <p>Offer Name</p>
+            <img src="web_images/offer1.jpeg">
+        </div>
+        <div class = "Offer">
+            <input type="checkbox" name="OfferCheckbox">
+            <p>Offer Name</p>
+            <img src="web_images/offer1.jpeg">
+        </div>
+        <div class = "Offer">
+            <input type="checkbox" name="OfferCheckbox">
+            <p>Offer Name</p>
+            <img src="web_images/offer1.jpeg">
+        </div>
+    </div>
+</div>
+<div class="OfferForm">
+    <div class="HeaderOfferForm"> <!---no need?--->
+    <h1>Create New Offer</h1>
+        <p>Here you can create new offer after fill offers information</p>
+    </div>
+    <form>
+        <ul>
+            <li>
+                <label for="OfferName">Offer Name</label>
+                <input type="text" name="OfferName" value="Type offer name" id="OfferName">
+            </li>
+            <li>
+                <label for="OfferDescription">Offer Description</label>
+                <input type="text" name="OfferDescription" value="Type offer description" id="OfferDescription">
+            </li>
+            <li>
+                <label for="OfferImage">Offer Name</label>
+                <input type="file" name="OfferImage" id="OfferImage">
+            </li>
+
+        </ul>
+<input type="submit" name="SubmitOffer" value="Create offer">
+    </form>
+
+</div>
+</div>
+</body>
+</html>
