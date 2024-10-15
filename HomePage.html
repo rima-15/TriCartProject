@@ -7,70 +7,85 @@
 </head>
 <body>
 <header>
-    <div class="header">
-    <img id="headerLogo" src="web_images/logoTriCart.png" alt="TriCart" width="225px" height="100px">
-        <ul class="navigation">
-            <a><li> Home </li></a>
-            <a><li> Electronics</li></a>
-            <a><li> Furniture </li></a>
-            <a><li> Sport </li></a>
-        </ul>
-    </div>
+    <!--<div class="header">-->
+    <img id="headerLogo" src="web_images/logoTriCart.png" alt="TriCart" width="20%" height="20%">
+        <nav class="navigation" >
+            <ul>
+                <li> <a href="#"> Home </a> </li>
+                <li> <a href="#"> Electronics </a> </li>
+                <li> <a href="#"> Furniture </a> </li>
+                <li> <a href="#"> Sport </a> </li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="#">
+                <img src="web_images/cart.png" alt="Cart" width="50%">
+                <span class="cart-count">2</span>
+            </a>
+        </div>
+        <div class="user-type">
+            <h5> <a href="#" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+        </div>
+    <!--</div> -->
 </header>
-<!-- Offers section -->
-<div class="offers_list">
-    <div class="offers_list1">
-        <div class="offer">
-            <img src='web_images/offer1.jpeg' alt="offer one" width="300px" height="225px">
-            <h4 class="offerL"><b> Offer one </b> <br> check out our offer !! </h4>
+<main>
+    <!-- Offers section -->
+    <div class="offers_list">
+        <div class="offers_list1">
+            <div class="offer">
+                <img src='web_images/offer1.jpeg' alt="offer one" width="300px" height="225px">
+                <h4 class="offerL"><b> Offer one </b> <br> check out our offer !! </h4>
+            </div>
+            <div class="offer">
+                <img src='web_images/offer2.jpeg' alt="offer two" width="300px" height="225px">
+                <h4 class="offerL"><b> Offer two </b> <br> check out our offer !! </h4>
+            </div>
+            <div class="offer">
+                <img src='web_images/offer3.jpeg' alt="offer three" width="300px" height="225px">
+                <h4 class="offerL"><b> Offer three </b> <br> check out our offer !! </h4>
+            </div>
         </div>
-        <div class="offer">
-            <img src='web_images/offer2.jpeg' alt="offer two" width="300px" height="225px">
-            <h4 class="offerL"><b> Offer two </b> <br> check out our offer !! </h4>
-        </div>
-        <div class="offer">
-            <img src='web_images/offer3.jpeg' alt="offer three" width="300px" height="225px">
-            <h4 class="offerL"><b> Offer three </b> <br> check out our offer !! </h4>
+        <div class="offers_list2">
+            <div class="offer">
+                <img src='web_images/offer4.jpeg' alt="offer three" width="300px" height="225px">
+                <h4 class="offerL"><b> Offer four </b> <br> check out our offer !! </h4>
+            </div>
+            <div class="offer">
+                <img src='web_images/offer5.jpeg' alt="offer Five" width="300px" height="225px">
+                <h4 class="offerL"><b> Offer five </b> <br> check out our offer !! </h4>
+            </div>
+            <div class="offer">
+                <img src='web_images/offer6.jpeg' alt="offer three" width="300px" height="225px">
+                <h4 class="offerL"><b> Offer six </b> <br> check out our offer !! </h4>
+            </div>
         </div>
     </div>
-    <div class="offers_list2">
-        <div class="offer">
-            <img src='web_images/offer4.jpeg' alt="offer three" width="300px" height="225px">
-            <h4 class="offerL"><b> Offer four </b> <br> check out our offer !! </h4>
+    <hr>
+    <!-- vision -->
+    <div class="vision">
+        <h1> TriCart </h1>
+        <p> <q> TriCart brings you the best in sports, furniture, and electronics—all in one place.
+            Shop smarter, live better. </q></p>
+    </div>
+    <hr>
+    <!-- Categories -->
+    <h2> <br>Shop By Category </h2>
+    <div class="categories">
+        <div>
+            <img src="web_images/ElectronicsCat.jpeg" alt="Electronics" width="200px" height="150px">
+            <h4>Electronics</h4>
         </div>
-        <div class="offer">
-            <img src='web_images/offer5.jpeg' alt="offer Five" width="300px" height="225px">
-            <h4 class="offerL"><b> Offer five </b> <br> check out our offer !! </h4>
+        <div>
+            <img src="web_images/FurnitureCa.jpeg" alt="Electronics" width="200px" height="150px">
+            <h4>Furniture</h4>
         </div>
-        <div class="offer">
-            <img src='web_images/offer6.jpeg' alt="offer three" width="300px" height="225px">
-            <h4 class="offerL"><b> Offer six </b> <br> check out our offer !! </h4>
+        <div>
+            <img src="web_images/SportCa.jpeg" alt="Electronics" width="200px" height="150px">
+            <h4>Sports</h4>
         </div>
     </div>
-</div>
-<!-- vision -->
-<div class="vision">
-    <h1> TriCart </h1>
-    <p> "TriCart brings you the best in sports, furniture, and electronics—all in one place.
-        Shop smarter, live better.</p>
-</div>
-<!-- Categories -->
-<h2> <br>Shop By Category </h2>
-<div class="categories">
-    <div>
-        <img src="web_images/ElectronicsCat.jpeg" alt="Electronics" width="200px" height="150px">
-        <h4>Electronics</h4>
-    </div>
-    <div>
-        <img src="web_images/FurnitureCa.jpeg" alt="Electronics" width="200px" height="150px">
-        <h4>Furniture</h4>
-    </div>
-    <div>
-        <img src="web_images/SportCa.jpeg" alt="Electronics" width="200px" height="150px">
-        <h4>Sports</h4>
-    </div>
-</div>
-
+    <hr>
+</main>
 <h1>hello savejn</h1>
 <h2>hello savejn</h2>
 <h3>hello savejn</h3>

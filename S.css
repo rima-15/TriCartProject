@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+body {
+    font-family: Georgia, serif;
+    background-color: #FDFBED ;
+    }
+/* Header styling */
+header {
+    background-color: #fcf8db;
+    color: green ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    }
+nav.navigation ul {
+    display: flex;
+    list-style: none;
+    }
+nav.navigation ul li {
+    margin: 0 30px ;
+    font-weight: bold;
+    }
+nav.navigation ul li a:hover {
+    color: #9e9756;
+    }
+nav.navigation li {
+    color: green;
+    font-size: 18px;
+    transition: color 0.3s;
+    }
+.cart {
+    position: relative;
+    }
+.cart .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ffcc00;
+    color: black;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+header a {
+    text-decoration: none;
+    color: green ;
+}
+.user-type a {
+    text-decoration: none;
+    font-size: 16px;
+    }
+.user-type h5 {
+    margin-right: 40px;
+}
+#customer {
+
+}
+/* Offers section style */
+.offers_list {
+    display: flex;
+    flex-flow: row rap;
+}
+.offers_list1  {
+    display: flex;
+    flex-flow: row ;
+    justify-content: space-around;
+}
+.offers_list2  {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+.offers_list1 > div {
+    margin: 30px;
+    }
+.offers_list2 > div {
+    margin: 30px;
+}
+.offer {
+    position: relative;
+}
+.offerL {
+    position: absolute;
+      bottom: 8px;
+      left: 16px;
+      font-size: 12px;
+    }
+.vision {
+    display: flex;
+    justify-content: space-around;
+}
+
+.categories {
+display: flex;
+justify-content: space-around
+}
+
+
