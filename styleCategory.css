@@ -1,0 +1,97 @@
+
+/* change the background of the page */
+body{
+background-color: #F0FBFE;
+}
+
+/* Style for breadcrumb */
+.breadcrumb {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 10px 0; /* Add some margin */
+}
+
+.breadcrumb li {
+    display: inline-block; /* Use inline-block for horizontal layout */
+    margin-right: 5px; /* Space between items */
+    color: #68A8CA;
+}
+.breadcrumb a {
+    text-decoration: none; /* Remove underline from links */
+    color: #9E9756;; /* Change link color */
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.breadcrumb .separator {
+    color: #9E9756; /* Color for the separator */
+}
+/*style for Container product */
+.products-container{
+display: flex;
+flex-wrap: wrap;
+margin:0 auto;
+gap:20px;
+}
+
+/*style for one product */
+.product {
+background-color:#FCF8DB;
+border: 3px solid #9E9756;
+    padding: 15px;
+    margin : 14px;
+    width: 150px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Hover effect on each product */
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product button {
+background-color:#FCF8DB;
+border : none;
+padding: 10px 20px;
+cursor :pointer;
+border-radius:20px;
+margin-top:0px;
+margin-right:-10px;
+
+}
+.product button:hover{
+ transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.p-and-b{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:10px;
+}
+h1{
+color :#68A8CA;
+}
+.sort{
+font-size:18px;
+text-align: left;
+margin:20px;
+color:#68A8CA;
+}
+select{
+padding: 5px;
+font-size:15px;
+border-radius:5px;
+border :1px solid #ddd;
+
+}
+optgroup {
+font-weight: bold;
+}
