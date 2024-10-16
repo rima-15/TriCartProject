@@ -1,53 +1,105 @@
 
 
-/* Style for breadcrumb */
-.breadcrumb {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 10px 0; /* Add some margin */
-}
-
-.breadcrumb li {
-    display: inline-block; /* Use inline-block for horizontal layout */
-    margin-right: 5px; /* Space between items */
-    color: #68A8CA;
-}
-
-.breadcrumb a {
-    text-decoration: none; /* Remove underline from links */
-    color: #9E9756;; /* Change link color */
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-.breadcrumb .separator {
-    color: #9E9756; /* Color for the separator */
-}
 
 
-h2{
-margin-top:150px;
-margin-bottom:100px ;
-text-align: left ;
-color :#68A8CA ;
-margin-left : 40px ;
+   header {
+        background-color: #fcf8db;
+        color: green ;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        }
+ nav.navigation ul {
+        display: flex;
+        list-style: none;
+        }
+    nav.navigation ul li {
+        margin: 0 30px ;
+        font-weight: bold;
+        }
+    nav.navigation ul li a:hover {
+        color: #9e9756;
+        }
+    nav.navigation li {
+        color: green;
+        font-size: 18px;
+        transition: color 0.3s;
+        }
+    .cart {
+        position: relative;
+        }
+    .cart .cart-count {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: #ffcc00;
+        color: black;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+    }
+    header a {
+        text-decoration: none;
+        color: green ;
+    }
+    .user-type a {
+        text-decoration: none;
+        font-size: 16px;
+        }
+    .user-type h5 {
+        margin-right: 40px;
+    }
+    #customer {
 
-}
+    }
+
+    /* Style for breadcrumb */
+    .breadcrumb {
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Remove default padding */
+        margin: 5px 1px; /* Add some margin */
+    }
+
+    .breadcrumb li {
+        font-family: Georgia, serif;
+        display: inline-block; /* Use inline-block for horizontal layout */
+        margin-right: 5px; /* Space between items */
+        color: #68A8CA;
+    }
+
+    .breadcrumb a {
+        text-decoration: none; /* Remove underline from links */
+        color: green ;/* Change link color */
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: none; /* Underline on hover */
+        color: #9e9756;
+    }
+
+    .breadcrumb .separator {
+        color: #9E9756; /* Color for the separator */
+    }
 
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, serif;
     margin: 0;
     padding: 0;
-    background-color: #F0FBFE;
+    background-color: #FDFBED;
     height: 100%;
     justify-content:center ;
     align-items:center;
 }
+h2{
+margin-top:30px;
+margin-bottom:30px ;
+text-align: left ;
+color :#68A8CA ;
+margin-left : 10px ;
 
-
+}
 /* Container for Flexbox */
 .container {
     display: flex;
@@ -100,4 +152,142 @@ body {
 .Box p {
     font-size: 14px;
     color: #9E9756;
+}
+
+/* The End of User Page */
+
+/*Product Evaluation */
+/* Main content */
+main {
+    padding: 20px 50px;
+}
+
+/* Product Evaluation Title */
+
+
+/* Container for the form and feedback section */
+.evaluation-container {
+    display:flex ;
+    justify-content: center;
+    align-items:center ;
+    height:100%;
+
+
+}
+
+/* Form Section Styling */
+.form-section {
+    width: 50%;
+    background-color: #fff;
+    border: 1.5px solid #6BA8CA;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 0 ;
+    margin-top:50;
+}
+.form-section label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+.form-section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6BA8CA;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+/* Feedback Section Styling */
+.feedback-section {
+    width: 50%;
+    background-color: #fff;
+    border: 1.5px solid #6BA8CA;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.feedback-section img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+}
+.feedback-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.feedback-section .rating {
+    margin-bottom: 20px;
+}
+.feedback-section .rating span {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.feedback-section select {
+    padding: 10px;
+    border: 1px solid #6BA8CA;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.feedback-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+.feedback-section button {
+    padding: 12px 25px;
+    background-color: #6BA8CA;;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top : 10px ;
+    margin-right :10px;
+    margin-left :85%;
+
+}
+.feedback-section button:hover {
+    background-color: #9E9756;
+
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #fcf8db;
+    color: green;
+    padding: 20px;
+    position: relative;
+    border-top-style: groove;
+
+    }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     /*water mark part */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+    border-color: #808080;
+    }
+.footer-content .contact-us , .footer-content .find-us {
+    text-align: center;
+    }
+.footer-content h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    }
+.footer-content #apps-icons {
+    display: flex;
+    flex-flow: row ;
+    justify-content: space-around;
 }

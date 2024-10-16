@@ -1,0 +1,119 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Dashboard</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <!--<div class="header">-->
+    <img id="headerLogo" src="web_images/logoTriCart.png" alt="TriCart" width="20%" height="20%">
+    <nav class="navigation" >
+        <ul>
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> Electronics </a> </li>
+            <li> <a href="#"> Furniture </a> </li>
+            <li> <a href="#"> Sport </a> </li>
+        </ul>
+    </nav>
+    <div class="cart">
+        <a href="#">
+            <img src="web_images/cart.png" alt="Cart" width="50%">
+            <span class="cart-count">2</span>
+        </a>
+    </div>
+    <div class="user-type">
+        <h5> <a href="#" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+    </div>
+    <!--</div> -->
+</header>
+
+<nav aria-label="Breadcrumb">
+    <ul class="breadcrumb">
+        <li><a href="HomePage.html">Home</a></li>
+        <li class ="separator" >&gt; </li> <!-- This represents the '>' character -->
+        <li><a href="UserPage.html">Customer</a></li>
+        <li class ="separator" >&gt; </li> <!-- This represents the '>' character -->
+        <li>Product Evaluation</li>
+    </ul>
+</nav>
+
+<main>
+<h2>Product Evaluation</h2>
+<form action="submit_evaluation.php" method="post">
+    <div class="evalution-container">
+        <div class ="form-section">
+          <label for="listsOforder">Select the order you want to evaluate:</label>  <!-- ?-->
+          <select id="listsOforder" name="order">
+
+             <option value="Order1">Order#20032023</option>
+             <option value="Order2">Order#13082020 </option>
+             <option value="Order3">Order#09102019 </option>
+          </select>
+
+
+          <label for="ListOfproduct">Select Product:</label>
+          <select id="ListOfproduct" name="product">
+             <option value="productA">Product A</option>
+             <option value="productB">Product B</option>
+             <option value="productC">Product B</option>
+             <option value="productD">Product B</option>
+           </select>
+
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="feedback-section">
+            <img src="web_images/coputerimag.jpg"  alt="Ipad">
+            <h3> Computer </h3>
+            <p> Apple MacBook Air 13 M3 Laptop</p>
+
+            <div class="rating">
+                <span>Rating:</span>
+                <select name="rating">
+                    <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                    <option value="4">⭐️⭐️⭐️⭐️</option>
+                    <option value="3">⭐️⭐️⭐️</option>
+                    <option value="2">⭐️⭐️</option>
+                    <option value="1">⭐️</option>
+                </select>
+            </div>
+
+            <label for="feedback">Your Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4"></textarea>
+            <br>
+               <div class ="Submit action" >
+                <button type="submit">Submit</button>
+              </div>
+        </div>
+    </div>
+</form>
+</main>
+<footer>
+    <div class="footer-content">
+        <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="15%">
+        <div class="contact-us">
+            <h4>Contact Us</h4>
+            <a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+            <p> +123 456 789</p>
+            <p> +345 735 988</p>
+        </div>
+        <div class="find-us">
+            <h4>Find Us</h4>
+            <div id="apps-icons">
+                <img src="web_images/instagramIcon.png" alt="instagram" width="20%" >
+                <img src="web_images/linkedIn.png" alt="LinkedIn" width="20%">
+                <img src="web_images/twitter.png" alt="X app" width="20%">
+            </div>
+        </div>
+    </div>
+    <div id="watermark">
+        <p>&copy; 2024 TriCart Store</p>
+    </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centers the container horizontally */
+    align-items: center;     /* Centers the container vertically */
+    background-color: #f0f0f0; /* Light background to distinguish the container */
+}
+
+/* Style for the evaluation-container */
+.evaluation-container {
+    width: 80%;                 /* Adjusts to 80% of the viewport width */
+    max-width: 900px;            /* Limits the max width to 900px for larger screens */
+    background-color: white;     /* White background for the form container */
+    padding: 40px;               /* Adds padding inside the container */
+    border-radius: 8px;          /* Slight rounding of the corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    display: flex;
+    flex-direction: column;      /* Stack items vertically */
+}
+
+/* Center the text inside form-section but align left for content */
+.form-section, .feedback-section {
+    text-align: left;            /* Left-align text */
+    margin-bottom: 20px;         /* Adds spacing between form and feedback sections */
+}
+
+/* Label styles for select boxes */
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Select box styling */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;         /* Spacing between select boxes */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;      /* Makes sure padding is included in width */
+    font-size: 1rem;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin-bottom: 20px;         /* Adds space below the textarea */
+}
+
+/* Submit button styling */
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Feedback section image */
+.feedback-section img {
+    width: 100%;                 /* Full width of the container */
+    height: auto;
+    margin-bottom: 20px;         /* Space below the image */
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* Star rating section */
+.rating {
+    margin-bottom: 20px;         /* Adds space below the rating */
+}
+
+.rating select {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+/* Optional responsive adjustments */
+@media (max-width: 600px) {
+    .evaluation-container {
+        width: 95%;              /* Make the container narrower on small screens */
+        padding: 20px;
+    }
+}
