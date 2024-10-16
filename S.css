@@ -15,7 +15,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    border-bottom-style: groove;
     }
+
 nav.navigation ul {
     display: flex;
     list-style: none;
@@ -32,6 +34,7 @@ nav.navigation li {
     font-size: 18px;
     transition: color 0.3s;
     }
+
 .cart {
     position: relative;
     }
@@ -55,34 +58,34 @@ header a {
     }
 .user-type h5 {
     margin-right: 40px;
-}
+    }
 #customer {
 
-}
+    }
 /* Offers section style */
 .offers_list {
     display: flex;
     flex-flow: row rap;
-}
+    }
 .offers_list1  {
     display: flex;
     flex-flow: row ;
     justify-content: space-around;
-}
+    }
 .offers_list2  {
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-}
+    }
 .offers_list1 > div {
     margin: 30px;
     }
 .offers_list2 > div {
     margin: 30px;
-}
+    }
 .offer {
     position: relative;
-}
+    }
 .offerL {
     position: absolute;
       bottom: 8px;
@@ -92,11 +95,55 @@ header a {
 .vision {
     display: flex;
     justify-content: space-around;
-}
+    }
 
 .categories {
 display: flex;
-justify-content: space-around
-}
+justify-content: space-around;
+    }
 
+/* Footer styling */
+footer {
+    background-color: #fcf8db;
+    color: green;
+    padding: 20px;
+    position: relative;
+    border-top-style: groove;
+
+    }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     /*water mark part */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+    border-color: #808080;
+    }
+.footer-content .contact-us , .footer-content .find-us {
+    text-align: center;
+    }
+.footer-content h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    }
+.footer-content #apps-icons {
+    display: flex;
+    flex-flow: row ;
+    justify-content: space-around;
+}
+.footer-content a {
+    text-decoration:none;
+    color: green;
+    }
+#watermark {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: ##606060;
+    }
 
