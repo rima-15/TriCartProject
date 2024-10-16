@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    }
+}
 body {
     font-family: Georgia, serif;
     background-color: #FDFBED ;
-    }
+}
 /* Header styling */
 header {
     background-color: #fcf8db;
@@ -16,28 +16,30 @@ header {
     align-items: center;
     padding: 10px 20px;
     border-bottom-style: groove;
-    }
+}
+.logo {
+height:auto;
+}
 
 nav.navigation ul {
     display: flex;
     list-style: none;
-    }
+}
 nav.navigation ul li {
     margin: 0 30px ;
     font-weight: bold;
-    }
+}
 nav.navigation ul li a:hover {
     color: #9e9756;
-    }
+}
 nav.navigation li {
     color: green;
     font-size: 18px;
     transition: color 0.3s;
-    }
-
+}
 .cart {
     position: relative;
-    }
+}
 .cart .cart-count {
     position: absolute;
     top: -5px;
@@ -55,53 +57,80 @@ header a {
 .user-type a {
     text-decoration: none;
     font-size: 16px;
-    }
+}
 .user-type h5 {
     margin-right: 40px;
-    }
+}
 #customer {
 
-    }
-/* Offers section style */
-.offers_list {
-    display: flex;
-    flex-flow: row rap;
-    }
-.offers_list1  {
-    display: flex;
-    flex-flow: row ;
-    justify-content: space-around;
-    }
-.offers_list2  {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-around;
-    }
-.offers_list1 > div {
-    margin: 30px;
-    }
-.offers_list2 > div {
-    margin: 30px;
-    }
+}
+
+/* Offers section styling */
+.offers-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 90px; /* Space between each offer */
+    padding: 30px;
+}
+
 .offer {
     position: relative;
-    }
-.offerL {
+    overflow: hidden; /* hide it if it was too big or bad for the container */
+    border: 1px solid #68A8CA;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.offer:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+
+}
+.offer:hover .offer-description {
+    font-weight: bold;
+}
+
+.offer-image {
+    position: relative;
+}
+
+.offer-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.offer-label {
     position: absolute;
-      bottom: 8px;
-      left: 16px;
-      font-size: 12px;
-    }
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.offer-description {
+    padding: 15px;
+    text-align: center;
+}
+
+.offer-description p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
 .vision {
     display: flex;
     justify-content: space-around;
-    }
+}
 
 .categories {
 display: flex;
 justify-content: space-around;
-    }
-
+}
 /* Footer styling */
 footer {
     background-color: #fcf8db;
@@ -110,7 +139,7 @@ footer {
     position: relative;
     border-top-style: groove;
 
-    }
+}
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -119,18 +148,18 @@ footer {
     padding-bottom: 20px;
     border-bottom: 1px solid #444;
     border-color: #808080;
-    }
+}
 .footer-content .contact-us , .footer-content .find-us {
     text-align: center;
-    }
+}
 .footer-content h4 {
     font-size: 18px;
     margin-bottom: 10px;
-    }
+}
 .footer-content p {
     margin: 5px 0;
     font-size: 14px;
-    }
+}
 .footer-content #apps-icons {
     display: flex;
     flex-flow: row ;
@@ -139,11 +168,50 @@ footer {
 .footer-content a {
     text-decoration:none;
     color: green;
-    }
+}
 #watermark {
     text-align: center;
     margin-top: 10px;
     font-size: 12px;
     color: ##606060;
+}
+@media (max-width: 768px) {
+    /* Header content */
+    header {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+        }
+    .logo , .navigation , .cart , .user-type {
+        margin-bottom: 20px;
     }
 
+    .logo {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav.categories ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .cart, .user-type , .categories{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    /* Footer content */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content .logo,
+    .footer-content .contact-us,
+    .footer-content .find-us {
+        margin-bottom: 20px;
+    }
+}

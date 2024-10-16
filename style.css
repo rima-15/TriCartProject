@@ -1,8 +1,4 @@
-
-
-
-
-   header {
+ header {
         background-color: #fcf8db;
         color: green ;
         display: flex;
@@ -177,7 +173,8 @@ main {
 
 /* Form Section Styling */
 .form-section {
-    width: 50%;
+   transform :translate(25%);
+    width: 60%;
     background-color: #fff;
     border: 1.5px solid #6BA8CA;
     padding: 20px;
@@ -201,15 +198,18 @@ main {
 
 /* Feedback Section Styling */
 .feedback-section {
-    width: 50%;
+    transform :translate(25%);
+    width: 60%;
     background-color: #fff;
     border: 1.5px solid #6BA8CA;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .feedback-section img {
-    width: 120px;
-    height: 120px;
+    float :left ;
+    width: 140px;
+    height: 140px;
+    margin-right :0.5em ;
     margin-bottom: 10px;
 }
 .feedback-section p {
@@ -247,16 +247,15 @@ main {
     border-radius: 4px;
     font-size: 16px;
     margin-top : 10px ;
-    margin-right :10px;
-    margin-left :85%;
 
 }
 .feedback-section button:hover {
     background-color: #9E9756;
 
 }
-
-
+.Submit-action{
+transform :translate(85%);
+}
 /* Footer styling */
 footer {
     background-color: #fcf8db;
@@ -265,7 +264,7 @@ footer {
     position: relative;
     border-top-style: groove;
 
-    }
+}
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -274,20 +273,72 @@ footer {
     padding-bottom: 20px;
     border-bottom: 1px solid #444;
     border-color: #808080;
-    }
+}
 .footer-content .contact-us , .footer-content .find-us {
     text-align: center;
-    }
+}
 .footer-content h4 {
     font-size: 18px;
     margin-bottom: 10px;
-    }
+}
 .footer-content p {
     margin: 5px 0;
     font-size: 14px;
-    }
+}
 .footer-content #apps-icons {
     display: flex;
     flex-flow: row ;
     justify-content: space-around;
 }
+.footer-content a {
+    text-decoration:none;
+    color: green;
+}
+#watermark {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: ##606060;
+}
+@media (max-width: 768px) {
+    /* Header content */
+    header {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+        }
+    .logo , .navigation , .cart , .user-type {
+        margin-bottom: 20px;
+    }
+
+    .logo {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav.categories ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .cart, .user-type , .categories{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    /* Footer content */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content .logo,
+    .footer-content .contact-us,
+    .footer-content .find-us {
+        margin-bottom: 20px;
+    }
+}
+
+
