@@ -1,119 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Electronics Category Page</title>
-    <link rel="Category stylesheet" href="styleCategory.css">
-</head>
-<body>
+<html>
 
-    <nav aria-label="Breadcrumb">
-      <ul class="breadcrumb">
-        <li><a href="HomePage.html">Home</a></li>
-        <li class ="separator" >&gt; </li> <!-- This represents the '>' character -->
-          <li>Electronics</li>
-    </ul>
-</nav>
+    <head>
+        <meta charset="UTF-8">
+        <title>Electronics Category Page</title>
+        <link rel="Category stylesheet" href="styleCategory.css">
+        <link href="S.css" rel="stylesheet"><!--just for header remove it later-->
+    </head>
 
-    <h1>Electronics</h1>
-    <p> Electronic category contain a lot of smart devices!  </p>
+    <body>
+    <!-- header-->
+    <header>
+        <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="20%" height="20%">
+        <nav class="navigation" >
+            <ul>
+                <li> <a href="HomePage.html"> Home </a> </li>
+                <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
+                <li> <a href="#"> Furniture </a> </li>
+                <li> <a href="#"> Sport </a> </li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="#">
+                <img src="web_images/cart.png" alt="Cart" width="50%">
+                <span class="cart-count">2</span>
+            </a>
+        </div>
+        <div class="user-type">
+            <h5> <a href="#" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+        </div>
+    </header>
+<br>
+        <nav aria-label="Breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="HomePage.html">Home</a></li>
+            <li class ="separator" >&gt; </li> <!-- This represents the '>' character -->
+              <li>Electronics</li>
+        </ul>
+        </nav>
+<br>
+        <h1 class="categoryName">Electronics</h1>
 
-    <div class ="sort">
-       <label for="sort">Sort by:</label>
-        <select id ="sort">
-            <optgroup label = "Price">
-                <option >Low to High</option>
-                <option >High to Low</option>
-            </optgroup>
-            <optgroup label = "Name">
-                <option >A-Z</option>
-                <option >Z-A</option>
-            </optgroup>
-        </select>
-    </div>
-    <div class = "products-container">
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-            <p><strong>3700 SR</strong></p>
-            <button>
-            <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-            </button> </div>
-        </div>
+        <p class ="CategoryDiscr"> Electronic category contain a lot of smart devices!  </p>
 
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-                <p><strong>3700 SR</strong></p>
-                <button>
-                    <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-                </button> </div>
+        <div class ="sort">
+           <label for="sort">Sort by:</label>
+            <select id ="sort">
+                <optgroup label = "Price">
+                    <option >Low to High</option>
+                    <option >High to Low</option>
+                </optgroup>
+                <optgroup label = "Name">
+                    <option >A-Z</option>
+                    <option >Z-A</option>
+                </optgroup>
+            </select>
         </div>
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-                <p><strong>3700 SR</strong></p>
-                <button>
-                    <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-                </button> </div>
-        </div>
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-                <p><strong>3700 SR</strong></p>
-                <button>
-                    <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-                </button> </div>
-        </div>
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-                <p><strong>3700 SR</strong></p>
-                <button>
-                    <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-                </button> </div>
-        </div>
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-                <p><strong>3700 SR</strong></p>
-                <button>
-                    <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-                </button> </div>
-        </div>
+        <div class = "products-container">
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
 
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-                <p><strong>3700 SR</strong></p>
-                <button>
-                    <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-                </button> </div>
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                    <div class = "p-and-b">
+                        <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                        <button class="addToCart"><img src ="web_images/addToCart.jpg" alt=""  ></button>
+                    </div>
+            </div>
+
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
+
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                <div class = "p-and-b">
+                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                    <button class="addToCart"><img src ="web_images/addToCart.jpg" alt=""  ></button>
+                </div>
+            </div>
+
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
+
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                <div class = "p-and-b">
+                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                    <button class="addToCart"><img src ="web_images/addToCart.jpg" alt=""  ></button>
+                </div>
+            </div>
+
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
+
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                <div class = "p-and-b">
+                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                    <button class="addToCart"><img src ="web_images/addToCart.jpg" alt=""  ></button>
+                </div>
+            </div>
+
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
+
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                <div class = "p-and-b">
+                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                    <button class="addToCart"><img src ="web_images/addToCart.jpg" alt=""  ></button>
+                </div>
+            </div>
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
+
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                <div class = "p-and-b">
+                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                    <button class="addToCart"><img src ="web_images/addToCart.jpg" alt="image"  ></button>
+                </div>
+            </div>
+
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
+
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                <div class = "p-and-b">
+                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                    <button class="addToCart"><img src ="web_images/addToCart.jpg" alt="image"  ></button>
+                </div>
+            </div>
+
+            <div class = "product">
+                <img src="web_images/coputerimag.jpg" alt="ipad product">
+
+                <p class="infoOfProduct"> Computer </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+
+                <div class = "p-and-b">
+                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+
+                    <button class="addToCart"><img src ="web_images/addToCart.jpg" alt="image"  ></button>
+                </div>
+            </div>
+
+
         </div>
-        <div class = "product">
-            <img src="web_images/coputerimag.jpg" alt="ipad product" width="150px" height="200px"></img>
-            <h3> Computer </h3>
-            <p> Apple MacBook Air 13 M3 Laptop</p>
-            <div class = "p-and-b">
-                <p><strong>3700 SR</strong></p>
-                <button>
-                    <img src ="web_images/addToCart.jpg" width="40px" height="40px" ></img>
-                </button> </div>
+    <!--footer-->
+    <footer>
+        <div class="footer-content">
+            <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="15%">
+            <div class="contact-us">
+                <h4>Contact Us</h4>
+                <a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+                <p> +123 456 789</p>
+                <p> +345 735 988</p>
+            </div>
+            <div class="find-us">
+                <h4>Find Us</h4>
+                <div id="apps-icons">
+                    <img src="web_images/instagramIcon.png" alt="instagram" width="20%" >
+                    <img src="web_images/linkedIn.png" alt="LinkedIn" width="20%">
+                    <img src="web_images/twitter.png" alt="X app" width="20%">
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+        <div id="watermark">
+            <p>&copy; 2024 TriCart Store</p>
+        </div>
+    </footer>
+    </body>
 </html>
