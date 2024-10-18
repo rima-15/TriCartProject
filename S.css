@@ -7,6 +7,18 @@ body {
     font-family: Georgia, serif;
     background-color: #FDFBED ;
 }
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content {
+    flex-grow: 1;
+}
 /* Header styling */
 header {
     background-color: #fcf8db;
@@ -61,14 +73,11 @@ header a {
 .user-type h5 {
     margin-right: 40px;
 }
-#customer {
-
-}
 
 /* Offers section styling */
 .offers-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
     gap: 90px; /* Space between each offer */
     padding: 30px;
 }
@@ -76,7 +85,7 @@ header a {
 .offer {
     position: relative;
     overflow: hidden; /* hide it if it was too big or bad for the container */
-    border: 1px solid #68A8CA;
+    border: 1px solid #9E9756;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -95,7 +104,7 @@ header a {
 }
 
 .offer-image img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px 10px 0 0;
 }
@@ -107,7 +116,7 @@ header a {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
 }
 
@@ -119,17 +128,66 @@ header a {
 .offer-description p {
     font-size: 14px;
     color: #555;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .vision {
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
+    padding: 20px , 0px;
+}
+.vision .name {
+    font-family: Garamond;
+    font-size: 34px;
+    color: #68A8CA ;
+    margin-right: 80px;
+}
+.vision .Quote {
+    margin-right: 20px;
+    text-align: center;
+    font-style:italic;
 }
 
+/* Category sections styling */
+.cat-header {
+    color: #68A8CA;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    border-color: #9E9756;
+    margin-top: 30px;
+}
 .categories {
-display: flex;
-justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 300px)); /* Responsive columns */
+    gap: 200px; /* Space between each category */
+    text-align: center;
+	padding: 20px 100px;
+    padding-bottom: 20px;
+    /*border-bottom: 1px solid #444;
+    border-color: #808080;
+    margin-bottom: 30px;*/
+}
+.category-types {
+    border: 1px solid #9E9756;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.category-types:hover {
+    transform: translateY(-5px);
+}
+.category-types img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+.category-name {
+    padding: 20px 0px ;
+    height: auto ;
+    border-bottom: 1px solid #ddd;
 }
 /* Footer styling */
 footer {
@@ -202,6 +260,21 @@ footer {
         flex-basis: 100%;
         text-align: center;
     }
+    .vision {
+        display: block;
+        text-align: center;
+    }
+
+    .vision .name, .vision .Quote {
+        justify-content: center;
+        display: block;
+        margin-bottom: 10px;
+    }
+    /* Categories section in body */
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
     /* Footer content */
     .footer-content {
         flex-direction: column;
