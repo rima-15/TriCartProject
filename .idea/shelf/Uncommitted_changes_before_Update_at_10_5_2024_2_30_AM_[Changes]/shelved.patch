@@ -1,0 +1,32 @@
+Index: CategoryPage.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Title</title>\r\n</head>\r\n<body>\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/CategoryPage.html b/CategoryPage.html
+--- a/CategoryPage.html	(revision 2f473c14d89359092ca7be22e0d787f9cacd3928)
++++ b/CategoryPage.html	(date 1728084464927)
+@@ -1,10 +1,18 @@
+ <!DOCTYPE html>
+ <html lang="en">
++
+ <head>
+     <meta charset="UTF-8">
+-    <title>Title</title>
++    <title>Category Page</title>
+ </head>
+ <body>
+-
++<header>
++    <h1>Electronics<h1>
++        <p>#Explain categoty type <br>
++        explain more#</p>
++</header>
++    <img src = "web_images/img.png" alt="Ipad" width="100px" height="100px"> </img>
++<img src = "web_images/IpadPic.jpg" alt="Ipad2" width="100px" height="100px">
+ </body>
++
+ </html>
+\ No newline at end of file
