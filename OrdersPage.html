@@ -1,0 +1,99 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <!--<div class="header">-->
+    <img id="headerLogo" src="web_images/logoTriCart.png" alt="TriCart" width="20%" height="20%">
+    <nav class="navigation" >
+        <ul>
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> Electronics </a> </li>
+            <li> <a href="#"> Furniture </a> </li>
+            <li> <a href="#"> Sport </a> </li>
+        </ul>
+    </nav>
+    <div class="cart">
+        <a href="#">
+            <img src="web_images/cart.png" alt="Cart" width="50%">
+            <span class="cart-count">2</span>
+        </a>
+    </div>
+    <div class="user-type">
+        <h5> <a href="#" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+    </div>
+    <!--</div> -->
+</header>
+
+<nav aria-label="Breadcrumb">
+    <ul class="breadcrumb">
+        <li><a href="HomePage.html">Home</a></li>
+        <li class ="separator" >&gt; </li> <!-- This represents the '>' character -->
+        <li><a href="UserPage.html">Customer</a></li>
+        <li class ="separator" >&gt; </li> <!-- This represents the '>' character -->
+        <li>Product Evaluation</li>
+    </ul>
+</nav>
+
+
+<h1 >My Orders</h1>
+<div class ="Order-container">
+    <div class ="Order-Box">
+        <h3> Order: #2003202311</h3>
+        <hr>
+        <p> Date : 10:30:15  | 20/3/2023</p>
+        <p class ="price"> Total Price : 320.50$</p>
+    </div>
+
+    <div class ="Order-Box">
+
+        <h3> Order: #1308202071</h3>
+        <hr>
+        <p> Date : 9:15:23 | 13/8/2020</p>
+        <p class ="price"> Total Price : 879.99$</p>
+    </div>
+
+    <div class ="Order-Box">
+
+        <h3> Order: #0910201989</h3>
+        <hr>
+        <p> Date : 12:45:37 | 9/10/2019</p>
+        <p class ="price"> Total Price : 3700.00$</p>
+
+    </div>
+
+
+</div>
+</main>
+<footer>
+    <div class="footer-content">
+        <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="15%">
+        <div class="contact-us">
+            <h4>Contact Us</h4>
+            <a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+            <p> +123 456 789</p>
+            <p> +345 735 988</p>
+        </div>
+        <div class="find-us">
+            <h4>Find Us</h4>
+            <div id="apps-icons">
+                <img src="web_images/instagramIcon.png" alt="instagram" width="20%" >
+                <img src="web_images/linkedIn.png" alt="LinkedIn" width="20%">
+                <img src="web_images/twitter.png" alt="X app" width="20%">
+            </div>
+        </div>
+    </div>
+    <div id="watermark">
+        <p>&copy; 2024 TriCart Store</p>
+    </div>
+</footer>
+
+</body>
+
+</html>
