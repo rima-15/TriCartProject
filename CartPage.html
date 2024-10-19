@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Cart Page</title>
+        <link href="S.css" rel="stylesheet"><!--just for header remove it later-->
+        <link href="styleCategory.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+        <!-- header-->
+        <header>
+            <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="20%" height="20%">
+            <nav class="navigation" >
+                <ul>
+                    <li> <a href="HomePage.html"> Home </a> </li>
+                    <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
+                    <li> <a href="#"> Furniture </a> </li>
+                    <li> <a href="#"> Sport </a> </li>
+                </ul>
+            </nav>
+            <div class="cart">
+                <a href="CartPage.html">
+                    <img src="web_images/cart.png" alt="Cart" width="50%">
+                    <span class="cart-count">2</span>
+                </a>
+            </div>
+            <div class="user-type">
+                <h5> <a href="#" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+            </div>
+        </header>
+
+        <nav aria-label="Breadcrumb">
+            <ul class="breadcrumb">
+                <li><a href="HomePage.html">Home</a></li>
+                <li class ="separator" >&gt; </li> <!-- This represents the '>' character -->
+                <li>Cart</li>
+            </ul>
+        </nav>
+
+        <h1 class="CartName">My Cart</h1>
+        <p class ="CartDiscr">here is an amazing product that you choose! </p>
+
+        <div class="cartListContainer">
+
+            <div class="cartProduct">
+                <img src="web_images/coputerimag.jpg" alt="computer">
+                <p class="infoOfProduct"> <strong>Computer</strong> </p>
+                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+                <p><strong class="priceOftheProduct">3700 SR</strong></p>
+            </div>
+            <hr>
+            <div class="PruductControle" >
+                <button class="remove"> <i class="fas fa-trash"></i></button>
+               <!-- <input type="number" name="quantity" value="1" min="0" max="10">-->
+                <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">
+                <button class="add"> <i class="fas fa-plus"></i></button>
+            </div>
+
+
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="footer-content">
+                <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="15%">
+                <div class="contact-us">
+                    <h4>Contact Us</h4>
+                    <a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+                    <p> +123 456 789</p>
+                    <p> +345 735 988</p>
+                </div>
+                <div class="find-us">
+                    <h4>Find Us</h4>
+                    <div id="apps-icons">
+                        <img src="web_images/instagramIcon.png" alt="instagram" width="20%" >
+                        <img src="web_images/linkedIn.png" alt="LinkedIn" width="20%">
+                        <img src="web_images/twitter.png" alt="X app" width="20%">
+                    </div>
+                </div>
+            </div>
+            <div id="watermark">
+                <p>&copy; 2024 TriCart Store</p>
+            </div>
+        </footer>
+    </body>
+</html>
