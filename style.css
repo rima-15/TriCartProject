@@ -1,100 +1,107 @@
+ /* General Styles */
+ body {
+     font-family: Georgia, serif;
+     margin: 0;
+     padding: 0;
+     background-color: #FDFBED;
+ }
+
+ h1 {
+     margin: 30px 0;
+     margin-left: 10px;
+     text-align: left;
+     color: #68A8CA;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Header Styles */
  header {
-        background-color: #fcf8db;
-        color: green ;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        }
+     background-color: #567C8D;
+     color: green; /*??*/
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 10px 20px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+ }
+
  nav.navigation ul {
-        display: flex;
-        list-style: none;
-        }
-    nav.navigation ul li {
-        margin: 0 30px ;
-        font-weight: bold;
-        }
-    nav.navigation ul li a:hover {
-        color: #9e9756;
-        }
-    nav.navigation li {
-        color: green;
-        font-size: 18px;
-        transition: color 0.3s;
-        }
-    .cart {
-        position: relative;
-        }
-    .cart .cart-count {
-        position: absolute;
-        top: -5px;
-        right: -10px;
-        background-color: #ffcc00;
-        color: black;
-        border-radius: 50%;
-        padding: 2px 6px;
-        font-size: 12px;
-    }
-    header a {
-        text-decoration: none;
-        color: #68A8CA ;
-    }
-    .user-type a {
-        text-decoration: none;
-        font-size: 16px;
-        }
-    .user-type h5 {
-        margin-right: 40px;
-    }
-    #customer {
+     display: flex;
+     list-style: none;
+ }
 
-    }
+ nav.navigation ul li {
+     margin: 0 30px;
+     font-weight: bold;
 
-    /* Style for breadcrumb */
-    .breadcrumb {
-        list-style: none; /* Remove bullet points */
-        padding: 0; /* Remove default padding */
-        margin: 5px 1px; /* Add some margin */
-    }
+ }
+ nav.navigation ul li a:hover {
+     color: #9e9756;
+ }
 
-    .breadcrumb li {
-        font-family: Georgia, serif;
-        display: inline-block; /* Use inline-block for horizontal layout */
-        margin-right: 5px; /* Space between items */
-        color: #68A8CA;
-    }
+ nav.navigation li {
+     color: green;
+     font-size: 18px;
+     transition: color 0.3s;
+ }
 
-    .breadcrumb a {
-        text-decoration: none; /* Remove underline from links */
-        color: green ;/* Change link color */
-    }
+ header a {
+     text-decoration: none;
+     color: #F5EFEB;
+ }
 
-    .breadcrumb a:hover {
-        text-decoration: none; /* Underline on hover */
-        color: #9e9756;
-    }
+ .cart {
+     position: relative;
+ }
 
-    .breadcrumb .separator {
-        color: #9E9756; /* Color for the separator */
-    }
+ .cart .cart-count {
+     position: absolute;
+     top: -5px;
+     right: -10px;
+     background-color: #ffcc00;
+     color: black;
+     border-radius: 50%;
+     padding: 2px 6px;
+     font-size: 12px;
+ }
 
+ .user-type a {
+     text-decoration: none;
+     font-size: 16px;
+ }
 
-body {
-    font-family: Georgia, serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FDFBED;
-    height: 100%;
+ .user-type h5 {
+     margin-right: 40px;
+ }
 
-}
-h1{
-margin-top:30px;
-margin-bottom:30px ;
-margin-left : 10px ;
-text-align: left ;
-color :#68A8CA ;
+ /* Breadcrumb Styles */
+ .breadcrumb {
+     list-style: none;
+     padding: 0;
+     margin: 5px 1px;
+ }
 
-}
+ .breadcrumb li {
+     font-family: Georgia, serif;
+     display: inline-block;
+     margin-right: 5px;
+     color: #68A8CA;
+ }
+
+ .breadcrumb a {
+     text-decoration: none;
+     color: green;
+ }
+
+ .breadcrumb a:hover {
+     color: #9e9756;
+ }
+
+ .breadcrumb .separator {
+     color: #9E9756;
+ }
+/*User Page*?
+
 /* Container for Flexbox */
 .container {
     display: flex;
@@ -110,7 +117,7 @@ color :#68A8CA ;
 .Box {
 
     background-color:#FCF8DB;
-    border: 3px solid #9E9756;
+    border: 3px solid #68A8CA;
     padding: 20px;
     width: 300px;
     text-align: left;
@@ -155,108 +162,107 @@ color :#68A8CA ;
 /* The End of User Page */
 
 /*Product Evaluation */
-/* Main content */
-main {
-    padding: 20px 50px;
+ /* Evaluation Styles */
+ .evaluation-container {
+     margin: 100px auto;
+     width: 60%;
+ }
 
-}
+ /* Form Section */
+ /* Center the Evaluation Container */
 
-/* Product Evaluation Title */
+ /* Form Section Styling */
+ /*.form-section, .feedback-section {
+     background-color: #fff;
+     border: 2px solid #9E9756;
+     padding: 20px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     margin: 20px 50px;
+     border-radius: 10px; /* Add rounded corners for a softer look */
+ fieldset{
+ margin: 20px 50px;
+ padding : 1em 2em ;
+ border :1px solid #9E9756;
+ border-radius: 6px;
+ }
+ legend {
+ font-size:1.25em;
+ padding :0 .25em;
+ color:#9E9756;
+ font-weight:bold ;
+ }
 
 
-/* Container for the form and feedback section */
-.evaluation-container {
-    height:100%;
 
 
-}
+ .feedback-section img {
+     float : left ;
+     width: 140px; /* Set a fixed width */
+     height: auto; /* Maintain aspect ratio */
+     max-width: 100%; /* Ensure responsiveness */
 
-/* Form Section Styling */
-.form-section {
-margin: 100px auto;
-    width: 60%;
-    background-color: #fff;
-    border: 1.5px solid #6BA8CA;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
 
-}
-.form-section label {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 10px;
-    color: #333;
-}
-.form-section select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #6BA8CA;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
+ .form-section label,
+ .feedback-section label {
+     font-weight: bold;
+     font-size: 18px;
+     display: block;
+     margin-bottom: 10px;
+     color: #6BA8CA;
+ }
 
-/* Feedback Section Styling */
-.feedback-section {
-margin: 100px auto;
-    width: 60%;
-    background-color: #fff;
-    border: 1.5px solid #6BA8CA;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.feedback-section img {
-    float :left ;
-    width: 140px;
-    height: 140px;
-    margin-right :0.5em ;
-    margin-bottom: 10px;
-}
-.feedback-section p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-.feedback-section .rating {
-    margin-bottom: 20px;
-     clear :  left ;
-}
-.feedback-section .rating span {
+ .form-section select,
+ .feedback-section select,
+ .feedback-section textarea {
+     width: 100%;
+     padding: 10px;
+     border: 2px solid #9E9756;
+     border-radius: 4px;
+     margin-bottom: 20px;
+     transition:border 0.3s;
 
-    font-size: 18px;
-    margin-right: 10px;
-}
-.feedback-section select {
-    padding: 10px;
-    border: 1px solid #6BA8CA;
-    border-radius: 4px;
-    margin-top: 10px;
-}
-.feedback-section textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 10px;
-    font-size: 14px;
+ }
 
+.form-section select:focus,
+.feedback-section select:focus,
+.feedback-section textarea:focus {
+    border-color: #6BA8CA; /* D blue on focus */
+    outline: none; /* Remove default outline */
 }
-.feedback-section button {
-    padding: 12px 25px;
-    background-color: #6BA8CA;;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-top : 10px ;
+ /* Rating Section */
+ .feedback-section .rating {
+    clear:left;
+ }
 
+ .feedback-section .rating span {
+     color: #6BA8CA;
+      font-weight: bold;
+     font-size: 18px;
+     margin-right: 10px;
+ }
+.feedback-section p{
+ color:#4B4B4B;
 }
-.feedback-section button:hover {
-    background-color: #9E9756;
+ /* Submit Button */
+ .feedback-section button {
+     padding: 12px 25px;
+     background-color: #6BA8CA;
+     color: white;
+     border: none;
+     cursor: pointer;
+     border-radius: 4px;
+     font-size: 16px;
+     margin-top: 10px;
+    /* transform:translate(1000%);*/
+    position:relative   ;
+    left:90%;
+ }
 
-}
-.Submit-action{
-transform :translate(85%);
-}
+ .feedback-section button:hover {
+     background-color: #9E9756;
+     transform: translateY(-2px); /* Lift effect */
+    }
 /*End of Product Evaluation*/
 /*Order Page*/
 /* Order Container for Flexbox */
@@ -276,19 +282,19 @@ transform :translate(85%);
 .Order-Box {
     margin-bottom : 20px;
     background-color:#FCF8DB;
-    border: 3px solid #9E9756;
-    padding: 10px;
-    width: 1000px;
+    border: 3px solid #68A8CA;
+    padding: 15px;
+    width: 100%;
     text-align: left;
     border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Hover effect on each box */
 .Order-Box:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* Paragraph inside the box */
@@ -300,95 +306,81 @@ transform :translate(85%);
 }
 .price  {
 text-align :right ;
+font-weight:bold ;
+}
+.price span {
+font-size:18px;
+color:#FF5733;
 }
 .Order-Box h3 {
    color :#68A8CA
 }
-/* Footer styling */
-footer {
-    background-color: #fcf8db;
-    color:#68A8CA ;
-    padding: 20px;
-    position: relative;
-    border-top-style: groove;
+ /* Footer Styles */
+ footer {
+     background-color: #567C8D;
+     color:  #F5EFEB;
+     padding: 20px;
+     border-top-style: groove;
+ }
 
-}
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-     /*water mark part */
-    padding-bottom: 20px;
-    border-bottom: 1px solid #444;
-    border-color: #808080;
-}
-.footer-content .contact-us , .footer-content .find-us {
-    text-align: center;
-}
-.footer-content h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-.footer-content p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-.footer-content #apps-icons {
-    display: flex;
-    flex-flow: row ;
-    justify-content: space-around;
-}
-.footer-content a {
-    text-decoration:none;
-    color: #68A8CA ;
-}
-#watermark {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 12px;
-    color: ##606060;
-}
-@media (max-width: 768px) {
-    /* Header content */
-    header {
+ .footer-content {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding-bottom: 20px;
+     border-bottom: 1px solid #444;
+ }
+
+ .footer-content .contact-us,
+ .footer-content .find-us {
+     text-align: center;
+ }
+
+ .footer-content h4 {
+     font-size: 18px;
+     margin-bottom: 10px;
+ }
+
+ .footer-content p {
+     margin: 5px 0;
+     font-size: 14px;
+ }
+
+ .footer-content #apps-icons {
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .footer-content a {
+     text-decoration: none;
+     color:  #F5EFEB;
+ }
+
+ #watermark {
+     text-align: center;
+     margin-top: 10px;
+     font-size: 12px;
+     color: #F5EFEB;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+     header {
          flex-direction: column;
          align-items: center;
          text-align: center;
-        }
-    .logo , .navigation , .cart , .user-type {
-        margin-bottom: 20px;
-    }
+     }
 
-    .logo {
-        flex-basis: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+     .evaluation-container {
+         width: 90%;
+     }
 
-    nav.categories ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
+     .footer-content {
+         flex-direction: column;
+         align-items: center;
+     }
 
-    .cart, .user-type , .categories{
-        flex-basis: 100%;
-        text-align: center;
-    }
-    /* Footer content */
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-content .logo,
-    .footer-content .contact-us,
-    .footer-content .find-us {
-        margin-bottom: 20px;
-    }
-}
-.infoOfProduct{
-color
-}
-
+     .footer-content .find-us {
+         margin-top: 20px;
+     }
+ }

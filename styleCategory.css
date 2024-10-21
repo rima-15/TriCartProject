@@ -85,6 +85,17 @@ text-indent:5%;
 
 }
 
+h1.CartName{
+color :#68A8CA;
+text-indent:4%;
+
+}
+
+p.CartDiscr{
+color:#9e9756;
+text-indent:5%;
+
+}
 .sort{
 font-size:18px;
 text-align: left;

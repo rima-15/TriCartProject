@@ -10,11 +10,11 @@
 
 <header>
     <!--<div class="header">-->
-    <img id="headerLogo" src="web_images/logoTriCart.png" alt="TriCart" width="20%" height="20%">
+    <img id="headerLogo" src="web_images/LOGOTricart2.png" alt="TriCart" width="20%" height="20%">
     <nav class="navigation" >
         <ul>
-            <li> <a href="#"> Home </a> </li>
-            <li> <a href="#"> Electronics </a> </li>
+            <li> <a href="HomePage.html"> Home </a> </li>
+            <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
             <li> <a href="#"> Furniture </a> </li>
             <li> <a href="#"> Sport </a> </li>
         </ul>
@@ -45,9 +45,10 @@
 <h1>Product Evaluation</h1>
 <form action="submit_evaluation.php" method="post">
     <div class="evalution-container">
-        <div class ="form-section">
+        <fieldset class ="form-section">
+            <legend> Order Information </legend>
           <label for="listsOforder">Select the order you want to evaluate:</label>  <!-- ?-->
-          <select id="listsOforder" name="Order">
+          <select id="listsOforder" name="Order" required>
 
              <option value="Order1">Order#20032023</option>
              <option value="Order2">Order#13082020 </option>
@@ -56,24 +57,25 @@
 
 
           <label for="ListOfproduct">Select Product:</label>
-          <select id="ListOfproduct" name="Product">
+          <select id="ListOfproduct" name="Product" required>
              <option value="productA">Product A</option>
              <option value="productB">Product B</option>
-             <option value="productC">Product B</option>
-             <option value="productD">Product B</option>
+             <option value="productC">Product C </option>
+             <option value="productD">Product D</option>
            </select>
 
-        </div>
+        </fieldset>
 
         <!-- Feedback Section -->
-        <div class="feedback-section">
+        <fieldset class="feedback-section">
+            <legend>Feedback</legend>
             <img src="web_images/coputerimag.jpg"  alt="Ipad">
             <h3> Computer </h3>
             <p > Apple MacBook Air 13 M3 Laptop</p>
 
             <div class="rating">
                 <span>Rating:</span>
-                <select name="Rating">
+                <select name="Rating" required>
                     <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
                     <option value="4">⭐️⭐️⭐️⭐️</option>
                     <option value="3">⭐️⭐️⭐️</option>
@@ -83,18 +85,18 @@
             </div>
 
             <label for="feedback">Your Feedback:</label>
-            <textarea id="feedback" name="feedback" rows="4"></textarea>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
             <br>
                <div class ="Submit-action" >
                 <button type="submit">Submit</button>
               </div>
-        </div>
+        </fieldset>
     </div>
 </form>
 </main>
 <footer>
     <div class="footer-content">
-        <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="15%">
+        <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
         <div class="contact-us">
             <h4>Contact Us</h4>
             <a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
