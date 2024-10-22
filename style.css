@@ -1,5 +1,5 @@
  header {
-        background-color: #fcf8db;
+        background-color: #567C8D;
         color: green ;
         display: flex;
         justify-content: space-between;
@@ -37,7 +37,7 @@
     }
     header a {
         text-decoration: none;
-        color: #68A8CA ;
+        color:#F6F6FB;
     }
     .user-type a {
         text-decoration: none;
@@ -306,8 +306,8 @@ text-align :right ;
 }
 /* Footer styling */
 footer {
-    background-color: #fcf8db;
-    color:#68A8CA ;
+    background-color: #567C8D;
+    color:#F6F6FB;
     padding: 20px;
     position: relative;
     border-top-style: groove;
@@ -340,7 +340,7 @@ footer {
 }
 .footer-content a {
     text-decoration:none;
-    color: #68A8CA ;
+    color: #F6F6FB;
 }
 #watermark {
     text-align: center;

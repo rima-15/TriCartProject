@@ -21,7 +21,7 @@ body {
 }
 /* Header styling */
 header {
-    background-color: #fcf8db;
+    background-color: #567C8D;
     color: green ;
     display: flex;
     justify-content: space-between;
@@ -45,7 +45,7 @@ nav.navigation ul li a:hover {
     color: #9e9756;
 }
 nav.navigation li {
-    color: green;
+    color: #F6F6FB;
     font-size: 18px;
     transition: color 0.3s;
 }
@@ -64,7 +64,7 @@ nav.navigation li {
 }
 header a {
     text-decoration: none;
-    color: green ;
+    color: #F6F6FB;
 }
 .user-type a {
     text-decoration: none;
@@ -191,8 +191,8 @@ header a {
 }
 /* Footer styling */
 footer {
-    background-color: #fcf8db;
-    color: green;
+    background-color: #567C8D;
+    color: #F6F6FB;
     padding: 20px;
     position: relative;
     border-top-style: groove;
@@ -225,7 +225,7 @@ footer {
 }
 .footer-content a {
     text-decoration:none;
-    color: green;
+    color: #F6F6FB;
 }
 #watermark {
     text-align: center;
