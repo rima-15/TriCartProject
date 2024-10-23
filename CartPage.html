@@ -43,28 +43,30 @@
         <p class ="CartDiscr">here is an amazing product that you choose! </p>
 
         <!-- main-->
-        <div class="cart-items-summary-Container">
+        <div class="cart-items-summary-Container"> <!-- contains cart items and order summary-->
 
+            <div class="cartListContainer"> <!-- contains all items -->
 
-        <div class="cartListContainer">
+                <div class="cartProduct">  <!-- contain all things for one product-->
 
-            <div class="cartProduct">
-                <div class="product-img"><img src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px"></div>
-                <div class="cartProductde-details">
-                <p class="infoOfProduct"> <strong>Computer</strong> </p>
-                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
-                <p><strong class="priceOftheProduct">3700 SR</strong></p>
-
-            <hr>
-            <div class="PruductControle" >
-                <button class="remove"> <i class="fas fa-trash"></i></button>
-                <input type="number" name="quantity" value="1" min="0" max="10">
-                <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
-                 <button class="add"> <i class="fas fa-plus"></i></button>
+                    <div class="product-img"><img src="web_images/coputerimag.jpg" alt="computer" width="500%"  height="500%"></div>
+                    <div class="cartProductde-details">
+                        <div class="cartProductde-NDP"><!--name disc and price-->
+                        <p class="infoOfProduct"> <strong>Computer</strong> </p>
+                            <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+                            <p><strong class="priceOftheProduct">3700 SR</strong></p>
+                        </div>
+                    <div><hr class="in-CartProduct-between-image-and-control"></div>
+                    <div class="PruductControle" >
+                        <button class="remove"> <i class="fas fa-trash"></i></button>
+                        <input type="number" name="quantity" value="1" min="0" max="10" class="quantity">
+                        <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
+                         <button class="add"> <i class="fas fa-plus"></i></button>
              </div>
             </div>
             </div>
-        </div>
+        </div>        <!-- /items-->
+
 
             <div class="orderSummary">
                 <h2>Order Summary</h2>
@@ -78,8 +80,9 @@
                 <button class="checkout">Checkout</button>
             </div>
 
-         </div>
-         <!--footer-->
+         </div>        <!-- /summary and items-->
+
+        <!--footer-->
         <footer>
             <div class="footer-content">
                 <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">

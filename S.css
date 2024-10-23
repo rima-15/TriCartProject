@@ -556,6 +556,9 @@ footer {
     }
 }
 
+
+
+
 /*Cart page */
 h1.CartName{
 color :#68A8CA;
@@ -597,24 +600,37 @@ h1 {
 
 .cartProduct {
     display: flex;
-    border: 1px solid #ccc;
+    border: 1px solid #567C8D;
     padding: 20px;
-    background-color: #fff;
+    background-color: #eee;
+    position:relative;
 }
 
 .product-img {
+    width:20px;
+    height:20px;
+    margin:0 auto;
+    position:absolute;
+    top:10px;
+    left:10px;
 
-    background-color: white;
-    margin-right: 20px;
-    float:left;
+
+
+
 }
 
 .cartProductde-details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width:100%;
 }
 
+.cartProductde-NDP{
+flex:1;
+margin-top:10px;
+
+}
 .priceOftheProduct {
     font-weight: bold;
     margin: 10px 0;
@@ -623,6 +639,8 @@ h1 {
 .PruductControle {
     display: flex;
     align-items: center;
+    justify-content:flex-end;
+    margin-top:10px;
 }
 
 .PruductControle button,
@@ -630,13 +648,19 @@ h1 {
     padding: 5px;
     margin: 0 5px;
 }
+.in-CartProduct-between-image-and-control{
+margin:10px 0;
+border:0;
+border-top:1px solid #567C8D;
+}
 
 .orderSummary {
-    background-color: #fff;
-    border: 1px solid #ccc;
+
+    border: 2px solid #567C8D;
     padding: 20px;
     margin-bottom: 100px ;
     margin-right: 20px ;
+    background-color: #eee;
 }
 
 .orderSummary h2 {
@@ -668,5 +692,39 @@ button {
     border: none;
 }
 .PruductControle .remove i {
-color : blue;
+color : white;
+
 }
+.PruductControle button.remove{
+    background-color: #567C8D;
+    border:none;
+
+}
+.PruductControle .add i {
+color : white;
+
+}
+.PruductControle button.add{
+    background-color: #567C8D;
+    border:none;
+}
+.PruductControle button:hover {
+background-color:#E87373;
+}
+
+/* For Chrome, Safari, Edge, Opera */
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.quantity{
+border: 0.5px solid #567C8D;
+text-align:center;
+-moz-appearance: textfield;
+
+}
+
+/* end cart page */
