@@ -1,33 +1,6 @@
 
 
-/* Style for breadcrumb */
-    .breadcrumb {
-        list-style: none; /* Remove bullet points */
-        padding: 0; /* Remove default padding */
-        margin: 5px 1px; /* Add some margin */
-        text-indent:2%;
-    }
 
-    .breadcrumb li {
-        font-family: Georgia, serif;
-        display: inline-block; /* Use inline-block for horizontal layout */
-        margin-right: 5px; /* Space between items */
-        color: #68A8CA;
-    }
-
-    .breadcrumb a {
-        text-decoration: none; /* Remove underline from links */
-        color: green ;/* Change link color */
-    }
-
-    .breadcrumb a:hover {
-        text-decoration: none; /* Underline on hover */
-        color: #9e9756;
-    }
-
-    .breadcrumb .separator {
-        color: #9E9756; /* Color for the separator */
-    }
 /*style for Container product */
 .products-container{
 display: flex;
