@@ -1,6 +1,15 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
  header {
         background-color: #567C8D;
-        color: green ;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -15,10 +24,9 @@
         font-weight: bold;
         }
     nav.navigation ul li a:hover {
-        color: #9e9756;
+        color: #E87373
         }
     nav.navigation li {
-        color: green;
         font-size: 18px;
         transition: color 0.3s;
         }
@@ -51,40 +59,55 @@
     }
 
     /* Style for breadcrumb */
-    .breadcrumb {
-        list-style: none; /* Remove bullet points */
-        padding: 0; /* Remove default padding */
-        margin: 5px 1px; /* Add some margin */
+
+
+   .breadcrumb li {
+      display: inline;
     }
 
-    .breadcrumb li {
-        font-family: Georgia, serif;
-        display: inline-block; /* Use inline-block for horizontal layout */
-        margin-right: 5px; /* Space between items */
-        color: #68A8CA;
-    }
+     .breadcrumb a {
+      color: white;
+      background: #567C8D;
+      text-decoration: none;
+      position :relative ;
+      margin-right: 8px;
+      padding:0px 11px;
+      font-size :17px;
+   }
 
-    .breadcrumb a {
-        text-decoration: none; /* Remove underline from links */
-        color: green ;/* Change link color */
-    }
+     .breadcrumb a::before ,.breadcrumb a::after
+      {
+      content :"";
+      position :absolute ;
+      border-color : #567C8D;
+      border-style :solid ;
+      border-width : 9px 5px ;
+      border-width : 11px 5px 9px 5px ;
+     }
+     .breadcrumb a::before {
+     left :-5px;
+     border-left-color :transparent;
+     }
 
-    .breadcrumb a:hover {
-        text-decoration: none; /* Underline on hover */
-        color: #9e9756;
-    }
+.breadcrumb a::after {
+     left :100%;
+     border-color :transparent;
+     border-left-color :  #567C8D;
+     }
+ .breadcrumb a:hover {
+  color :#567C8D;
+  background-color : #F6F6FB;
+ }
 
-    .breadcrumb .separator {
-        color: #9E9756; /* Color for the separator */
-    }
+ .breadcrumb a:hover::before ,.breadcrumb a:hover::after
+       { border-color: #F6F6FB;
+         border-color :transparent;
+       }
 
 
 body {
     font-family: Georgia, serif;
-    margin: 0;
-    padding: 0;
-    background-color: #FDFBED;
-    height: 100%;
+    background-color: #FDFBED ;
 
 }
 h1{
@@ -92,9 +115,10 @@ margin-top:30px;
 margin-bottom:30px ;
 margin-left : 10px ;
 text-align: left ;
-color :#68A8CA ;
+color : #567C8D;
 
 }
+/*USER PAGE */
 /* Container for Flexbox */
 .container {
     display: flex;
@@ -157,53 +181,61 @@ color :#68A8CA ;
 /*Product Evaluation */
 /* Main content */
 main {
-    padding: 20px 50px;
+    padding: 20px 0px;
 
 }
 
-/* Product Evaluation Title */
+/* Product Evaluation  */
 
 
 /* Container for the form and feedback section */
 .evaluation-container {
     height:100%;
+    width:60%;
+    margin: 80% auto ;
+    padding:20px;
+    border -radius :10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position:relative ;
+    left :25%;
 
 
 }
 
 /* Form Section Styling */
-.form-section {
-margin: 100px auto;
+.form-section, .feedback-section {
+    margin: 20px auto;
     width: 60%;
     background-color: #fff;
-    border: 1.5px solid #6BA8CA;
+    border: 1px solid #567C8D;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
+    border -radius :8px;
 }
-.form-section label {
+.form-section label,.feedback-section label {
     font-size: 16px;
     display: block;
     margin-bottom: 10px;
-    color: #333;
+    color: #567C8D;
+    font-weight:bold ;
 }
-.form-section select {
+.form-section select ,.feedback-section select ,.feedback-section textarea{
     width: 100%;
     padding: 10px;
-    border: 1px solid #6BA8CA;
+    border: 1px solid #567C8D;
     border-radius: 4px;
     margin-bottom: 20px;
+    transition :border 0.3s;
+}
+
+
+.form-section select:focus ,.feedback-section select:focus ,.feedback-section textarea:focus{
+  border-color:#2F4156;
+  outline :none ;
+
 }
 
 /* Feedback Section Styling */
-.feedback-section {
-margin: 100px auto;
-    width: 60%;
-    background-color: #fff;
-    border: 1.5px solid #6BA8CA;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 .feedback-section img {
     float :left ;
     width: 140px;
@@ -220,42 +252,47 @@ margin: 100px auto;
      clear :  left ;
 }
 .feedback-section .rating span {
-
-    font-size: 18px;
+     color: #567C8D;
+    font-weight:bold ;
+    font-size: 16px;
     margin-right: 10px;
 }
-.feedback-section select {
-    padding: 10px;
-    border: 1px solid #6BA8CA;
-    border-radius: 4px;
-    margin-top: 10px;
-}
-.feedback-section textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 10px;
-    font-size: 14px;
 
-}
 .feedback-section button {
+
     padding: 12px 25px;
-    background-color: #6BA8CA;;
+    background-color:#567C8D;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
-    margin-top : 10px ;
+
 
 }
 .feedback-section button:hover {
-    background-color: #9E9756;
+    background-color: #E87373;
 
 }
-.Submit-action{
-transform :translate(85%);
+.Submit-action {
+position :relative;
+left :85% ;
+}
+
+
+fieldset{
+margin :2em 0;
+padding : 1em 2em ;
+border :solid 1px #ccc;
+border-radius :6px ;
+min-width:200px;
+}
+
+legend {
+font-size : 1.25em ;
+padding:0 .25em;
+color : #999 ;
+
 }
 /*End of Product Evaluation*/
 /*Order Page*/
@@ -275,8 +312,8 @@ transform :translate(85%);
 /* Styling for Each Box */
 .Order-Box {
     margin-bottom : 20px;
-    background-color:#FCF8DB;
-    border: 3px solid #9E9756;
+    background-color:white;
+    border: 3px solid #567C8D;
     padding: 10px;
     width: 1000px;
     text-align: left;
@@ -387,6 +424,7 @@ footer {
     .footer-content .find-us {
         margin-bottom: 20px;
     }
+
 }
 .infoOfProduct{
 color

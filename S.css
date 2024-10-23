@@ -22,16 +22,13 @@ body {
 /* Header styling */
 header {
     background-color: #567C8D;
-    color: green ;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     border-bottom-style: groove;
 }
-.logo {
-height:auto;
-}
+
 
 nav.navigation ul {
     display: flex;
@@ -42,7 +39,7 @@ nav.navigation ul li {
     font-weight: bold;
 }
 nav.navigation ul li a:hover {
-    color: #9e9756;
+    color: #E87373 ;
 }
 nav.navigation li {
     color: #F6F6FB;
@@ -51,17 +48,27 @@ nav.navigation li {
 }
 .cart {
     position: relative;
+    display: inline-block;
 }
-.cart .cart-count {
+
+.cart i {
+    font-size: 24px; /* Adjust the icon size here */
+}
+.cart a:hover {
+color: #E87373 ;
+}
+
+.cart-count {
     position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: #ffcc00;
-    color: black;
+    top: -10px; /* Adjust as needed */
+    right: -10px; /* Adjust as needed */
+    background-color: red;
+    color: white;
     border-radius: 50%;
-    padding: 2px 6px;
+    padding: 5px;
     font-size: 12px;
 }
+
 header a {
     text-decoration: none;
     color: #F6F6FB;
@@ -70,9 +77,55 @@ header a {
     text-decoration: none;
     font-size: 16px;
 }
+.user-type a:hover {
+  color: #E87373 ;
+}
 .user-type h5 {
     margin-right: 40px;
 }
+ /* Style for breadcrumb */
+.breadcrumb li {
+      display: inline;
+    }
+
+     .breadcrumb a {
+      color: white;
+      background: #567C8D;
+      text-decoration: none;
+      position :relative ;
+      margin-right: 8px;
+      padding:0px 11px;
+      font-size :17px;
+   }
+
+     .breadcrumb a::before ,.breadcrumb a::after
+      {
+      content :"";
+      position :absolute ;
+      border-color : #567C8D;
+      border-style :solid ;
+      border-width : 9px 5px ;
+      border-width : 11px 5px 9px 5px ;
+     }
+     .breadcrumb a::before {
+     left :-5px;
+     border-left-color :transparent;
+     }
+
+.breadcrumb a::after {
+     left :100%;
+     border-color :transparent;
+     border-left-color :  #567C8D;
+     }
+ .breadcrumb a:hover {
+  color :#567C8D;
+  background-color : #F6F6FB;
+ }
+
+ .breadcrumb a:hover::before ,.breadcrumb a:hover::after
+       { border-color: #F6F6FB;
+         border-color :transparent;
+       }
 
 /* Offers section styling */
 .offers-section {
@@ -189,6 +242,235 @@ header a {
     height: auto ;
     border-bottom: 1px solid #ddd;
 }
+/*HOME PAGE */
+h1{
+margin-top:30px;
+margin-bottom:30px ;
+margin-left : 10px ;
+text-align: left ;
+color : #567C8D;
+
+}
+/*USER PAGE */
+/* Container for Flexbox */
+.container {
+    display: flex;
+    justify-content: space-between ; /* Done */
+    align-items : center ;
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 1200px;
+
+}
+
+/* Styling for Each Box */
+.Box {
+
+    background-color:#FDFBED ;
+    border: 2px solid #567C8D;
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on each box */
+.Box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Image inside the box */
+.Box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0px;
+
+
+}
+
+/* Link Styling */
+.Box a {
+    text-decoration: none ;
+    color: #567C8D;
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Paragraph inside the box */
+.Box p {
+
+    font-size: 14px;
+    color: #E87373 ;
+
+}
+
+/* The End of User Page */
+/* Product Evaluation  */
+
+
+/* Container for the form and feedback section */
+.evaluation-container {
+    height:100%;
+    width:60%;
+    margin: 80% auto ;
+    padding:20px;
+    border -radius :10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position:relative ;
+    left :25%;
+
+
+}
+
+/* Form Section Styling */
+.form-section, .feedback-section {
+    margin: 20px auto;
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid #567C8D;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border -radius :8px;
+}
+.form-section label,.feedback-section label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    color: #567C8D;
+    font-weight:bold ;
+}
+.form-section select ,.feedback-section select ,.feedback-section textarea{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #567C8D;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition :border 0.3s;
+}
+
+
+.form-section select:focus ,.feedback-section select:focus ,.feedback-section textarea:focus{
+  border-color:#2F4156;
+  outline :none ;
+
+}
+
+/* Feedback Section Styling */
+.feedback-section img {
+    float :left ;
+    width: 140px;
+    height: 140px;
+    margin-right :0.5em ;
+    margin-bottom: 10px;
+}
+.feedback-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.feedback-section .rating {
+    margin-bottom: 20px;
+     clear :  left ;
+}
+.feedback-section .rating span {
+     color: #567C8D;
+    font-weight:bold ;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.feedback-section button {
+
+    padding: 12px 25px;
+    background-color:#567C8D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+
+
+}
+.feedback-section button:hover {
+    background-color: #E87373;
+
+}
+.Submit-action {
+position :relative;
+left :85% ;
+}
+
+
+fieldset{
+margin :2em 0;
+padding : 1em 2em ;
+border :solid 1px #ccc;
+border-radius :6px ;
+min-width:200px;
+}
+
+legend {
+font-size : 1.25em ;
+padding:0 .25em;
+color : #999 ;
+
+}
+/*End of Product Evaluation*/
+
+/*Order Page*/
+/* Order Container for Flexbox */
+.Order-container {
+    display: flex;
+    flex-direction : column ;
+    justify-content: center; /* Done */
+    align-items : flex-start ;
+    margin-left :20px ;
+    padding: 0px;
+    max-width: 1000px;
+    flex-wrap:wrap;
+
+}
+
+/* Styling for Each Box */
+.Order-Box {
+    margin-bottom : 20px;
+    background-color:#FDFBED ;
+    border: 2px solid #567C8D;
+    padding: 40px;
+    width: 1000px;
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on each box */
+.Order-Box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph inside the box */
+.Order-Box p {
+
+    font-size: 16px;
+    color: #9E9756;
+
+}
+.price  {
+text-align :right ;
+}
+.Order-Box h3 {
+   color :#68A8CA
+}
+
+
+
+
 /* Footer styling */
 footer {
     background-color: #567C8D;
