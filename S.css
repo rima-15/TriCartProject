@@ -527,10 +527,14 @@ footer {
     margin: 5px 0;
     font-size: 14px;
 }
+.footer-content .find-us {
+    margin-right: 5px;
+}
 .footer-content #apps-icons {
     display: flex;
     flex-flow: row ;
     justify-content: space-around;
+    gap: 10px;
 }
 .footer-content a {
     text-decoration:none;
