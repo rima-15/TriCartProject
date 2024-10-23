@@ -11,7 +11,7 @@
 <body>
 <header>
     <!--<div class="header">-->
-    <img id="headerLogo" src="web_images/LOGOTricart2.png" alt="TriCart" width="20%" height="20%">
+    <img id="headerLogo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%" >
     <nav class="navigation" >
         <ul>
             <li> <a href="HomePage.html"> Home </a> </li>
@@ -23,56 +23,47 @@
     <div class="cart">
         <a href="#">
             <i class="fas fa-shopping-cart" ></i>
-            <!-- <span class="cart-count">2</span> -->
         </a>
     </div>
     <div class="user-type">
-        <h5> <a href="#" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+        <h5> <a href="UserPage.html" id="customer">Customer</a> | <a href="sellerDashboard.html" id="seller">Seller</a> </h5>
     </div>
-    <!--</div> -->
 </header>
-<main>
-    <div class="breadcrumbM">
+<!-- Bread Crumb -->
+ <div class="breadcrumbM">
     <nav aria-label="breadcrumb">
         <ul class="breadcrumb">
             <li><a href="HomePage.html">Home</a></li>
             <li class = "current"><a href="UserPage.html">Customer</a></li>
-
         </ul>
     </nav>
     </div>
-
+<main>
   <h1 >Customer's Dashboard</h1>
   <div class ="container">
       <div class ="Box">
           <a href="OrdersPage.html">
-              <i class="fas fa-box"></i> <!-- Shopping cart icon -->
+              <i class="fas fa-box"></i> <!-- Box icon -->
               My Orders
           </a>
               <P> View your previous orders </P>
-
-
       </div>
 
       <div class ="Box">
-          <a href="OrdersPage.html">
+          <a href="CartPage.html">
               <i class="fas fa-shopping-cart"></i> <!-- Shopping cart icon -->
               My Cart
           </a>
               <P> Check the items in your cart </P>
-
       </div>
 
       <div class ="Box">
           <a href ="ProductEvaluation.html">
-              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i> <!-- star icon -->
               Product Evaluation
           </a>
               <P> Share Your Feedback with Us </P>
-
       </div>
-
-
   </div>
 </main>
 <footer>
@@ -87,9 +78,9 @@
         <div class="find-us">
             <h4>Find Us</h4>
             <div id="apps-icons">
-                <img src="web_images/instagramIcon.png" alt="instagram" width="20%" >
-                <img src="web_images/linkedIn.png" alt="LinkedIn" width="20%">
-                <img src="web_images/twitter.png" alt="X app" width="20%">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-x-twitter"></i>
             </div>
         </div>
     </div>
@@ -99,5 +90,4 @@
 </footer>
 
 </body>
-
 </html>

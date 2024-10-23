@@ -16,10 +16,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+main {
+    margin: 0 10px;
+}
 .content {
     flex-grow: 1;
 }
-/* Header styling */
+/* Header section styling */
 header {
     background-color: #567C8D;
     display: flex;
@@ -28,8 +31,6 @@ header {
     padding: 10px 20px;
     border-bottom-style: groove;
 }
-
-
 nav.navigation ul {
     display: flex;
     list-style: none;
@@ -58,17 +59,6 @@ nav.navigation li {
 color: #E87373 ;
 }
 
-.cart-count {
-    position: absolute;
-    top: -10px; /* Adjust as needed */
-    right: -10px; /* Adjust as needed */
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    padding: 5px;
-    font-size: 12px;
-}
-
 header a {
     text-decoration: none;
     color: #F6F6FB;
@@ -83,8 +73,8 @@ header a {
 .user-type h5 {
     margin-right: 40px;
 }
- /* Style for breadcrumb */
 
+ /* Style for breadcrumb */
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
@@ -125,7 +115,7 @@ ul.breadcrumb  li.current a:hover{
 .offer {
     position: relative;
     overflow: hidden; /* hide it if it was too big or bad for the container */
-    border: 1px solid #9E9756;
+    border: 1px solid #567C8D;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -133,22 +123,18 @@ ul.breadcrumb  li.current a:hover{
 
 .offer:hover {
     transform: translateY(-5px); /* Lift the card on hover */
-
 }
 .offer:hover .offer-description {
     font-weight: bold;
 }
-
 .offer-image {
     position: relative;
 }
-
 .offer-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px 10px 0 0;
 }
-
 .offer-label {
     position: absolute;
     bottom: 10px;
@@ -159,18 +145,16 @@ ul.breadcrumb  li.current a:hover{
     font-size: 16px;
     border-radius: 5px;
 }
-
 .offer-description {
     padding: 15px;
     text-align: center;
 }
-
 .offer-description p {
     font-size: 14px;
     color: #555;
     margin: 20px 0;
 }
-
+/* Vision section styling */
 .vision {
     text-align: center;
     padding: 20px , 0px;
@@ -178,7 +162,7 @@ ul.breadcrumb  li.current a:hover{
 .vision .name {
     font-family: Garamond;
     font-size: 34px;
-    color: #68A8CA ;
+    color: #567C8D ;
     margin-right: 80px;
 }
 .vision .Quote {
@@ -189,28 +173,24 @@ ul.breadcrumb  li.current a:hover{
 
 /* Category sections styling */
 .cat-header {
-    color: #68A8CA;
+    color: #567C8D;
     font-size: 30px;
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 20px;
-    border-top: 1px solid #444;
-    border-color: #9E9756;
+    border-top: 1px solid #567C8D;
     margin-top: 30px;
 }
 .categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 300px)); /* Responsive columns */
-    gap: 200px; /* Space between each category */
+    gap: 180px; /* Space between each category */
     text-align: center;
 	padding: 20px 100px;
     padding-bottom: 20px;
-    /*border-bottom: 1px solid #444;
-    border-color: #808080;
-    margin-bottom: 30px;*/
 }
 .category-types {
-    border: 1px solid #9E9756;
+    border: 1px solid #567C8D;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -227,8 +207,70 @@ ul.breadcrumb  li.current a:hover{
 .category-name {
     padding: 20px 0px ;
     height: auto ;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #567C8D;
+    color: #555 ;
+    font-size: 18px;
 }
+
+/* Reviews section styling */
+.reviews-section {
+    padding: 30px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #567C8D;
+}
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid layout for responsiveness */
+    gap: 20px; /* Space between the reviews */
+    justify-items: center;
+}
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+.review-details h3 {
+    font-size: 20px;
+    }
+.review p {
+    font-size: 15px;
+    }
+.product-image .product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.review-details {
+    text-align: center;
+}
+.product-name {
+    font-size: 18px;
+    margin: 5px 0;
+}
+.rating {
+    color: #f39c12; /* Star color */
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.feedback {
+    font-style: italic;
+    color: #555;
+}
+
 /*HOME PAGE */
 h1{
 margin-top:30px;
@@ -236,8 +278,9 @@ margin-bottom:30px ;
 margin-left : 10px ;
 text-align: left ;
 color :  #567C8D;
-
 }
+
+
 /*USER PAGE */
 /* Container for Flexbox */
 .container {
@@ -247,7 +290,6 @@ color :  #567C8D;
     margin: 100px auto;
     padding: 20px;
     max-width: 1200px;
-
 }
 
 /* Styling for Each Box */
@@ -485,10 +527,14 @@ footer {
     margin: 5px 0;
     font-size: 14px;
 }
+.footer-content .find-us {
+    margin-right: 5px;
+}
 .footer-content #apps-icons {
     display: flex;
     flex-flow: row ;
     justify-content: space-around;
+    gap: 10px;
 }
 .footer-content a {
     text-decoration:none;
@@ -541,6 +587,7 @@ footer {
     .categories {
         grid-template-columns: 1fr;
     }
+
 
     /* Footer content */
     .footer-content {
