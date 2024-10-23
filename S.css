@@ -84,48 +84,35 @@ header a {
     margin-right: 40px;
 }
  /* Style for breadcrumb */
-.breadcrumb li {
-      display: inline;
-    }
 
-     .breadcrumb a {
-      color: white;
-      background: #567C8D;
-      text-decoration: none;
-      position :relative ;
-      margin-right: 8px;
-      padding:0px 11px;
-      font-size :17px;
-   }
-
-     .breadcrumb a::before ,.breadcrumb a::after
-      {
-      content :"";
-      position :absolute ;
-      border-color : #567C8D;
-      border-style :solid ;
-      border-width : 9px 5px ;
-      border-width : 11px 5px 9px 5px ;
-     }
-     .breadcrumb a::before {
-     left :-5px;
-     border-left-color :transparent;
-     }
-
-.breadcrumb a::after {
-     left :100%;
-     border-color :transparent;
-     border-left-color :  #567C8D;
-     }
- .breadcrumb a:hover {
-  color :#567C8D;
-  background-color : #F6F6FB;
- }
-
- .breadcrumb a:hover::before ,.breadcrumb a:hover::after
-       { border-color: #F6F6FB;
-         border-color :transparent;
-       }
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #567C8D;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+ul.breadcrumb  li.current a{
+ color: #E87373 ;
+}
+ul.breadcrumb  li.current a:hover{
+ color: #01447e;
+}
 
 /* Offers section styling */
 .offers-section {
@@ -248,7 +235,7 @@ margin-top:30px;
 margin-bottom:30px ;
 margin-left : 10px ;
 text-align: left ;
-color : #567C8D;
+color :  #567C8D;
 
 }
 /*USER PAGE */
@@ -268,9 +255,10 @@ color : #567C8D;
 
     background-color:#FDFBED ;
     border: 2px solid #567C8D;
-    padding: 20px;
+    padding: 30px;
     width: 300px;
     text-align: left;
+    margin-bottom :50px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -280,15 +268,6 @@ color : #567C8D;
 .Box:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Image inside the box */
-.Box img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0px;
-
-
 }
 
 /* Link Styling */
@@ -301,11 +280,17 @@ color : #567C8D;
     margin-bottom: 10px;
 }
 
+.Box i {
+   color: #E87373 ;
+    font-size: 26px; /* Adjust size of the icon */
+    margin-right:3px;
+}
 /* Paragraph inside the box */
 .Box p {
 
     font-size: 14px;
-    color: #E87373 ;
+    color:#567C8D;
+    text-align :center ;
 
 }
 
@@ -331,7 +316,7 @@ color : #567C8D;
 .form-section, .feedback-section {
     margin: 20px auto;
     width: 60%;
-    background-color: #fff;
+    background-color: #eee;
     border: 1px solid #567C8D;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -347,7 +332,7 @@ color : #567C8D;
 .form-section select ,.feedback-section select ,.feedback-section textarea{
     width: 100%;
     padding: 10px;
-    border: 2px solid #567C8D;
+    border: 1px solid #567C8D;
     border-radius: 4px;
     margin-bottom: 20px;
     transition :border 0.3s;
@@ -355,7 +340,7 @@ color : #567C8D;
 
 
 .form-section select:focus ,.feedback-section select:focus ,.feedback-section textarea:focus{
-  border-color:#2F4156;
+  border-color:#E87373 ;
   outline :none ;
 
 }
@@ -408,7 +393,7 @@ left :85% ;
 fieldset{
 margin :2em 0;
 padding : 1em 2em ;
-border :solid 1px #ccc;
+border :solid 1px #567C8D;
 border-radius :6px ;
 min-width:200px;
 }
@@ -416,7 +401,7 @@ min-width:200px;
 legend {
 font-size : 1.25em ;
 padding:0 .25em;
-color : #999 ;
+color : #567C8D;
 
 }
 /*End of Product Evaluation*/
@@ -473,7 +458,7 @@ text-align :right ;
 
 /* Footer styling */
 footer {
-    background-color: #567C8D;
+    background-color:  #567C8D;
     color: #F6F6FB;
     padding: 20px;
     position: relative;

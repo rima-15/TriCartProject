@@ -197,6 +197,8 @@ h1 {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 20px;
+    margin-bottom: 100px ;
+    margin-right: 20px ;
 }
 
 .orderSummary h2 {
