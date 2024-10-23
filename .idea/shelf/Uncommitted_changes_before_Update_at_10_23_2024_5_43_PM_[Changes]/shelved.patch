@@ -1,0 +1,379 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_.xml	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]" date="1729691533565" recycled="false" toDelete="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 10/23/2024 4:52 PM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]/shelved.patch	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,141 +0,0 @@
+-Index: styleCategory.css
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>\r\n\r\n/* Style for breadcrumb */\r\n    .breadcrumb {\r\n        list-style: none; /* Remove bullet points */\r\n        padding: 0; /* Remove default padding */\r\n        margin: 5px 1px; /* Add some margin */\r\n        text-indent:2%;\r\n    }\r\n\r\n    .breadcrumb li {\r\n        font-family: Georgia, serif;\r\n        display: inline-block; /* Use inline-block for horizontal layout */\r\n        margin-right: 5px; /* Space between items */\r\n        color: #68A8CA;\r\n    }\r\n\r\n    .breadcrumb a {\r\n        text-decoration: none; /* Remove underline from links */\r\n        color: green ;/* Change link color */\r\n    }\r\n\r\n    .breadcrumb a:hover {\r\n        text-decoration: none; /* Underline on hover */\r\n        color: #9e9756;\r\n    }\r\n\r\n    .breadcrumb .separator {\r\n        color: #9E9756; /* Color for the separator */\r\n    }\r\n/*style for Container product */\r\n.products-container{\r\ndisplay: flex;\r\nflex-wrap: wrap;\r\nmargin:0 auto;\r\ngap:20px;\r\npadding:20px;\r\njustify-content:center;\r\n\r\n}\r\n\r\n/*style for one product */\r\n.product {\r\nbackground-color:#FCF8DB;\r\nborder: 2px solid #9E9756;\r\n    padding: 5px;\r\n    margin : 15px;\r\n    width: 250px;\r\n    height: 550px;\r\n    text-align: left;\r\n    border-radius: 8px;\r\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\r\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\r\n}\r\n\r\n\r\n/* Hover effect on each product */\r\n.product:hover {\r\n    transform: translateY(-5px);\r\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.product img {\r\nalign:center;\r\nwidth: 99%;\r\nheight:70%;\r\n}\r\n\r\n\r\n.product button:hover{\r\n transform: translateY(-5px);\r\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n\r\nh1.categoryName{\r\ncolor :#68A8CA;\r\ntext-indent:4%;\r\n\r\n}\r\n\r\np.CategoryDiscr{\r\ncolor:#9e9756;\r\ntext-indent:5%;\r\n\r\n}\r\n\r\n\r\n.sort{\r\nfont-size:18px;\r\ntext-align: left;\r\nmargin:20px;\r\ncolor:#68A8CA;\r\ntext-indent :3%;\r\n}\r\nselect{\r\npadding: 2px;\r\nfont-size:15px;\r\nborder-radius:5px;\r\nborder :1px solid #68A8CA ;\r\ncolor:#68A8CA;\r\n\r\n\r\n}\r\noptgroup  option{\r\nfont-weight: bold;\r\ncolor : #9e9756;\r\n}\r\n\r\n\r\nbutton.addToCart{\r\nwidth:80px;\r\nheight:80px;\r\ndisplay: flex;\r\njustify-content:center;\r\nalign-items=center;\r\nbackground-color:#FCF8DB;\r\nborder : none;\r\npadding: 10px 20px;\r\ncursor :pointer;\r\nborder-radius:20px;\r\n\r\n}\r\nbutton.addToCart img{\r\nwidth:100%;\r\nheight:100%;\r\n}\r\n.p-and-b{\r\ndisplay:flex;\r\njustify-content:space-between;\r\nalign-items:center;\r\n\r\n\r\n}\r\n\r\n\r\n.p-and-b strong{\r\ncolor :#68A8CA;\r\n}\r\n.infoOfProduct{\r\nfont-size:20px;\r\nweight:bolder;\r\ncolor:green;\r\n}\r\n.infoOfProductDisc{\r\noverflow: hidden;\r\n}\r\n/*Cart page */\r\nh1.CartName{\r\ncolor :#68A8CA;\r\ntext-indent:4%;\r\n\r\n}\r\n\r\np.CartDiscr{\r\ncolor:#9e9756;\r\ntext-indent:5%;\r\n\r\n}\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n\r\n\r\n\r\n.cart-items-summary-Container {\r\n    display: grid;\r\n    grid-template-columns: 2fr 1fr;\r\n    gap: 20px;\r\n}\r\n\r\n\r\nh1 {\r\n    font-size: 24px;\r\n    margin: 20px 0;\r\n}\r\n\r\n.cartListContainer {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 20px;\r\n}\r\n\r\n.cartProduct {\r\n    display: flex;\r\n    border: 1px solid #ccc;\r\n    padding: 20px;\r\n    background-color: #fff;\r\n}\r\n\r\n.product-img {\r\n\r\n    background-color: white;\r\n    margin-right: 20px;\r\n    float:left;\r\n}\r\n\r\n.cartProductde-details {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n\r\n.priceOftheProduct {\r\n    font-weight: bold;\r\n    margin: 10px 0;\r\n}\r\n\r\n.PruductControle {\r\n    display: flex;\r\n    align-items: center;\r\n}\r\n\r\n.PruductControle button,\r\n.PruductControle input {\r\n    padding: 5px;\r\n    margin: 0 5px;\r\n}\r\n\r\n.orderSummary {\r\n    background-color: #fff;\r\n    border: 1px solid #ccc;\r\n    padding: 20px;\r\n}\r\n\r\n.orderSummary h2 {\r\n    font-size: 20px;\r\n    margin-bottom: 10px;\r\n}\r\n\r\n.orderSummary p {\r\n    margin: 10px 0;\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\nbutton {\r\n    padding: 10px;\r\n    margin-top: 20px;\r\n    cursor: pointer;\r\n}\r\n\r\n.empty {\r\n    background-color: #ffcccc;\r\n    border: 1px solid red;\r\n    color: red;\r\n}\r\n\r\n.checkout {\r\n    background-color: #4CAF50;\r\n    color: white;\r\n    border: none;\r\n}\r\n.PruductControle .remove i {\r\ncolor : blue;\r\n}\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/styleCategory.css b/styleCategory.css
+---- a/styleCategory.css	(revision 4c6b2f9e9bc31a064411bae85c9965b7b50e9639)
+-+++ b/styleCategory.css	(date 1729673266542)
+-@@ -145,6 +145,8 @@
+- .infoOfProductDisc{
+- overflow: hidden;
+- }
+-+
+-+
+- /*Cart page */
+- h1.CartName{
+- color :#68A8CA;
+-@@ -160,7 +162,7 @@
+- 
+- * {
+-     box-sizing: border-box;
+--    margin: 0;
+-+    margin: 0 ;
+-     padding: 0;
+- }
+- 
+-@@ -170,6 +172,7 @@
+-     display: grid;
+-     grid-template-columns: 2fr 1fr;
+-     gap: 20px;
+-+    justify-content:center;
+- }
+- 
+- 
+-@@ -222,13 +225,14 @@
+- 
+- .orderSummary {
+-     background-color: #fff;
+--    border: 1px solid #ccc;
+-+    border: 1px solid #567C8D;
+-     padding: 20px;
+- }
+- 
+- .orderSummary h2 {
+-     font-size: 20px;
+-     margin-bottom: 10px;
+-+
+- }
+- 
+- .orderSummary p {
+-@@ -236,6 +240,10 @@
+-     display: flex;
+-     justify-content: space-between;
+- }
+-+.between-summary{
+-+color:#567C8D;
+-+}
+-+
+- 
+- button {
+-     padding: 10px;
+-@@ -244,15 +252,17 @@
+- }
+- 
+- .empty {
+--    background-color: #ffcccc;
+--    border: 1px solid red;
+--    color: red;
+-+background-color: gray;
+-+    border: 0px solid ;
+-+    color: white ;
+-+    border-radius:20px;
+- }
+- 
+- .checkout {
+--    background-color: #4CAF50;
+--    color: white;
+--    border: none;
+-+    background-color: #E87373;
+-+     border: 0px solid ;
+-+     color: white ;
+-+     border-radius:20px;
+- }
+- .PruductControle .remove i {
+- color : blue;
+-Index: CartPage.html
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><!DOCTYPE html>\r\n<html>\r\n\r\n    <head>\r\n        <meta charset=\"UTF-8\">\r\n        <title>Cart Page</title>\r\n        <link href=\"S.css\" rel=\"stylesheet\"><!--just for header remove it later-->\r\n        <link href=\"styleCategory.css\" rel=\"stylesheet\"><!---->\r\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\"><!--icons-->\r\n    </head>\r\n\r\n    <body>\r\n        <!-- header-->\r\n        <header>\r\n            <img class=\"logo\" src=\"web_images/logoTriCart.png\" alt=\"TriCart\" width=\"20%\" height=\"20%\">\r\n            <nav class=\"navigation\" >\r\n                <ul>\r\n                    <li> <a href=\"HomePage.html\"> Home </a> </li>\r\n                    <li> <a href=\"ElectronicsPage.html\"> Electronics </a> </li>\r\n                    <li> <a href=\"#\"> Furniture </a> </li>\r\n                    <li> <a href=\"#\"> Sport </a> </li>\r\n                </ul>\r\n            </nav>\r\n            <div class=\"cart\">\r\n                <a href=\"CartPage.html\">\r\n                    <img src=\"web_images/cart.png\" alt=\"Cart\" width=\"50%\">\r\n                    <span class=\"cart-count\">2</span>\r\n                </a>\r\n            </div>\r\n            <div class=\"user-type\">\r\n                <h5> <a href=\"#\" id=\"customer\">Customer</a> | <a href=\"#\" id=\"seller\">Seller</a> </h5>\r\n            </div>\r\n        </header>\r\n\r\n        <nav aria-label=\"Breadcrumb\">\r\n            <ul class=\"breadcrumb\">\r\n                <li><a href=\"HomePage.html\">Home</a></li>\r\n                <li class =\"separator\" >&gt; </li> <!-- This represents the '>' character -->\r\n                <li>Cart</li>\r\n            </ul>\r\n        </nav>\r\n        <h1 class=\"CartName\">My Cart</h1>\r\n        <p class =\"CartDiscr\">here is an amazing product that you choose! </p>\r\n\r\n        <!-- main-->\r\n        <div class=\"cart-items-summary-Container\">\r\n\r\n\r\n        <div class=\"cartListContainer\">\r\n\r\n            <div class=\"cartProduct\">\r\n                <div class=\"product-img\"><img src=\"web_images/coputerimag.jpg\" alt=\"computer\" width=\"100px\" height=\"100px\"></div>\r\n                <div class=\"cartProductde-details\">\r\n                <p class=\"infoOfProduct\"> <strong>Computer</strong> </p>\r\n                <p class=\"infoOfProductDisc\"> Apple MacBook Air 13 M3 Laptop </p>\r\n                <p><strong class=\"priceOftheProduct\">3700 SR</strong></p>\r\n\r\n            <hr>\r\n            <div class=\"PruductControle\" >\r\n                <button class=\"remove\"> <i class=\"fas fa-trash\"></i></button>\r\n                <input type=\"number\" name=\"quantity\" value=\"1\" min=\"0\" max=\"10\">\r\n                <!-- <input type=\"text\" name=\"quantity\" value=\"1\" minlength=\"0\" maxlength=\"10\" size=\"2\">-->\r\n                 <button class=\"add\"> <i class=\"fas fa-plus\"></i></button>\r\n             </div>\r\n            </div>\r\n            </div>\r\n        </div>\r\n\r\n            <div class=\"orderSummary\">\r\n                <h2>Order Summary</h2>\r\n                <p>Item Total: <span class=\"item-summary\">xxxxxx</span> <p>\r\n                <p>Shipping: <span class=\"item-summary\">xxxxxx</span> <p>\r\n                <p>Discount: <span class=\"item-summary\">xxxxxx</span> <p>\r\n                <hr>\r\n                <p>Total: <span class=\"item-summary\">xxxxxx</span> <p>\r\n\r\n            <button class=\"empty\">Empty Cart</button>\r\n                <button class=\"checkout\">Checkout</button>\r\n            </div>\r\n\r\n         </div>\r\n         <!--footer-->\r\n        <footer>\r\n            <div class=\"footer-content\">\r\n                <img class=\"logo\" src=\"web_images/logoTriCart.png\" alt=\"TriCart\" width=\"15%\">\r\n                <div class=\"contact-us\">\r\n                    <h4>Contact Us</h4>\r\n                    <a href=\"mailto:TriCart@gmail.com\" >TriCart@gmail.com</a>\r\n                    <p> +123 456 789</p>\r\n                    <p> +345 735 988</p>\r\n                </div>\r\n                <div class=\"find-us\">\r\n                    <h4>Find Us</h4>\r\n                    <div id=\"apps-icons\">\r\n                        <img src=\"web_images/instagramIcon.png\" alt=\"instagram\" width=\"20%\" >\r\n                        <img src=\"web_images/linkedIn.png\" alt=\"LinkedIn\" width=\"20%\">\r\n                        <img src=\"web_images/twitter.png\" alt=\"X app\" width=\"20%\">\r\n                    </div>\r\n                </div>\r\n            </div>\r\n            <div id=\"watermark\">\r\n                <p>&copy; 2024 TriCart Store</p>\r\n            </div>\r\n        </footer>\r\n    </body>\r\n</html>
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/CartPage.html b/CartPage.html
+---- a/CartPage.html	(revision 4c6b2f9e9bc31a064411bae85c9965b7b50e9639)
+-+++ b/CartPage.html	(date 1729675755081)
+-@@ -12,7 +12,7 @@
+-     <body>
+-         <!-- header-->
+-         <header>
+--            <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="20%" height="20%">
+-+            <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="20%" height="20%">
+-             <nav class="navigation" >
+-                 <ul>
+-                     <li> <a href="HomePage.html"> Home </a> </li>
+-@@ -67,22 +67,26 @@
+-         </div>
+- 
+-             <div class="orderSummary">
+--                <h2>Order Summary</h2>
+--                <p>Item Total: <span class="item-summary">xxxxxx</span> <p>
+--                <p>Shipping: <span class="item-summary">xxxxxx</span> <p>
+--                <p>Discount: <span class="item-summary">xxxxxx</span> <p>
+--                <hr>
+--                <p>Total: <span class="item-summary">xxxxxx</span> <p>
+-+
+-+                <div class="aboveLine"><h2>Order Summary</h2>
+-+                <p>Item Total: <span class="item-summary">500 SR</span> </p>
+-+                <p>Shipping: <span class="item-summary">25 SR</span> </p>
+-+                <p>Discount: <span class="item-summary">30%</span> </p>
+-+                </div>
+- 
+-+                <hr class="between-summary">
+-+
+-+                <p class="summary-afterLine">Total: <span class="item-summary">367.5 SR</span> </p>
+-+            <div>
+-             <button class="empty">Empty Cart</button>
+-                 <button class="checkout">Checkout</button>
+-             </div>
+--
+-+            </div>
+-          </div>
+-          <!--footer-->
+-         <footer>
+-             <div class="footer-content">
+--                <img class="logo" src="web_images/logoTriCart.png" alt="TriCart" width="15%">
+-+                <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
+-                 <div class="contact-us">
+-                     <h4>Contact Us</h4>
+-                     <a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]/shelved.patch	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,36 +0,0 @@
+-Index: .idea/workspace.xml
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"ee6efe18-22b6-47b0-bfe8-89ef079fc7fc\" name=\"Changes\" comment=\"Merge remote-tracking branch 'origin/main'\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PREVIOUS_COMMIT_AUTHORS\">\r\n      <list>\r\n        <option value=\"Remas &lt;remas207s@gmail.com&gt;\" />\r\n      </list>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Mona-Sa&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/rima-15/TriCartProject.git&quot;,\r\n    &quot;accountId&quot;: &quot;a46789a3-54df-4a5e-93c8-69712c58090e&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 1\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2myWlIGqbjqVTLcmLT4NO6dx65W\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/anaja/IdeaProjects/TriCartProject/web_images\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\anaja\\IdeaProjects\\TriCartProject\\web_images\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"ee6efe18-22b6-47b0-bfe8-89ef079fc7fc\" name=\"Changes\" comment=\"\" />\r\n      <created>1728049446207</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1728049446207</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728050071164</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728050071164</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728113180290</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728113180290</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728121116130</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728121116130</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728122210771</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728122210771</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728137881560</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728137881560</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1728139734128</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1728139734128</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729210326473</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729210326473</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Cpage\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729277780569</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729277780569</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Merge remote-tracking branch 'origin/main'\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1729382301709</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1729382301709</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"10\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"test\" />\r\n    <MESSAGE value=\"Cpage\" />\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/main'\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Merge remote-tracking branch 'origin/main'\" />\r\n  </component>\r\n</project>
+-===================================================================
+-diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+---- a/.idea/workspace.xml	(revision a4a8d70d4d8422704adb707a232170e471febea6)
+-+++ b/.idea/workspace.xml	(date 1729400913333)
+-@@ -4,7 +4,9 @@
+-     <option name="autoReloadType" value="SELECTIVE" />
+-   </component>
+-   <component name="ChangeListManager">
+--    <list default="true" id="ee6efe18-22b6-47b0-bfe8-89ef079fc7fc" name="Changes" comment="Merge remote-tracking branch 'origin/main'" />
+-+    <list default="true" id="ee6efe18-22b6-47b0-bfe8-89ef079fc7fc" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+-+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-+    </list>
+-     <option name="SHOW_DIALOG" value="false" />
+-     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-@@ -148,7 +150,15 @@
+-       <option name="project" value="LOCAL" />
+-       <updated>1729382301709</updated>
+-     </task>
+--    <option name="localTasksCounter" value="10" />
+-+    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/main'">
+-+      <option name="closed" value="true" />
+-+      <created>1729382425045</created>
+-+      <option name="number" value="00010" />
+-+      <option name="presentableId" value="LOCAL-00010" />
+-+      <option name="project" value="LOCAL" />
+-+      <updated>1729382425045</updated>
+-+    </task>
+-+    <option name="localTasksCounter" value="11" />
+-     <servers />
+-   </component>
+-   <component name="Vcs.Log.Tabs.Properties">
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_1.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_1.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_1.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM__Changes_1.xml	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]1" date="1729691710279" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]1/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 10/23/2024 4:52 PM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+deleted file mode 100644
+--- a/.idea/workspace.xml	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,96 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="AutoImportSettings">
+-    <option name="autoReloadType" value="SELECTIVE" />
+-  </component>
+-  <component name="ChangeListManager">
+-    <list default="true" id="ee6efe18-22b6-47b0-bfe8-89ef079fc7fc" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
+-    <option name="SHOW_DIALOG" value="false" />
+-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-    <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="GitHubPullRequestSearchHistory">{
+-  &quot;lastFilter&quot;: {
+-    &quot;state&quot;: &quot;OPEN&quot;,
+-    &quot;assignee&quot;: &quot;Mona-Sa&quot;
+-  }
+-}</component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/rima-15/TriCartProject.git&quot;,
+-    &quot;accountId&quot;: &quot;a46789a3-54df-4a5e-93c8-69712c58090e&quot;
+-  }
+-}</component>
+-  <component name="ProjectColorInfo">{
+-  &quot;associatedIndex&quot;: 3
+-}</component>
+-  <component name="ProjectId" id="2noOxgMWEtSlGMaQUMlBs12cERU" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+-    <OptionsSetting value="false" id="Update" />
+-  </component>
+-  <component name="ProjectViewState">
+-    <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showLibraryContents" value="true" />
+-  </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
+-    "kotlin-language-version-configured": "true"
+-  }
+-}]]></component>
+-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-  <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task">
+-      <changelist id="ee6efe18-22b6-47b0-bfe8-89ef079fc7fc" name="Changes" comment="Merge remote-tracking branch 'origin/main'" />
+-      <created>1729636211435</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1729636211435</updated>
+-    </task>
+-    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/main'">
+-      <option name="closed" value="true" />
+-      <created>1729641151913</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1729641151913</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="Merge remote-tracking branch 'origin/main'">
+-      <option name="closed" value="true" />
+-      <created>1729691728029</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1729691728029</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/main'">
+-      <option name="closed" value="true" />
+-      <created>1729693558012</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1729693558012</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/main'">
+-      <option name="closed" value="true" />
+-      <created>1729693619253</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1729693619253</updated>
+-    </task>
+-    <option name="localTasksCounter" value="5" />
+-    <servers />
+-  </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]1/shelved.patch
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]1/shelved.patch
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_4_52_PM_[Changes]1/shelved.patch	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,19 +0,0 @@
+-Index: S.css
+-IDEA additional info:
+-Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+-<+>* {\r\n    padding: 0;\r\n    margin: 0;\r\n    box-sizing: border-box;\r\n}\r\nbody {\r\n    font-family: Georgia, serif;\r\n    background-color: #FDFBED ;\r\n}\r\nhtml, body {\r\n    height: 100%;\r\n    margin: 0;\r\n}\r\nbody {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n}\r\n.content {\r\n    flex-grow: 1;\r\n}\r\n/* Header styling */\r\nheader {\r\n    background-color: #567C8D;\r\n    color: green ;\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    padding: 10px 20px;\r\n    border-bottom-style: groove;\r\n}\r\n.logo {\r\nheight:auto;\r\n}\r\n\r\nnav.navigation ul {\r\n    display: flex;\r\n    list-style: none;\r\n}\r\nnav.navigation ul li {\r\n    margin: 0 30px ;\r\n    font-weight: bold;\r\n}\r\nnav.navigation ul li a:hover {\r\n    color: #9e9756;\r\n}\r\nnav.navigation li {\r\n    color: #F6F6FB;\r\n    font-size: 18px;\r\n    transition: color 0.3s;\r\n}\r\n.cart {\r\n    position: relative;\r\n}\r\n.cart .cart-count {\r\n    position: absolute;\r\n    top: -5px;\r\n    right: -10px;\r\n    background-color: #ffcc00;\r\n    color: black;\r\n    border-radius: 50%;\r\n    padding: 2px 6px;\r\n    font-size: 12px;\r\n}\r\nheader a {\r\n    text-decoration: none;\r\n    color: #F6F6FB;\r\n}\r\n.user-type a {\r\n    text-decoration: none;\r\n    font-size: 16px;\r\n}\r\n.user-type h5 {\r\n    margin-right: 40px;\r\n}\r\n\r\n/* Offers section styling */\r\n.offers-section {\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */\r\n    gap: 90px; /* Space between each offer */\r\n    padding: 30px;\r\n}\r\n\r\n.offer {\r\n    position: relative;\r\n    overflow: hidden; /* hide it if it was too big or bad for the container */\r\n    border: 1px solid #9E9756;\r\n    border-radius: 10px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n    transition: transform 0.3s;\r\n}\r\n\r\n.offer:hover {\r\n    transform: translateY(-5px); /* Lift the card on hover */\r\n\r\n}\r\n.offer:hover .offer-description {\r\n    font-weight: bold;\r\n}\r\n\r\n.offer-image {\r\n    position: relative;\r\n}\r\n\r\n.offer-image img {\r\n    max-width: 100%;\r\n    height: auto;\r\n    border-radius: 10px 10px 0 0;\r\n}\r\n\r\n.offer-label {\r\n    position: absolute;\r\n    bottom: 10px;\r\n    left: 10px;\r\n    background-color: rgba(0, 0, 0, 0.7);\r\n    color: white;\r\n    padding: 5px 10px;\r\n    font-size: 16px;\r\n    border-radius: 5px;\r\n}\r\n\r\n.offer-description {\r\n    padding: 15px;\r\n    text-align: center;\r\n}\r\n\r\n.offer-description p {\r\n    font-size: 14px;\r\n    color: #555;\r\n    margin: 20px 0;\r\n}\r\n\r\n.vision {\r\n    text-align: center;\r\n    padding: 20px , 0px;\r\n}\r\n.vision .name {\r\n    font-family: Garamond;\r\n    font-size: 34px;\r\n    color: #68A8CA ;\r\n    margin-right: 80px;\r\n}\r\n.vision .Quote {\r\n    margin-right: 20px;\r\n    text-align: center;\r\n    font-style:italic;\r\n}\r\n\r\n/* Category sections styling */\r\n.cat-header {\r\n    color: #68A8CA;\r\n    font-size: 30px;\r\n    margin-left: 20px;\r\n    margin-right: 20px;\r\n    padding-top: 20px;\r\n    border-top: 1px solid #444;\r\n    border-color: #9E9756;\r\n    margin-top: 30px;\r\n}\r\n.categories {\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fit, minmax(50px, 300px)); /* Responsive columns */\r\n    gap: 200px; /* Space between each category */\r\n    text-align: center;\r\n\tpadding: 20px 100px;\r\n    padding-bottom: 20px;\r\n    /*border-bottom: 1px solid #444;\r\n    border-color: #808080;\r\n    margin-bottom: 30px;*/\r\n}\r\n.category-types {\r\n    border: 1px solid #9E9756;\r\n    border-radius: 10px;\r\n    overflow: hidden;\r\n    transition: transform 0.3s;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n}\r\n.category-types:hover {\r\n    transform: translateY(-5px);\r\n}\r\n.category-types img {\r\n    width: 100%;\r\n    height: auto;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n.category-name {\r\n    padding: 20px 0px ;\r\n    height: auto ;\r\n    border-bottom: 1px solid #ddd;\r\n}\r\n/* Footer styling */\r\nfooter {\r\n    background-color: #567C8D;\r\n    color: #F6F6FB;\r\n    padding: 20px;\r\n    position: relative;\r\n    border-top-style: groove;\r\n\r\n}\r\n.footer-content {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n     /*water mark part */\r\n    padding-bottom: 20px;\r\n    border-bottom: 1px solid #444;\r\n    border-color: #808080;\r\n}\r\n.footer-content .contact-us , .footer-content .find-us {\r\n    text-align: center;\r\n}\r\n.footer-content h4 {\r\n    font-size: 18px;\r\n    margin-bottom: 10px;\r\n}\r\n.footer-content p {\r\n    margin: 5px 0;\r\n    font-size: 14px;\r\n}\r\n.footer-content #apps-icons {\r\n    display: flex;\r\n    flex-flow: row ;\r\n    justify-content: space-around;\r\n}\r\n.footer-content a {\r\n    text-decoration:none;\r\n    color: #F6F6FB;\r\n}\r\n#watermark {\r\n    text-align: center;\r\n    margin-top: 10px;\r\n    font-size: 12px;\r\n    color: ##606060;\r\n}\r\n@media (max-width: 768px) {\r\n    /* Header content */\r\n    header {\r\n         flex-direction: column;\r\n         align-items: center;\r\n         text-align: center;\r\n        }\r\n    .logo , .navigation , .cart , .user-type {\r\n        margin-bottom: 20px;\r\n    }\r\n\r\n    .logo {\r\n        flex-basis: 100%;\r\n        text-align: center;\r\n        margin-bottom: 10px;\r\n    }\r\n\r\n    nav.categories ul {\r\n        flex-wrap: wrap;\r\n        justify-content: center;\r\n        margin-bottom: 10px;\r\n    }\r\n\r\n    .cart, .user-type , .categories{\r\n        flex-basis: 100%;\r\n        text-align: center;\r\n    }\r\n    .vision {\r\n        display: block;\r\n        text-align: center;\r\n    }\r\n\r\n    .vision .name, .vision .Quote {\r\n        justify-content: center;\r\n        display: block;\r\n        margin-bottom: 10px;\r\n    }\r\n    /* Categories section in body */\r\n    .categories {\r\n        grid-template-columns: 1fr;\r\n    }\r\n\r\n    /* Footer content */\r\n    .footer-content {\r\n        flex-direction: column;\r\n        align-items: center;\r\n        text-align: center;\r\n    }\r\n\r\n    .footer-content .logo,\r\n    .footer-content .contact-us,\r\n    .footer-content .find-us {\r\n        margin-bottom: 20px;\r\n    }\r\n}\r\n
+-Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+-<+>UTF-8
+-===================================================================
+-diff --git a/S.css b/S.css
+---- a/S.css	(revision 4c6b2f9e9bc31a064411bae85c9965b7b50e9639)
+-+++ b/S.css	(date 1729672220719)
+-@@ -5,7 +5,7 @@
+- }
+- body {
+-     font-family: Georgia, serif;
+--    background-color: #FDFBED ;
+-+    background-color: #FBFCF8 ;
+- }
+- html, body {
+-     height: 100%;
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM__Changes_.xml	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
++++ /dev/null	(revision 7d4a88788efe8e123cc83701e5807ad29a1d30fd)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]" date="1729634976140" recycled="false" toDelete="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 10/23/2024 1:09 AM [Changes]" />
+-</changelist>
+\ No newline at end of file
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]1/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_10_23_2024_1_09_AM_[Changes]1/shelved.patch
+deleted file mode 100644
