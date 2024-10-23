@@ -9,7 +9,6 @@
     </head>
 
     <body>
-        <!-- header-->
         <header>
             <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%" >
             <nav class="navigation" >
@@ -40,44 +39,44 @@
         <h1 class="CartName">My Cart</h1>
         <p class ="CartDiscr">here is an amazing product that you choose! </p>
 
-        <!-- main-->
-        <div class="cart-items-summary-Container">
+        <main>
+            <div class="cart-items-summary-Container">
 
+                <div class="cartListContainer">
 
-        <div class="cartListContainer">
+                    <div class="cartProduct">
+                        <div class="product-img"><img src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px"></div>
+                        <div class="cartProductde-details">
+                            <p class="infoOfProduct"> <strong>Computer</strong> </p>
+                            <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+                            <p><strong class="priceOftheProduct">3700 SR</strong></p>
 
-            <div class="cartProduct">
-                <div class="product-img"><img src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px"></div>
-                <div class="cartProductde-details">
-                <p class="infoOfProduct"> <strong>Computer</strong> </p>
-                <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
-                <p><strong class="priceOftheProduct">3700 SR</strong></p>
+                            <hr>
+                            <div class="PruductControle" >
+                                <button class="remove"> <i class="fas fa-trash"></i></button>
+                                <input type="number" name="quantity" value="1" min="0" max="10">
+                                <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
+                                <button class="add"> <i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <hr>
-            <div class="PruductControle" >
-                <button class="remove"> <i class="fas fa-trash"></i></button>
-                <input type="number" name="quantity" value="1" min="0" max="10">
-                <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
-                 <button class="add"> <i class="fas fa-plus"></i></button>
-             </div>
+                <div class="orderSummary">
+                    <h2>Order Summary</h2>
+                    <p>Item Total: <span class="item-summary">xxxxxx</span> <p>
+                    <p>Shipping: <span class="item-summary">xxxxxx</span> <p>
+                    <p>Discount: <span class="item-summary">xxxxxx</span> <p>
+                    <hr>
+                    <p>Total: <span class="item-summary">xxxxxx</span> <p>
+
+                    <button class="empty">Empty Cart</button>
+                    <button class="checkout">Checkout</button>
+                </div>
+
             </div>
-            </div>
-        </div>
-
-            <div class="orderSummary">
-                <h2>Order Summary</h2>
-                <p>Item Total: <span class="item-summary">xxxxxx</span> <p>
-                <p>Shipping: <span class="item-summary">xxxxxx</span> <p>
-                <p>Discount: <span class="item-summary">xxxxxx</span> <p>
-                <hr>
-                <p>Total: <span class="item-summary">xxxxxx</span> <p>
-
-            <button class="empty">Empty Cart</button>
-                <button class="checkout">Checkout</button>
-            </div>
-
-         </div>
-         <!--footer-->
+        </main>
+         <!--footer section-->
         <footer>
             <div class="footer-content">
                 <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">

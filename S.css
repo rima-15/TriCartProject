@@ -16,6 +16,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+main {
+    margin: 0 10px;
+}
 .content {
     flex-grow: 1;
 }
@@ -181,7 +184,7 @@ ul.breadcrumb  li.current a:hover{
 .categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 300px)); /* Responsive columns */
-    gap: 200px; /* Space between each category */
+    gap: 180px; /* Space between each category */
     text-align: center;
 	padding: 20px 100px;
     padding-bottom: 20px;
@@ -580,6 +583,7 @@ footer {
     .categories {
         grid-template-columns: 1fr;
     }
+
 
     /* Footer content */
     .footer-content {
