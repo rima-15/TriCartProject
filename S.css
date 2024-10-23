@@ -248,7 +248,7 @@ ul.breadcrumb  li.current a:hover{
 .review p {
     font-size: 15px;
     }
-.product-image .product-img {
+.product-image img {
     width: 80px;
     height: 80px;
     object-fit: cover;
