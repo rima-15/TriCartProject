@@ -660,13 +660,7 @@ h1 {
     width:20px;
     height:20px;
     margin:0 auto;
-    position:absolute;
-    top:10px;
-    left:10px;
-
-
-
-
+    float:left;
 }
 
 .cartProductde-details {
@@ -706,16 +700,17 @@ border-top:1px solid #567C8D;
 
 .orderSummary {
 
-    border: 2px solid #567C8D;
+    border: 1px solid #567C8D;
     padding: 20px;
     margin-bottom: 100px ;
     margin-right: 20px ;
     background-color: #eee;
+    border-radius: 6px;
 }
-
 .orderSummary h2 {
     font-size: 20px;
     margin-bottom: 10px;
+    color:#567C8D;
 }
 
 .orderSummary p {
@@ -729,17 +724,27 @@ button {
     margin-top: 20px;
     cursor: pointer;
 }
-
+button:hover{
+background-color:#E87373;
+}
 .empty {
     background-color: #ffcccc;
     border: 1px solid red;
     color: red;
+    background-color: #fff;
+    border: 1px solid #567C8D;
+    color: #567C8D;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .checkout {
     background-color: #4CAF50;
+    background-color:#567C8D;
     color: white;
     border: none;
+    border-radius: 6px;
+    font-size: 16px
 }
 .PruductControle .remove i {
 color : white;
