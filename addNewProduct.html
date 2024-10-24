@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Add New Product</title>
+		<link rel="stylesheet" href="project.css">
+	</head>
+
+	<body>
+
+		<header>
+			<a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
+			<nav class="navigation" >
+            <ul>
+                <li> <a href="HomePage.html"> Home </a> </li>
+                <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
+                <li> <a href="#"> Furniture </a> </li>
+                <li> <a href="#"> Sport </a> </li>
+            </ul>
+			</nav>
+			<div class="cart">
+				<a href="CartPage.html">
+					<i class="fas fa-shopping-cart" ></i>
+				</a>
+			</div>
+			<div class="user-type">
+				<h5> <a href="UserPage.html" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+			</div>
+		</header>
+
+		<nav aria-label="Breadcrumb">
+			<ul class="breadcrumb">
+				<li><a href="HomePage.html">Home</a></li>
+				<li><a href="sellerDashboard.html">Seller</a></li>
+				<li class = "current"><a href ="addNewProduct.html">Add New Product</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<div class = "SD-content">
+				<h2>Add a New Product</h2>
+				<p>Welcome to the Add New Product page! Here, you can easily showcase your latest offerings. Fill out the form with the product name, description, and an image to highlight its features. Once you're done, click "Add Product" to make it available to customers. Let’s get started!</p>
+				<hr>
+				<form action="add_product.php" method="post">
+					<fieldset>
+						<legend>Product Information</legend>
+						<div class="form-container">
+							<div class="left-half">
+								<label for="productName">Product Name:</label>
+								<input type="text" id="productName" name="productName" required>
+								<label for="category">Category:</label>
+								<select id="category" name="category" required>
+									<option value="electronics">Electronics</option>
+									<option value="furniture">Furniture</option>
+									<option value="sports">Sports</option>
+									<option value="clothing">Clothing</option>
+								</select>
+								<label for="quantity">Price:</label>
+								<div class="input">
+									<input type="number" id="price" name="price" min="0" required>
+									<span class="sign">SAR</span>
+								</div>
+								<label for="quantity">Quantity:</label>
+								<div class="input">
+									<input type="number" id="quantity" name="quantity" min="0" required>
+									<span class="sign">pcs</span>
+								</div>
+							</div>
+							<div class="right-half">
+								<label for="description">Product Description:</label>
+								<textarea id="description" name="description" rows="5" required>Describe your product...</textarea>
+								<label for="imageUpload">Upload Image:</label>
+								<input type="file" id="imageUpload" name="imageUpload" accept="image/*" required>
+								<button type="submit" class="add-product-btn">Add Product</button>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</main>
+		
+		<footer>
+			<div class="footer-content">
+				<img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
+				<div class="contact-us">
+					<h4>Contact Us</h4>
+					<a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+					<p> +123 456 789</p>
+					<p> +345 735 988</p>
+				</div>
+				<div class="find-us">
+					<h4>Find Us</h4>
+					<div id="apps-icons">
+						<i class="fa-brands fa-instagram" ></i>
+						<i class="fa-brands fa-linkedin-in"></i>
+					</div>
+				</div>
+			</div>
+			<div id="watermark">
+				<p>&copy; 2024 TriCart Store</p>
+			</div>
+		</footer>
+	</body>
+	
+</html>
