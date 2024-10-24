@@ -16,8 +16,8 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-main {
-    margin: 0 10px;
+main h1{
+    margin: 10px;
 }
 .content {
     flex-grow: 1;
@@ -704,6 +704,7 @@ h1 {
     background-color: #eee;
     position:relative;
     border-radius: 6px;
+    margin-left:10px
 }
 .cartProductde-details {
     display: flex;
@@ -715,21 +716,17 @@ h1 {
     font-weight: bold;
     margin: 10px 0;
 }
-
 .PruductControle {
     display: flex;
     align-items: center;
     justify-content:flex-end;
     margin-top:10px;
 }
-
 .PruductControle button,
 .PruductControle input {
     padding: 5px;
     margin: 0 5px;
 }
-
-
 
 .orderSummary {
     border: 1px solid #567C8D;
@@ -740,20 +737,17 @@ h1 {
     border-radius: 6px;
     display:flex;
     flex-direction:column;
-
 }
 .orderSummary h2 {
     font-size: 20px;
     margin-bottom: 10px;
     color:#567C8D;
 }
-
 .orderSummary p {
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
 }
-
 button {
     padding: 10px;
     margin-top: 20px;
@@ -769,7 +763,6 @@ background-color:#E87373;
     border-radius: 6px;
     font-size: 16px;
 }
-
 .checkout {
     background-color: #4CAF50;
     background-color:#567C8D;
@@ -777,8 +770,6 @@ background-color:#E87373;
     border: none;
     border-radius: 6px;
     font-size: 16px;
-
-
 }
 .PruductControle .remove i {
 color : white;
@@ -787,18 +778,16 @@ color : white;
 .PruductControle button.remove{
     background-color: #567C8D;
     border:none;
-
 }
 .PruductControle .add i {
-color : white;
-
+    color : white;
 }
 .PruductControle button.add{
     background-color: #567C8D;
     border:none;
 }
 .PruductControle button:hover {
-background-color:#E87373;
+    background-color:#E87373;
 }
 
 /* For Chrome, Safari, Edge, Opera */
@@ -807,7 +796,6 @@ background-color:#E87373;
     -webkit-appearance: none;
     margin: 0;
 }
-
 
 .quantity{
 border: 0.5px solid #567C8D;
