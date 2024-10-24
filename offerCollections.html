@@ -52,7 +52,7 @@
 						</div>
 						<h3>Offer 1</h3>
 						<p>This is the description of Offer 1.</p>
-						<img src="offer1.jpg" alt="Offer 1">
+						<img src="offer111.avif" alt="Offer 1">
 					</div>
 					<div class="offer-box">
 						<div class="checkbox-container">
@@ -60,7 +60,7 @@
 						</div>
 						<h3>Offer 2</h3>
 						<p>This is the description of Offer 2.</p>
-						<img src="offer2.jpg" alt="Offer 2">
+						<img src="offer111.avif" alt="Offer 2">
 					</div>
 					<div class="offer-box">
 						<div class="checkbox-container">
@@ -68,7 +68,7 @@
 						</div>
 						<h3>Offer 3</h3>
 						<p>This is the description of Offer 3.</p>
-						<img src="offer3.jpg" alt="Offer 3">
+						<img src="offer111.avif" alt="Offer 3">
 					</div>
 					<div class="offer-box">
 						<div class="checkbox-container">
@@ -76,7 +76,7 @@
 						</div>
 						<h3>Offer 4</h3>
 						<p>This is the description of Offer 4.</p>
-						<img src="offer4.jpg" alt="Offer 4">
+						<img src="offer111.avif" alt="Offer 4">
 					</div>
 					<div class="offer-box">
 						<div class="checkbox-container">
@@ -84,7 +84,7 @@
 						</div>
 						<h3>Offer 5</h3>
 						<p>This is the description of Offer 5.</p>
-						<img src="offer5.jpg" alt="Offer 5">
+						<img src="offer111.avif" alt="Offer 5">
 					</div>
 					<div class="offer-box">
 						<div class="checkbox-container">
@@ -92,19 +92,24 @@
 						</div>
 						<h3>Offer 6</h3>
 						<p>This is the description of Offer 6.</p>
-						<img src="offer6.jpg" alt="Offer 6">
+						<img src="offer111.avif" alt="Offer 6">
 					</div>
 				</section>
 				<hr>
 				<section class="new-offer-section">
 					<h2>Create a New Offer</h2>
-					<label for="offerName">Offer Name:</label>
-					<input type="text" id="offerName" name="offerName" required>
-					<label for="offerDescription">Offer Description:</label>
-					<textarea id="offerDescription" name="offerDescription" rows="4" required></textarea>
-					<label for="offerImage">Upload Image:</label>
-					<input type="file" id="offerImage" name="offerImage" accept="image/*" required>
-					<button type="submit" class="add-offer-btn">Add Offer</button>
+					<form action="create_offer.php" method="post">
+						<fieldset>
+							<legend>Offer Information</legend>
+								<label for="offerName">Offer Name:</label>
+								<input type="text" id="offerName" name="offerName" required>
+								<label for="offerDescription">Offer Description:</label>
+								<textarea id="offerDescription" name="offerDescription" rows="4" required>Describe your product...</textarea>
+								<label for="offerImage">Upload Image:</label>
+								<input type="file" id="offerImage" name="offerImage" accept="image/*" required>
+								<button type="submit" class="add-offer-btn">Add Offer</button>
+						</fieldset>
+					</form>
 				</section>
 			</div>
 		</main>
