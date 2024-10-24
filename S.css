@@ -107,7 +107,7 @@ ul.breadcrumb  li.current a:hover{
 /* Offers section styling */
 .offers-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive columns */
     gap: 150px; /* Space between each offer */
     padding: 30px;
 }
@@ -358,7 +358,6 @@ color :  #567C8D;
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
-
 }
 
 .Box i {
@@ -372,7 +371,10 @@ color :  #567C8D;
     font-size: 14px;
     color:#567C8D;
     text-align :center ;
+}
 
+#customerPage {
+margin-top :24px;
 }
 
 /* The End of User Page */
@@ -480,8 +482,6 @@ fieldset {
     border-radius: 4px;
 }
 
-
-
 /* Submit button */
 .SubmitAction {
     display: flex;
@@ -512,7 +512,6 @@ fieldset {
     align-items : center ;
     max-width: 1500px;
     padding:20px;/* o*/
-
 }
 
 /* Styling for Each Box */
@@ -521,11 +520,13 @@ fieldset {
     background-color:#F3F3F3;
     border: 1px solid #567C8D;
     padding: 40px;
-    width: 100%; /was 1000px/
+    width: 90%;
     text-align: left;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 /* Hover effect on each box */
@@ -652,6 +653,9 @@ footer {
     .categories {
         grid-template-columns: 1fr;
     }
+    .category-name {
+    margin-bottom:40px
+    }
 
     /* Adjust the Box */
     .container {
@@ -674,7 +678,10 @@ footer {
         width: 100%; /* Full width on smaller screens */
         padding: 0 10px; /* Add some padding */
     }
-}
+    .evaluation-container{
+    display:flex;
+    flex-direction: column;
+    }
 
     /* Footer content */
     .footer-content {
