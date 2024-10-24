@@ -11,8 +11,7 @@
 <body>
 
 <header>
-    <a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
-    <nav class="navigation" >
+    <a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>    <nav class="navigation" >
         <ul>
             <li> <a href="HomePage.html"> Home </a> </li>
             <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
@@ -22,7 +21,7 @@
     </nav>
 
     <div class="cart">
-        <a href="#">
+        <a href="CartPage.html">
             <i class="fas fa-shopping-cart" ></i>
         </a>
     </div>
@@ -38,14 +37,16 @@
         <li class = "current"><a href ="ProductEvaluation.html">Product Evaluation</a></li>
     </ul>
 </nav>
-
 <main>
     <h1>Product Evaluation</h1>
-    <div class="evaluation-container">
-        <form action="submit_evaluation.php" method="post">
+
+    <form action="submit_evaluation.php" method="post">
+        <!-- Left side with dropdown menus -->
+        <div class="evaluation-container">
             <div class="form-section">
                 <fieldset>
                     <legend>Order Information</legend>
+                    <!-- Order Dropdown -->
                     <label for="listsOforder">Select the order you want to evaluate:</label>
                     <select id="listsOforder" name="Order" required>
                         <option value="Order1">Order#20032023</option>
@@ -53,6 +54,7 @@
                         <option value="Order3">Order#09102019</option>
                     </select>
 
+                    <!-- Product Dropdown -->
                     <label for="ListOfproduct">Select Product:</label>
                     <select id="ListOfproduct" name="Product" required>
                         <option value="productA">Product A</option>
@@ -63,13 +65,20 @@
                 </fieldset>
             </div>
 
+            <!-- Right side with feedback section -->
             <div class="feedback-section">
                 <fieldset>
                     <legend>Feedback</legend>
-                    <img src="web_images/coputerimag.jpg" alt="Computer">
-                    <h3>Computer</h3>
-                    <p>Apple MacBook Air 13 M3 Laptop</p>
+                    <!-- Image and product details -->
+                    <div class="product-info">
+                        <img src="web_images/coputerimag.jpg" alt="Product Image">
+                        <div class="product-details">
+                            <h3>Computer</h3>
+                            <p>Apple MacBook Air 13 M3 Laptop</p>
+                        </div>
+                    </div>
 
+                    <!-- Rating Dropdown -->
                     <div class="rating">
                         <span>Rating:</span>
                         <select name="Rating" required>
@@ -81,17 +90,21 @@
                         </select>
                     </div>
 
+                    <!-- Feedback Textarea -->
                     <label for="feedback">Your Feedback:</label>
                     <textarea id="feedback" name="feedback" rows="4" required></textarea>
-                    <br>
+
+                    <!-- Submit Button -->
                     <div class="SubmitAction">
                         <button type="submit">Submit</button>
                     </div>
                 </fieldset>
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+
 </main>
+
 <footer>
     <div class="footer-content">
         <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
