@@ -155,21 +155,58 @@ ul.breadcrumb  li.current a:hover{
     margin: 20px 0;
 }
 /* Vision section styling */
-.vision {
+#vision-section {
+    background: linear-gradient(190deg, #567C8D, #d6e3f2); /* Gradient using header and logo colors */
+    padding: 60px 30px;
+    color: white;
     text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
+    margin-left: 0px;
+    border-style: outset;
+}
+.vision {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     padding: 30px  0px;
+
 }
 .vision .name {
     font-family: Garamond;
     font-size: 34px;
     color: #567C8D ;
+    position: relative;
     margin-right: 80px;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    font-weight:bold;
+}
+.vision .name:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background-color: #e87373; /* Accent color */
+    border-radius: 2px;
+}
+.vision .name:hover {
+    transform: scale(1.05);
+    color: white;
 }
 .vision .Quote {
     text-align: center;
     font-style:italic;
 }
-
+.vision .Quote q:hover {
+    color: #e87373;
+}
 /* Category sections styling */
 .cat-header {
     color: #567C8D;
@@ -177,16 +214,15 @@ ul.breadcrumb  li.current a:hover{
     margin-left: 20px;
     margin-right: 20px;
     padding-top: 20px;
-    border-top: 1px solid #567C8D;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 .categories {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(50px, 300px)); /* Responsive columns */
-    gap: 180px; /* Space between each category */
     text-align: center;
 	padding: 20px 100px;
     padding-bottom: 20px;
+    justify-content: space-between;
 }
 .category-types {
     border: 1px solid #567C8D;
