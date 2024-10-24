@@ -107,7 +107,7 @@ ul.breadcrumb  li.current a:hover{
 /* Offers section styling */
 .offers-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive columns */
     gap: 150px; /* Space between each offer */
     padding: 30px;
 }
@@ -482,8 +482,6 @@ fieldset {
     border-radius: 4px;
 }
 
-
-
 /* Submit button */
 .SubmitAction {
     display: flex;
@@ -654,6 +652,9 @@ footer {
     /* Categories section in body */
     .categories {
         grid-template-columns: 1fr;
+    }
+    .category-name {
+    margin-bottom:40px
     }
 
     /* Adjust the Box */
