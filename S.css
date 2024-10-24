@@ -107,8 +107,8 @@ ul.breadcrumb  li.current a:hover{
 /* Offers section styling */
 .offers-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive columns */
-    gap: 90px; /* Space between each offer */
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Responsive columns */
+    gap: 150px; /* Space between each offer */
     padding: 30px;
 }
 
@@ -157,7 +157,7 @@ ul.breadcrumb  li.current a:hover{
 /* Vision section styling */
 .vision {
     text-align: center;
-    padding: 20px , 0px;
+    padding: 30px  0px;
 }
 .vision .name {
     font-family: Garamond;
@@ -166,7 +166,6 @@ ul.breadcrumb  li.current a:hover{
     margin-right: 80px;
 }
 .vision .Quote {
-    margin-right: 20px;
     text-align: center;
     font-style:italic;
 }
@@ -262,7 +261,7 @@ ul.breadcrumb  li.current a:hover{
     margin: 5px 0;
 }
 .rating {
-    color: #f39c12; /* Star color */
+    color: #E87373; /* Star color */
     font-size: 14px;
     margin-bottom: 10px;
 }
@@ -531,17 +530,30 @@ footer {
     font-size: 14px;
 }
 .footer-content .find-us {
-    margin-right: 5px;
+    margin-right: 10px;
+}
+.find-us #apps-icons i {
+    transform: translateY(-5px);
+    width: 50%;
 }
 .footer-content #apps-icons {
     display: flex;
     flex-flow: row ;
     justify-content: space-around;
     gap: 10px;
+    color: #E87373 ;
+    margin-top: 20px;
 }
 .footer-content a {
     text-decoration:none;
     color: #F6F6FB;
+}
+.contact-us a:hover ,
+.contact-us p:hover{
+    color: #E87373 ;
+}
+.footer-content .contact-us  {
+    padding-right: 120px;
 }
 #watermark {
     text-align: center;
