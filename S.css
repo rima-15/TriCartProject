@@ -107,8 +107,8 @@ ul.breadcrumb  li.current a:hover{
 /* Offers section styling */
 .offers-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 500fr)); /* Responsive columns */
-    gap: 160px; /* Space between each offer */
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Responsive columns */
+    gap: 150px; /* Space between each offer */
     padding: 30px;
 }
 
@@ -518,7 +518,7 @@ fieldset {
     background-color:#F3F3F3;
     border: 1px solid #567C8D;
     padding: 40px;
-    width: 90%;
+    width: 100%; /was 1000px/
     text-align: left;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -689,9 +689,6 @@ footer {
     .footer-content .contact-us,
     .footer-content .find-us {
         margin-bottom: 20px;
-    }
-    .footer-content .contact-us  {
-        padding-right: 0px;
     }
 }
 
