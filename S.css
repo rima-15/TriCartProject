@@ -84,10 +84,10 @@ ul.breadcrumb li {
   display: inline;
   font-size: 18px;
 }
-ul.breadcrumb li+li:before {
+ul.breadcrumb li + li:before {
   padding: 8px;
   color: black;
-  content: "/\00a0";
+  content: ">\00a0";
 }
 ul.breadcrumb li a {
   color: #567C8D;
@@ -294,11 +294,13 @@ color :  #567C8D;
 /* Styling for Each Box */
 .Box {
 
-    background-color:#eee ;
-    border: 2px solid #567C8D;
+    background-color:#F3F3F3;
+    border: 1px solid #567C8D;
     padding: 30px;
     width: 300px;
+    height: 130px; /* Fixed height */
     text-align: left;
+    margin-left :20px;
     margin-bottom :50px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -319,6 +321,7 @@ color :  #567C8D;
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
+
 }
 
 .Box i {
@@ -337,38 +340,39 @@ color :  #567C8D;
 
 /* The End of User Page */
 /* Product Evaluation  */
-/* Container for the form and feedback section */
+/* Container to display form sections side by side */
 .evaluation-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items */
-    justify-content: center; /* Center vertically */
-    min-height: 100vh; /* Full height */
-
+    display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 5%;
 }
 
-/* Form Section Styling */
-.form-section, .feedback-section {
-    width: 1200px; /* Fixed width */
-    margin-bottom: 0; /* No margin between sections */
+/* Left side: Form section with dropdown menus */
+.form-section, {
+    width: 10%; /* 40% width for the left section */
+    height:20%;
 }
-
-/* Fieldset Styling */
-fieldset {
-    background-color: #eee; /* Background color */
-    margin: 0; /* No margin around fieldset */
-    padding: 1em 2em; /* Padding */
-    border: solid 1px #567C8D; /* Keep border on fieldset */
-    border-radius: 6px; /* Rounded corners */
+/* Right side: Feedback section */
+.feedback-section {
+    width: 95%; /* 55% width for the right section */
+    height:60%;
 }
-
-/* Legend Styling */
 legend {
     font-size: 1.25em;
     padding: 0 .25em;
     color: #567C8D;
+    font-weight :bold;
+}
+/* Fieldset styling */
+fieldset {
+    background-color: #F3F3F3;
+    padding: 1em 2em;
+    border: 1px solid #567C8D;
+    border-radius: 4px;
+    margin-bottom: 20px;
 }
 
+/* Dropdown styles */
 /* Input and Label Styling */
 .form-section label, .feedback-section label {
     font-size: 16px;
@@ -392,22 +396,33 @@ legend {
     outline: none;
 }
 
-/* Feedback Section Image and Text */
-.feedback-section img {
-    float: left;
+/* Product info: Image and details */
+.product-info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.product-info img {
     width: 140px;
     height: 140px;
-    margin-right: 0.5em;
-    margin-bottom: 10px;
+    margin-right: 15px;
 }
 
-.feedback-section p {
+.product-details h3 {
+    margin: 0;
+    font-size: 1.5em;
+
+}
+
+.product-details p {
     font-size: 16px;
-    margin-bottom: 10px;
+     margin-bottom: 10px;
 }
 
-/* Rating Section */
+/* Rating section */
 .feedback-section .rating {
+
     margin-bottom: 20px;
     clear: left;
 }
@@ -419,34 +434,34 @@ legend {
     margin-right: 10px;
 }
 
-/* Button Styling */
-.feedback-section {
-    display: flex; /* Use flexbox for alignment */
-    flex-direction: column; /* Stack elements vertically */
+.rating select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #567C8D;
+    border-radius: 4px;
 }
 
-.feedback-section button {
-    align-self: flex-end; /* Align button to the right */
+
+
+/* Submit button */
+.SubmitAction {
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+}
+
+.SubmitAction button {
     padding: 12px 25px;
     background-color: #567C8D;
     color: white;
     border: none;
-    cursor: pointer;
     border-radius: 6px;
-    font-size: 16px;
-    margin-top: 20px; /* Space above button */
+    cursor: pointer;
 }
 
-.feedback-section button:hover {
+.SubmitAction button:hover {
     background-color: #E87373;
 }
-
-.feedback-section .SubmitAction {
-    display: flex; /* Flex container for the button */
-    justify-content: flex-end; /* Align button to the right */
-    margin-top: 20px; /* Space above button */
-}
-
 
 /*End of Product Evaluation*/
 
@@ -458,16 +473,17 @@ legend {
     justify-content: center; /* Done */
     align-items : center ;
     max-width: 1500px;
+    padding:20px;/* o*/
 
 }
 
 /* Styling for Each Box */
 .Order-Box {
     margin-bottom : 20px;
-    background-color:#eee ;
-    border: 2px solid #567C8D;
+    background-color:#F3F3F3;
+    border: 1px solid #567C8D;
     padding: 40px;
-    width: 1000px;
+    width: 100%; /*was 1000px*/
     text-align: left;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -482,20 +498,17 @@ legend {
 
 /* Paragraph inside the box */
 .Order-Box p {
-
     font-size: 16px;
-    color: #567C8D;;
+    color: #567C8D;
 
 }
 .price  {
 text-align :right ;
+font-weight : bold ;
 }
 .Order-Box h3 {
    color :#567C8D;
    font-weight : bold ;
-}
-.price span {
-font-weight : bold ;
 }
 
 
@@ -603,7 +616,29 @@ footer {
         grid-template-columns: 1fr;
     }
 
+/* Adjust the Box */
+     .container {
+            flex-direction: column; /* Stack boxes in a column */
+            align-items: center; /* Center align items */
+        }
 
+        .Box {
+            width: 100%; /* Full width on smaller screens */
+            margin-bottom: 20px; /* Add space between boxes */
+        }
+
+    /* Adjust the Order-Box */
+    .Order-Box {
+        padding:20px ;
+    }
+
+    /* Adjust form sections */
+    .form-section,
+    .feedback-section {
+        width: 100%; /* Full width on smaller screens */
+        padding: 0 10px; /* Add some padding */
+    }
+}
     /* Footer content */
     .footer-content {
         flex-direction: column;
@@ -657,8 +692,6 @@ h1 {
     background-color: #eee;
     position:relative;
     border-radius: 6px;
-
-
 
 }
 .cartProduct {
