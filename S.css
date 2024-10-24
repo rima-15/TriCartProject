@@ -1126,6 +1126,9 @@ overflow: hidden;
 	margin: 50px;
 }
 
+.SD-content  fieldset{
+    background-color: #F3F3F3;
+}
 
 /*Seller Dashboard Page*/
 
@@ -1160,6 +1163,8 @@ overflow: hidden;
     width: 30%; 
 	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	flex-shrink: 0;
+	overflow:hide;
+    background-color: #F3F3F3;
 }
 
 .SD-content .product-item img {
@@ -1176,8 +1181,11 @@ overflow: hidden;
 .SD-content .product-item p {
     color: #555;
 	margin-left:0px;
-    overflow-wrap: wrap;
     white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+    overflow: hidden; 
+	max-width: 100%;
 }
 
 /*List Styles*/
@@ -1218,7 +1226,11 @@ overflow: hidden;
 .SD-content .form-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+	background-color: #F3F3F3;
+
+}
+.SD-content #product-information {
+	margin: 0px 40px 20px;
 }
 
 .SD-content .left-half, .right-half {
@@ -1252,13 +1264,18 @@ overflow: hidden;
 	height:135px;
 }
 
+.SD-content textarea {
+	font-family: Georgia, serif;
+	color: darkGray;
+}
+
 
 .SD-content  .add-product-btn {
-	background-color: #68A8CA;
+	background-color: #567C8D;
     margin-top: 10px; 
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 0px;
     cursor: pointer;
 	border-radius: 5px;
 	transition: background-color 0.3s;
@@ -1301,7 +1318,7 @@ overflow: hidden;
 }
 
 .SD-content  .input .sign {
-    color: #68A8CA; 
+    color: #567C8D; 
     padding: 10px; 
     border-left: 1px solid #ccc; 
     white-space: nowrap; 
@@ -1317,11 +1334,11 @@ overflow: hidden;
 /*Create New Offer Page*/
 
 .SD-content .delete-offers-btn {
-	background-color: #68A8CA;
-    margin-top: 10px; 
+	background-color: #567C8D;
+    margin: 30px 30px; 
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 15px 15px;
     cursor: pointer;
 	border-radius: 5px;
 	transition: background-color 0.3s;
@@ -1336,13 +1353,18 @@ overflow: hidden;
 }
 
 .SD-content .new-offer-section {
-    padding: 20px;
     border-radius: 5px;
+	margin:20px 40px;
+}
+
+.SD-content .new-offer-section h2 {
+	margin-left: 0px;
 }
 
 .SD-content .new-offer-section label {
     display: block;
     margin-bottom: 5px;
+	color: #567C8D;
 }
 
 .SD-content input[type="text"],
@@ -1358,19 +1380,18 @@ overflow: hidden;
 input[type="text"]:focus,
 input[type="number"]:focus,
 textarea:focus {
-    border-color: #567C8D; /* Highlight on focus */
+    border-color: #567C8D;
 }
 
 .SD-content .add-offer-btn {
-    background-color: #68A8CA;
+    background-color: #567C8D;
 	border-radius: 5px;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 15px 15px;
     cursor: pointer;
 	transition: background-color 0.3s;
 	text-align: center;
-	width: 150px;
 }
 
 .SD-content .add-offer-btn:hover {
@@ -1385,23 +1406,20 @@ textarea:focus {
 	padding: 0px;
 }
 
-.SD-content * {
-	    border: 1px solid #ccc; 
-
-}
-
 .SD-content .offer-box {
-    width: calc(30% - 20px); 
+    width: calc(25% - 20px); 
     padding: 10px; 
     margin: 10px; 
     background-color: white; 
     border: 1px solid #ccc; 
     border-radius: 5px; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+	background-color: #F3F3F3;
+
 }
 
 .SD-content .checkbox-container {
-float:right;
+	float:right;
     display: inline-block;
 }
 
@@ -1414,7 +1432,7 @@ float:right;
 
 .SD-content .offer-box h3 {
 	vertical-align: top; 
-    color: #68A8CA;
+    color: #567C8D;
 	margin: 10px 0; 
     display: inline-block; 
 }
@@ -1422,7 +1440,8 @@ float:right;
 .SD-content .offer-box p {
     color: #555;
     overflow-wrap: break-word; 
-    margin: 5px 0; 
+    margin: 5px 0;
+	max-width: 100%;	
 }
 
 .SD-content .offer-box img {
@@ -1439,3 +1458,8 @@ float:right;
         font-size: 14px;
     }
 }
+
+/*.SD-content * {
+	    border: 1px solid #ccc; 
+
+}*/
