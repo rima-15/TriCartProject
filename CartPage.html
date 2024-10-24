@@ -1,6 +1,6 @@
 
 <!DOCTYPE html >
-<html>
+<html lang="en" >
 
     <head>
         <meta charset="UTF-8">
@@ -70,9 +70,9 @@
                 <div class="pic-and-info-in-cart">
                     <img class="product-img" src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px">
                         <div class="cartProductde-details">
-                            <p class="infoOfProduct"> <strong>Computer</strong> </p>
-                            <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
-                            <p><strong class="priceOftheProduct">3700 SR</strong></p>
+                            <p class="infoOfProduct"> <strong>IPad</strong> </p>
+                            <p class="infoOfProductDisc"> Apple IPad Air 13 M4 Air  </p>
+                            <p><strong class="priceOftheProduct">4000 SR</strong></p>
                         </div>
                 </div>
                 <br>
@@ -91,17 +91,90 @@
 
             <div class="orderSummary">
                 <h2>Order Summary</h2>
-                <p>Item Total: <span class="item-summary">500 SR</span> <p>
+                <p>Item Total: <span class="item-summary">7700 SR</span> <p>
                 <p>Shipping: <span class="item-summary">25 SR</span> <p>
-                <p>Discount: <span class="item-summary">30%</span> <p>
+                <p>Discount: <span class="item-summary">25%</span> <p>
                 <hr style="border:0.5px solid #567C8D;">
-                <p>Total: <span class="item-summary">367.5 SR</span> <p>
+                <p>Total: <span class="item-summary">5793.75 SR</span> <p>
                 <div class="empty-check-align">
                     <button class="empty">Empty Cart</button>
-                    <form action="Confermathion.html" method="GET"  class="f">
+                    <!--<form action="Confermathion.html" method="GET"  class="f">
                     <button type="submit" class="checkout">Checkout</button>
-                    </form>
+                    </form>-->
+
+                <!--<form action="Confermathion.html" method="GET" class="f" onsubmit="return confirmCheckout();">
+                    <button type="submit" class="checkout">
+                        <i class="fas fa-shopping-cart"></i> Checkout</button>
+                </form>
+
+                <script>
+                    function confirmCheckout() {
+                        return confirm("Are you sure you want to proceed to checkout?");
+                    }
+                </script>-->
+
+                <form class="f" onsubmit="return showModal(event);">
+                    <button type="submit" class="checkout">Checkout </button>
+
+                </form>
+            </div>
+
+                <!-- First Modal -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <p>Are you sure you want to confirm your order?</p>
+                        <button class="modal-button" onclick="confirmCheckout()">Yes</button>
+                        <button class="modal-button" onclick="closeModal()">No</button>
+                    </div>
                 </div>
+
+                <!-- Second Modal for Confirmation -->
+                <div id="confirmModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeConfirmModal()">&times;</span>
+                        <p>Your order confirmed!</p>
+                        <button class="modal-button" onclick="goToHome()">OK</button>
+                    </div>
+                </div>
+
+                <script>
+                    function showModal(event) {
+                        event.preventDefault(); // Prevent the form from submitting
+                        document.getElementById("myModal").style.display = "block"; // Show the first modal
+                    }
+
+                    function closeModal() {
+                        document.getElementById("myModal").style.display = "none"; // Hide the first modal
+                    }
+
+                    function confirmCheckout() {
+                        closeModal(); // Hide the first modal
+                        document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
+                    }
+
+                    function closeConfirmModal() {
+                        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
+                    }
+
+                    function goToHome() {
+                        closeConfirmModal(); // Hide the confirmation modal
+                        window.location.href = "HomePage.html"; // Redirect to home page
+                    }
+
+                    // Close the modals if the user clicks outside of them
+                    window.onclick = function(event) {
+                        if (event.target == document.getElementById("myModal")) {
+                            closeModal();
+                        } else if (event.target == document.getElementById("confirmModal")) {
+                            closeConfirmModal();
+                        }
+                    }
+                </script>
+
+
+
+            </div>
             </div>
 
          </div>

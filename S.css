@@ -694,13 +694,14 @@ footer {
 
 
 /*Cart page */
+/*
 h1.CartName{
     color :#567C8D;
     text-indent:4%;
     font-size: 24px;
     margin: 20px 0;
 
-}
+}*/
 
 p.CartDiscr{
     color:#9e9756;
@@ -796,7 +797,7 @@ background-color:#E87373;
 .checkout {
     background-color:#567C8D;
     color: white;
-    border: none;
+    border: 1px solid #567C8D;
     border-radius: 6px;
     font-size: 16px;
 }
@@ -838,25 +839,53 @@ text-align:center;
     justify-content:space-between;
 }
 
+/* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            padding-top: 100px; /* Position the modal */
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px; /* Could be more or less, depending on screen size */
+            text-align: center;
+            border-radius: 8px; /* Rounded corners */
+        }
+        .close {
+            color: black;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal-button {
+            background-color: #567C8D; /* Green */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .modal-button:hover {
+            background-color: #E87373; /* Darker green */
+        }
+ /* end cart page a*/
 
-.confirmDiv{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align=center;
-}
-.Done{
- background-color:#eee;
-     color: #567C8D;
-     border: none;
-     border-radius: 6px;
-     font-size: 16px;
-}
-.confirmDiv h3{
-color:#567C8D;
-}
-.confirmDiv p{
-font-size:14px;
-text-align=center;
-}
-/* end cart page a*/
+
+
