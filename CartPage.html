@@ -11,7 +11,7 @@
      <!-- header section -->
     <body>
         <header>
-            <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%" >
+            <a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
             <nav class="navigation" >
                 <ul>
                     <li> <a href="HomePage.html"> Home </a> </li>
@@ -48,33 +48,41 @@
         <div class="cartListContainer">
 
             <div class="cartProduct">
-                <img class="product-img"src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px">
-                <div class="cartProductde-details">
-                    <p class="infoOfProduct"> <strong>Computer</strong> </p>
-                    <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
-                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
-                </div>
-            </div>
-            <hr style="border:0.5px solid #567C8D;">
-                    <div class="PruductControle" >
-                        <button class="remove"> <i class="fas fa-trash"></i></button>
-                        <input type="number" name="quantity" value="1" min="0" max="10" class="quantity">
-                        <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
-                        <button class="add"> <i class="fas fa-plus"></i></button>
+                <div class="pic-and-info-in-cart">
+                    <img class="product-img" src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px">
+                    <div class="cartProductde-details">
+                        <p class="infoOfProduct"> <strong>Computer</strong> </p>
+                        <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+                        <p><strong class="priceOftheProduct">3700 SR</strong></p>
                     </div>
-            <div class="cartProduct">
-                <img class="product-img"src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px">
-                <div class="cartProductde-details">
-                    <p class="infoOfProduct"> <strong>Computer</strong> </p>
-                    <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
-                    <p><strong class="priceOftheProduct">3700 SR</strong></p>
+                </div>
+                <br>
+                <hr style="border:0.5px solid #567C8D;">
+                <div class="PruductControle" >
+                    <button class="remove"> <i class="fas fa-trash"></i></button>
+                    <input type="number" name="quantity" value="1" min="0" max="10" class="quantity">
+                    <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
+                    <button class="add"> <i class="fas fa-plus"></i></button>
                 </div>
             </div>
-            <hr style="border:0.5px solid #567C8D;">
-            <div class="PruductControle" >
-                <button class="remove"> <i class="fas fa-trash"></i></button>
-                <input type="number" name="quantity" value="1" min="0" max="10" class="quantity">
-                <button class="add"> <i class="fas fa-plus"></i></button>
+
+            <div class="cartProduct">
+                <div class="pic-and-info-in-cart">
+                    <img class="product-img" src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px">
+                        <div class="cartProductde-details">
+                            <p class="infoOfProduct"> <strong>Computer</strong> </p>
+                            <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
+                            <p><strong class="priceOftheProduct">3700 SR</strong></p>
+                        </div>
+                </div>
+                <br>
+                <hr style="border:0.5px solid #567C8D;">
+                <div class="PruductControle" >
+                    <button class="remove"> <i class="fas fa-trash"></i></button>
+                    <input type="number" name="quantity" value="1" min="0" max="10" class="quantity">
+                    <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
+                    <button class="add"> <i class="fas fa-plus"></i></button>
+                </div>
             </div>
 
 
@@ -88,12 +96,12 @@
                 <p>Discount: <span class="item-summary">30%</span> <p>
                 <hr style="border:0.5px solid #567C8D;">
                 <p>Total: <span class="item-summary">367.5 SR</span> <p>
-
-            <button class="empty">Empty Cart</button>
-
-                <form action="Confermathion.html" method="GET"  class="f">
-                <button type="submit" class="checkout">Checkout</button>
-            </form>
+                <div class="empty-check-align">
+                    <button class="empty">Empty Cart</button>
+                    <form action="Confermathion.html" method="GET"  class="f">
+                    <button type="submit" class="checkout">Checkout</button>
+                    </form>
+                </div>
             </div>
 
          </div>
