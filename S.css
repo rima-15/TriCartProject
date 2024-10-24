@@ -373,6 +373,10 @@ color :  #567C8D;
     text-align :center ;
 }
 
+#customerPage {
+margin-top :24px;
+}
+
 /* The End of User Page */
 /* Product Evaluation  */
 /* Container to display form sections side by side */
