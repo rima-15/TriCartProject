@@ -794,7 +794,6 @@ background-color:#E87373;
     font-size: 16px;
 }
 .checkout {
-    background-color: #4CAF50;
     background-color:#567C8D;
     color: white;
     border: none;
@@ -833,12 +832,31 @@ text-align:center;
 -moz-appearance: textfield;
 
 }
-.confirm{
-text-align:center;
-}
+
 .empty-check-align{
     display:flex;
     justify-content:space-between;
+}
 
+
+.confirmDiv{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align=center;
+}
+.Done{
+ background-color:#eee;
+     color: #567C8D;
+     border: none;
+     border-radius: 6px;
+     font-size: 16px;
+}
+.confirmDiv h3{
+color:#567C8D;
+}
+.confirmDiv p{
+font-size:14px;
+text-align=center;
 }
 /* end cart page a*/

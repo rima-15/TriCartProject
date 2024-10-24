@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Offer Collections</title>
+		<link rel="stylesheet" href="S.css">
+	</head>
+
+	<body>
+
+	<header>
+			<a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
+			<nav class="navigation" >
+            <ul>
+                <li> <a href="HomePage.html"> Home </a> </li>
+                <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
+                <li> <a href="#"> Furniture </a> </li>
+                <li> <a href="#"> Sport </a> </li>
+            </ul>
+			</nav>
+			<div class="cart">
+				<a href="CartPage.html">
+					<i class="fas fa-shopping-cart" ></i>
+				</a>
+			</div>
+			<div class="user-type">
+				<h5> <a href="UserPage.html" id="customer">Customer</a> | <a href="#" id="seller">Seller</a> </h5>
+			</div>
+		</header>
+
+		<nav aria-label="Breadcrumb">
+			<ul class="breadcrumb">
+				<li><a href="HomePage.html">Home</a></li>
+				<li><a href="sellerDashboard.html">Seller</a></li>
+				<li class = "current"><a href ="offerCollections.html">Offer Collections</a></li>
+			</ul>
+		</nav>
+		
+		<main>
+			<div class = "SD-content">
+				<section>
+					<button class="delete-offers-btn">Delete Selected Offers</button>
+					<h2>Offer Collection</h2>
+					<p>Browse our latest offers and discounts! You can select offers to delete them if needed.</p>
+				</section>
+				<section class="offers-section">
+					<div class="offer-box">
+						<div class="checkbox-container">
+							<input type="checkbox" class="offer-checkbox">
+						</div>
+						<h3>Offer 1</h3>
+						<p>This is the description of Offer 1.</p>
+						<img src="offer1.jpg" alt="Offer 1">
+					</div>
+					<div class="offer-box">
+						<div class="checkbox-container">
+							<input type="checkbox" class="offer-checkbox">
+						</div>
+						<h3>Offer 2</h3>
+						<p>This is the description of Offer 2.</p>
+						<img src="offer2.jpg" alt="Offer 2">
+					</div>
+					<div class="offer-box">
+						<div class="checkbox-container">
+						   <input type="checkbox" class="offer-checkbox">
+						</div>
+						<h3>Offer 3</h3>
+						<p>This is the description of Offer 3.</p>
+						<img src="offer3.jpg" alt="Offer 3">
+					</div>
+					<div class="offer-box">
+						<div class="checkbox-container">
+						   <input type="checkbox" class="offer-checkbox">
+						</div>
+						<h3>Offer 4</h3>
+						<p>This is the description of Offer 4.</p>
+						<img src="offer4.jpg" alt="Offer 4">
+					</div>
+					<div class="offer-box">
+						<div class="checkbox-container">
+							<input type="checkbox" class="offer-checkbox">
+						</div>
+						<h3>Offer 5</h3>
+						<p>This is the description of Offer 5.</p>
+						<img src="offer5.jpg" alt="Offer 5">
+					</div>
+					<div class="offer-box">
+						<div class="checkbox-container">
+							<input type="checkbox" class="offer-checkbox">
+						</div>
+						<h3>Offer 6</h3>
+						<p>This is the description of Offer 6.</p>
+						<img src="offer6.jpg" alt="Offer 6">
+					</div>
+				</section>
+				<hr>
+				<section class="new-offer-section">
+					<h2>Create a New Offer</h2>
+					<label for="offerName">Offer Name:</label>
+					<input type="text" id="offerName" name="offerName" required>
+					<label for="offerDescription">Offer Description:</label>
+					<textarea id="offerDescription" name="offerDescription" rows="4" required></textarea>
+					<label for="offerImage">Upload Image:</label>
+					<input type="file" id="offerImage" name="offerImage" accept="image/*" required>
+					<button type="submit" class="add-offer-btn">Add Offer</button>
+				</section>
+			</div>
+		</main>
+		
+		<footer>
+			<div class="footer-content">
+				<img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
+				<div class="contact-us">
+					<h4>Contact Us</h4>
+					<a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+					<p> +123 456 789</p>
+					<p> +345 735 988</p>
+				</div>
+				<div class="find-us">
+					<h4>Find Us</h4>
+					<div id="apps-icons">
+						<i class="fa-brands fa-instagram" ></i>
+						<i class="fa-brands fa-linkedin-in"></i>
+					</div>
+				</div>
+			</div>
+			<div id="watermark">
+				<p>&copy; 2024 TriCart Store</p>
+			</div>
+		</footer>
+	</body>
+	
+</html>
