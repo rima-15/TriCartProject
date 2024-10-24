@@ -392,7 +392,7 @@ color :  #567C8D;
 }
 /* Right side: Feedback section */
 .feedback-section {
-    width: 95%; /* 95% width for the right section */
+    width: 100%; /* 95% width for the right section */
     height:60%;
 }
 legend {
@@ -517,11 +517,13 @@ fieldset {
 
 /* Styling for Each Box */
 .Order-Box {
+    margin-right :5%;
+    margin-left:5%;
     margin-bottom : 20px;
     background-color:#F3F3F3;
     border: 1px solid #567C8D;
     padding: 40px;
-    width: 100%; /was 1000px/
+    width: 90%;
     text-align: left;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -674,7 +676,7 @@ footer {
         width: 100%; /* Full width on smaller screens */
         padding: 0 10px; /* Add some padding */
     }
-}
+
 
     /* Footer content */
     .footer-content {
