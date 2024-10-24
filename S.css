@@ -673,6 +673,10 @@ footer {
         width: 100%; /* Full width on smaller screens */
         padding: 0 10px; /* Add some padding */
     }
+    .evaluation-container{
+    display:flex;
+    flex-direction: column;
+    }
 
     /* Footer content */
     .footer-content {
