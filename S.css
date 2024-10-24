@@ -639,19 +639,19 @@ h1 {
 .cartListContainer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    border: 1px solid #567C8D;
-    padding: 20px;
-    background-color: #eee;
-    position:relative;
-    border-radius: 6px;
+    gap: 15px;
+
 
 
 
 }
 .cartProduct {
     display: flex;
-
+border: 1px solid #567C8D;
+    padding: 20px;
+    background-color: #eee;
+    position:relative;
+    border-radius: 6px;
 }
 .cartProductde-details {
     display: flex;
@@ -713,10 +713,7 @@ button:hover{
 background-color:#E87373;
 }
 .empty {
-    background-color: #ffcccc;
-    border: 1px solid red;
-    color: red;
-    background-color: #fff;
+  background-color: #fff;
     border: 1px solid #567C8D;
     color: #567C8D;
     border-radius: 6px;
