@@ -451,18 +451,23 @@ fieldset {
 }
 
 /* Product info: Image and details */
-.product-info {
+.productInfoINFeedback {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
+    background-color: #F3F3F3;
 }
 
-.product-info img {
+.productInfoINFeedback img {
     width: 140px;
     height: 140px;
     margin-right: 15px;
 }
 
+.product-details  {
+  background-color: #F3F3F3;
+
+}
 .product-details h3 {
     margin: 0;
     font-size: 1.5em;
