@@ -11,22 +11,22 @@
 <body>
 
 <header>
-    <a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>    <nav class="navigation" >
+    <a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
+    <nav class="navigation" >
         <ul>
-            <li> <a href="HomePage.html"> Home </a> </li>
+            <li> <a href="HomePage.html" accesskey="H"> Home </a> </li>
             <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
-            <li> <a href="#"> Furniture </a> </li>
-            <li> <a href="#"> Sport </a> </li>
+            <li> <a href="FurniturePage.html"> Furniture </a> </li>
+            <li> <a href="SportPage.html"> Sport </a> </li>
         </ul>
     </nav>
-
     <div class="cart">
-        <a href="CartPage.html">
+        <a href="CartPage.html" accesskey="C">
             <i class="fas fa-shopping-cart" ></i>
         </a>
     </div>
     <div class="user-type">
-        <h5> <a href="UserPage.html" id="customer">Customer</a> <span id="headerSplit"> | </span> <a href="sellerDashboard.html" id="seller">Seller</a> </h5>
+        <h5> <a href="UserPage.html" id="customer" accesskey="U">Customer</a> <span id="headerSplit"> | </span>  <a href="sellerDashboard.html" id="seller" accesskey="S">Seller</a> </h5>
     </div>
 </header>
 
@@ -40,7 +40,7 @@
 <main>
     <h1>Product Evaluation</h1>
 
-    <form action="submit_evaluation.php" method="post">
+    <form action="" method="post">
         <!-- Left side with dropdown menus -->
         <div class="evaluation-container">
             <div class="form-section">
@@ -49,18 +49,18 @@
                     <!-- Order Dropdown -->
                     <label for="listsOforder">Select the order you want to evaluate:</label>
                     <select id="listsOforder" name="Order" required>
-                        <option value="Order1">Order#20032023</option>
-                        <option value="Order2">Order#13082020</option>
-                        <option value="Order3">Order#09102019</option>
+                        <option value="Order1">Order#2003202311</option>
+                        <option value="Order2">Order#1308202071</option>
+                        <option value="Order3">Order#0910201989</option>
                     </select>
 
                     <!-- Product Dropdown -->
                     <label for="ListOfproduct">Select Product:</label>
                     <select id="ListOfproduct" name="Product" required>
-                        <option value="productA">Product A</option>
-                        <option value="productB">Product B</option>
-                        <option value="productC">Product C</option>
-                        <option value="productD">Product D</option>
+                        <option value="productA">Galaxy S24 FE</option>
+                        <option value="productB">Synergy Yoga Mat</option>
+                        <option value="productC">Neoprene Kettlebell</option>
+                        <option value="productD">Huawei MatePad 12 X </option>
                     </select>
                 </fieldset>
             </div>
@@ -71,22 +71,22 @@
                     <legend>Feedback</legend>
                     <!-- Image and product details -->
                     <div class="productInfoINFeedback">
-                        <img src="web_images/coputerimag.jpg" alt="Product Image">
+                        <img src="products-images/Galaxy-S24-fe.png" alt="Product Image">
                         <div class="product-details">
-                            <h3>Computer</h3>
-                            <p>Apple MacBook Air 13 M3 Laptop</p>
+                            <h2 class="infoOfProduct">Galaxy S24 FE</h2>
+                            <p class="infoOfProductDisc">256 GB 8 GB RAM Graphite 5G Exynos 2400 </p>
                         </div>
                     </div>
 
                     <!-- Rating Dropdown -->
                     <div class="rating">
                         <span>Rating:</span>
-                        <select name="Rating" required>
-                            <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
-                            <option value="4">⭐️⭐️⭐️⭐️</option>
-                            <option value="3">⭐️⭐️⭐️</option>
-                            <option value="2">⭐️⭐️</option>
-                            <option value="1">⭐️</option>
+                        <select class="rating-star" name="Rating" required>
+                            <option value="5" class="rating-star">★★★★★</option>
+                            <option value="4" class="rating-star">★★★★☆</option>
+                            <option value="3" class="rating-star">★★★☆☆</option>
+                            <option value="2" class="rating-star">★★☆☆☆</option>
+                            <option value="1" class="rating-star">★☆☆☆☆</option>
                         </select>
                     </div>
 
@@ -119,6 +119,8 @@
             <div id="apps-icons">
                 <i class="fa-brands fa-instagram" ></i>
                 <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
             </div>
         </div>
     </div>

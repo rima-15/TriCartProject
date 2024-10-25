@@ -14,19 +14,19 @@
         <a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
         <nav class="navigation" >
             <ul>
-                <li> <a href="HomePage.html"> Home </a> </li>
+                <li> <a href="HomePage.html" accesskey="H"> Home </a> </li>
                 <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
                 <li> <a href="FurniturePage.html"> Furniture </a> </li>
                 <li> <a href="SportPage.html"> Sport </a> </li>
             </ul>
         </nav>
         <div class="cart">
-            <a href="CartPage.html">
+            <a href="CartPage.html" accesskey="C">
                 <i class="fas fa-shopping-cart" ></i>
             </a>
         </div>
         <div class="user-type">
-            <h5> <a href="UserPage.html" id="customer">Customer</a> <span id="headerSplit"> | </span>  <a href="sellerDashboard.html" id="seller">Seller</a> </h5>
+            <h5> <a href="UserPage.html" id="customer" accesskey="U">Customer</a> <span id="headerSplit"> | </span>  <a href="sellerDashboard.html" id="seller" accesskey="S">Seller</a> </h5>
         </div>
     </header>
 
@@ -50,11 +50,11 @@
 
             <div class="cartProduct">
                 <div class="pic-and-info-in-cart">
-                    <img class="product-img" src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px">
+                    <img class="product-img" src="products-images/matebook-d-16 (2).png" alt="computer" width="100px" height="100px">
                     <div class="cartProductde-details">
-                        <p class="infoOfProduct"> <strong>Computer</strong> </p>
-                        <p class="infoOfProductDisc"> Apple MacBook Air 13 M3 Laptop </p>
-                        <p><strong class="priceOftheProduct">3700 SR</strong></p>
+                        <h2 class="infoOfProduct"> HUAWEI MateBook D16</h2>
+                        <p class="infoOfProductDisc"> 16" Intel Core i5 8 GB RAM 512 GB Light Gray </p>
+                        <p class="category-product-price">2999.00 SR</p>
                     </div>
                 </div>
                 <br>
@@ -69,11 +69,11 @@
 
             <div class="cartProduct">
                 <div class="pic-and-info-in-cart">
-                    <img class="product-img" src="web_images/coputerimag.jpg" alt="computer" width="100px" height="100px">
+                    <img class="product-img" src="products-images/Galaxy-S24-fe.png" alt="computer" width="100px" height="100px">
                         <div class="cartProductde-details">
-                            <p class="infoOfProduct"> <strong>IPad</strong> </p>
-                            <p class="infoOfProductDisc"> Apple IPad Air 13 M4 Air  </p>
-                            <p><strong class="priceOftheProduct">4000 SR</strong></p>
+                            <h2 class="infoOfProduct">Galaxy S24 FE</h2>
+                            <p class="infoOfProductDisc">256 GB 8 GB RAM Graphite 5G Exynos 2400 </p>
+                            <p class="category-product-price">2849.00 SR</p>
                         </div>
                 </div>
                 <br>
@@ -91,28 +91,13 @@
         </div>
             <div class="orderSummary">
                 <h2>Order Summary</h2>
-                <p>Item Total: <span class="item-summary">7700 SR</span> <p>
+                <p>Item Total: <span class="item-summary">5848 SR</span> <p>
                 <p>Shipping: <span class="item-summary">25 SR</span> <p>
                 <p>Discount: <span class="item-summary">25%</span> <p>
                 <hr style="border:0.5px solid #567C8D;">
-                <p>Total: <span class="item-summary">5793.75 SR</span> <p>
+                <p>Total: <span class="item-summary">4404.75 SR</span> <p>
                 <div class="empty-check-align">
                     <button class="empty">Empty Cart</button>
-                    <!--<form action="Confermathion.html" method="GET"  class="f">
-                    <button type="submit" class="checkout">Checkout</button>
-                    </form>-->
-
-                <!--<form action="Confermathion.html" method="GET" class="f" onsubmit="return confirmCheckout();">
-                    <button type="submit" class="checkout">
-                        <i class="fas fa-shopping-cart"></i> Checkout</button>
-                </form>
-
-                <script>
-                    function confirmCheckout() {
-                        return confirm("Are you sure you want to proceed to checkout?");
-                    }
-                </script>-->
-
                 <form class="f" onsubmit="return showModal(event);">
                     <button type="submit" class="checkout">Checkout </button>
 
@@ -194,7 +179,8 @@
                     <div id="apps-icons">
                         <i class="fa-brands fa-instagram"></i>
                         <i class="fa-brands fa-linkedin-in"></i>
-                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
                     </div>
                 </div>
             </div>
