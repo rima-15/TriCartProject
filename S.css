@@ -27,10 +27,30 @@ body {
 }
 main h1{
   font-family: 'Roboto', sans-serif;
-    margin: 10px;
+    color: #E87373;
+    line-height: 2em;
+    margin: 10px 40px;
+
 }
 .content {
     flex-grow: 1;
+}
+/*.PageTitle{
+	color: #E87373;
+	line-height: 2em;
+	margin: 20px 40px;
+}*/
+
+.PageDiscr {
+    width: 800px;
+	margin-left: 4em;
+	padding: 1000px;
+}
+
+.PageHr {
+	margin: 10px;
+	border-color: gray;
+    opacity:0.3;
 }
 /* Header section styling */
 header {
@@ -921,12 +941,11 @@ text-align:center;
 
 /* Category Page*/
 
-*.CategoreyContainer{
-   font-family: 'Quicksand', sans-serif;
-}
+
 
 /*style for Container product */
 .products-container{
+font-family: 'Quicksand', sans-serif;
 display: flex;
 flex-wrap: wrap;
 margin:0 auto;
@@ -987,13 +1006,12 @@ justify-content:center;
  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.categoryName,
 .infoOfProduct{
 padding: 0.6rem 0;
 text-indent:1%;
 }
 
-h1.categoryName {
+/*h1.categoryName {
   font-family: 'Roboto', sans-serif;
   margin-left: 0.4em;
   margin-bottom: 0em;
@@ -1003,19 +1021,16 @@ h1.categoryName {
   padding: .5rem 0;
   opacity: 0.9;
 
-}
-.CategoreyTitle p{
-    text-indent:5%;
+}*/
 
-}
 
-p.CategoryDiscr{
+p.PageDiscr{
+   font-family: 'Quicksand', sans-serif;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.5;
     padding: 1.3rem 0;
     opacity: 0.5;
-    text-indent:5%;
 
 }
 
@@ -1110,7 +1125,7 @@ align-items:center;
 
 .infoOfProduct{
 font-family: 'Quicksand', sans-serif;
-font-size:20px;
+font-size:19px;
 weight:bolder;
 }
 .infoOfProductDisc{
@@ -1121,7 +1136,7 @@ overflow: hidden;
 
 	/*General Seller Pages*/
 
-.SD-content h2{
+/*.SD-content h2{
 	color: #E87373;
 	line-height: 2em;
 	margin: 20px 40px;
@@ -1133,8 +1148,8 @@ overflow: hidden;
 }
 
 .SD-content hr {
-	margin: 50px;
-}
+	margin: 10px;
+}*/
 
 .SD-content  fieldset{
     background-color: #F3F3F3;
