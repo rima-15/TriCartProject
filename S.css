@@ -9,10 +9,7 @@ body {
     /*font-family: 'Arial', sans-serif;
     font-family: 'Open Sans', sans-serif;*/
     font-family: Georgia, serif;
-
-
-
-
+/*font-family: 'Quicksand', sans-serif;*/
 
     background-color: #fff ;
 }
@@ -27,6 +24,7 @@ body {
 }
 main h1{
   font-family: 'Roboto', sans-serif;
+  font-family: Georgia, serif;
     color: #E87373;
     line-height: 2em;
     margin: 10px 40px;
