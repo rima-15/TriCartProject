@@ -323,11 +323,15 @@ ul.breadcrumb  li.current a:hover{
 
 /*HOME PAGE */
 h1{
+/*
 margin-top:30px;
 margin-bottom:30px ;
 margin-left : 10px ;
 text-align: left ;
-color :  #567C8D;
+color :  #567C8D;*/
+color: #E87373;
+	line-height: 2em;
+	margin: 20px 40px;
 }
 
 
@@ -446,7 +450,7 @@ fieldset {
 }
 
 .form-section select:focus, .feedback-section select:focus, .feedback-section textarea:focus {
-    border-color: #E87373;
+    border-color: #007bff;
     outline: none;
 }
 
