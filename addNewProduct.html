@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 	<head>
 		<meta charset="UTF-8">
@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="S.css">
 		<link rel="shortcut icon" type="x-icon" href="web_images/CartNoBackground.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--icons-->
-
+		<script  defer src="script.js"></script>
 	</head>
 
 	<body>
@@ -31,8 +31,8 @@
 		<div class="user-type">
 			<h5> <a href="UserPage.html" id="customer" accesskey="U">Customer</a> <span id="headerSplit"> | </span>  <a href="sellerDashboard.html" id="seller" accesskey="S">Seller</a> </h5>
 		</div>
-	</header>
 
+	</header>
 		<nav aria-label="Breadcrumb">
 			<ul class="breadcrumb">
 				<li><a href="HomePage.html">Home</a></li>
@@ -44,15 +44,16 @@
 		<main>
 			<div class = "SD-content">
 				<h1>Add a New Product</h1>
-				<p class ="PageDiscr">Welcome to the Add New Product page! Here, you can easily showcase your latest offerings. Fill out the form with the product name, description, and an image to highlight its features. Once you're done, click "Add Product" to make it available to customers. Let’s get started!</p>
+				<p class ="PageDiscr">Welcome to the Add New Product page! Fill out the form with the product name, description, and an image to highlight its features.
+					Once you're done, click "Add Product" to make it available to customers. Let’s get started!</p>
 				<hr class="PageHr">
-				<form action="add_product.php" method="post">
+				<form id ="AddForm" action="" method="post">
 					<fieldset id = "product-information">
 						<legend>Product Information</legend>
 						<div class="form-container">
 							<div class="left-half">
 								<label for="productName">Product Name:</label>
-								<input type="text" id="productName" name="productName" required>
+								<input type="text" id="productName" name="productName" >
 								<label for="category">Category:</label>
 								<select id="category" name="category" required>
 									<option value="electronics">Electronics</option>
@@ -62,20 +63,20 @@
 								</select>
 								<label for="quantity">Price:</label>
 								<div class="input">
-									<input type="number" id="price" name="price" min="0" required>
+									<input type="number" id="price" name="price" min="0" >
 									<span class="sign">SAR</span>
 								</div>
 								<label for="quantity">Quantity:</label>
 								<div class="input">
-									<input type="number" id="quantity" name="quantity" min="0" required>
+									<input type="number" id="quantity" name="quantity" min="0" >
 									<span class="sign">pcs</span>
 								</div>
 							</div>
 							<div class="right-half">
 								<label for="description">Product Description:</label>
-								<textarea id="description" name="description" rows="5" required>Describe your product...</textarea>
+								<textarea id="description" name="description" rows="5" ></textarea>
 								<label for="imageUpload">Upload Image:</label>
-								<input type="file" id="imageUpload" name="imageUpload" accept="image/*" required>
+								<input type="file" id="imageUpload" name="imageUpload" accept="image/*" >
 								<button type="submit" class="add-product-btn">Add Product</button>
 							</div>
 						</div>
@@ -108,5 +109,5 @@
 			</div>
 		</footer>
 	</body>
-	
+
 </html>
