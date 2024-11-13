@@ -136,7 +136,6 @@ let allOffersShown = false; // Keep track of whether all offers are shown
 function showOffers () {
    //alert("Working");
 
-
         const button = document.getElementById('moreOffers');
         const hiddenOffers = document.querySelectorAll('.hidden');
         const totalOffers = document.querySelectorAll('.offer');
