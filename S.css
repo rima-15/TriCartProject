@@ -190,18 +190,20 @@ ul.breadcrumb  li.current a:hover{
 /* Offers section styling */
 .offers-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr)); /* Responsive columns */
-    gap: 150px; /* Space between each offer */
-    padding: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));*/ /* Responsive columns */
+    gap: 50px; /* Space between each offer */
+    padding: 20px;
 }
 
 .offer {
     position: relative;
     overflow: hidden; /* hide it if it was too big or bad for the container */
     border: 1px solid var(--header-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    max-width: 100%;
 }
 
 .offer:hover {
@@ -216,7 +218,7 @@ ul.breadcrumb  li.current a:hover{
 .offer-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 .offer-label {
     position: absolute;
@@ -237,6 +239,22 @@ ul.breadcrumb  li.current a:hover{
     color: #555;
     margin: 20px 0;
 }
+.more-button {
+display: block;
+    margin: 20px auto;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: white;
+    background-color: var(--header-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+   .hidden {
+       display: none; /* Initially hide offers */
+   }
 /* Vision section styling */
 #vision-section {
     background: linear-gradient(190deg, #567C8D, #d6e3f2); /* Gradient using header and logo colors */
