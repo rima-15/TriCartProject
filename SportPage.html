@@ -53,21 +53,21 @@
             <p class ="PageDiscr"> Shop in sport with a lot of fitness equipments!
                 from multiple famous brands  </p>
         </div>
-        <div class ="sort">
+        <div class ="sort" >
             <label for="sort">Sort by  </label> <span> | </span>
-            <select id ="sort">
+            <select id ="sort" onchange="sortProducts()">
                 <optgroup label = "Price">
-                    <option >Low to High</option>
-                    <option >High to Low</option>
+                    <option value="priceAsc">Low to High</option>
+                    <option value="priceDesc">High to Low</option>
                 </optgroup>
                 <optgroup label = "Name">
-                    <option >A-Z</option>
-                    <option >Z-A</option>
+                    <option value="nameAsc">A-Z</option>
+                    <option value="nameDesc">Z-A</option>
                 </optgroup>
             </select>
         </div>
         <hr class="PageHr">
-        <div class = "products-container">
+        <div class = "products-container" id="productsList">
             <div class = "product">
                 <div class = "product-content">
                     <div class = "category-product-img">
@@ -305,3 +305,4 @@
     </div>
 </footer>
 </body>
+</html>
