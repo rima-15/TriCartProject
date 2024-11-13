@@ -11,6 +11,7 @@
     <link href="S.css" rel="stylesheet"><!--just for header remove it later-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--icons-->
     <script  defer src="script.js"></script>
+
 </head>
 
 <body >
@@ -47,7 +48,7 @@
 
 <div class = "Categorey">
 
-    <div class = "CategoreyContainer">
+    <div class = "CategoreyContainer" >
         <div class="DivPageTitle">
             <h1 class="PageTitle">Furniture</h1>
 
@@ -56,19 +57,19 @@
         </div>
         <div class ="sort">
             <label for="sort">Sort by  </label> <span> | </span>
-            <select id ="sort">
+            <select id ="sort"  onchange="sortProducts()">
                 <optgroup label = "Price">
-                    <option >Low to High</option>
-                    <option >High to Low</option>
+                    <option value="priceAsc" >Low to High</option>
+                    <option value="priceDesc">High to Low</option>
                 </optgroup>
                 <optgroup label = "Name">
-                    <option >A-Z</option>
-                    <option >Z-A</option>
+                    <option value="nameAsc">A-Z</option>
+                    <option value="nameDesc">Z-A</option>
                 </optgroup>
             </select>
         </div>
         <hr class="PageHr">
-        <div class = "products-container">
+        <div class = "products-container" id="productsList">
             <div class = "product">
                 <div class = "product-content">
                     <div class = "category-product-img">
@@ -308,3 +309,4 @@
     </div>
 </footer>
 </body>
+</html>

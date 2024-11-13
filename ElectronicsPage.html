@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--icons-->
     <script  defer src="script.js"></script>
+  <script defer src="CategoryScipt.js"></script>
+
 </head>
 
 <body>
@@ -54,20 +56,20 @@
         </div>
         <div class ="sort">
             <label for="sort">Sort by  </label> <span> | </span>
-            <select id ="sort">
+            <select id ="sort" onchange="sortProducts()">
                 <optgroup label = "Price">
-                    <option >Low to High</option>
-                    <option >High to Low</option>
+                    <option value="priceAsc" >Low to High</option>
+                    <option value="priceDesc">High to Low</option>
                 </optgroup>
                 <optgroup label = "Name">
-                    <option >A-Z</option>
-                    <option >Z-A</option>
+                    <option value="nameAsc" >A-Z</option>
+                    <option value="nameDesc" >Z-A</option>
                 </optgroup>
             </select>
         </div>
         <hr class="PageHr">
-        <div class = "products-container">
-            <div class = "product">
+        <div class = "products-container" id="productsList">
+            <div class = "product" data-product-id="123">
                 <div class = "product-content">
                     <div class = "category-product-img">
                         <img src="products-images/appleiphone14.png" alt="Apple iPhone 14">
@@ -82,6 +84,12 @@
 
                     <div class = "price-and-button">
                         <p class="category-product-price">3799.00 SR</p>
+                        <!-- Quantity buttons -->
+                        <div class="quantity-controls">
+                        <button class="decrease-quantity">-</button>
+                          <input type="number" class="quantity" value="1" >
+                        <button class="increase-quantity">+</button>
+                        </div>
                         <!-- Shopping cart icon -->
                         <button class="addToCart"> <i class="fa-solid fa-cart-plus"> </i> </button>
                     </div>
@@ -303,4 +311,6 @@
         <p>&copy; 2024 TriCart Store</p>
     </div>
 </footer>
+
 </body>
+</html>
