@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
-
 document.addEventListener("DOMContentLoaded", function () {
   const productList = document.querySelector(".product-list");
 
@@ -128,19 +127,13 @@ themeSwitch.addEventListener("click", () => {
     darkmode = localStorage.getItem('darkmode');
     darkmode !== "active" ? enableDarkmode() : disableDarkmode();
 });
-
 // offers full view button
-
 let allOffersShown = false; // Keep track of whether all offers are shown
-
 function showOffers () {
    //alert("Working");
-
-
         const button = document.getElementById('moreOffers');
         const hiddenOffers = document.querySelectorAll('.hidden');
         const totalOffers = document.querySelectorAll('.offer');
-
         button.addEventListener('click', function() {
             if (!allOffersShown) {
                 // Show next three hidden offers
@@ -148,7 +141,6 @@ function showOffers () {
                 offersToShow.forEach(offer => {
                     offer.classList.remove('hidden'); // Show each hidden offer
                 });
-
                 // Change button text if no more hidden offers
                 if (hiddenOffers.length <= 3) {
                     button.textContent = 'Show Less Offers'; // Change button text
@@ -161,7 +153,6 @@ function showOffers () {
                 });
                 button.textContent = 'More Offers'; // Reset button text
             }
-
             // Toggle the state
             allOffersShown = !allOffersShown;
         });

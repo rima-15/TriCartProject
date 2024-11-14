@@ -9,6 +9,8 @@
         <link rel="shortcut icon" type="x-icon" href="web_images/CartNoBackground.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--icons-->
         <script  defer src="script.js"></script>
+        <script defer src="CategoryScipt.js"></script>
+
     </head>
      <!-- header section -->
     <body>
@@ -48,7 +50,7 @@
 
         <div class="cart-items-summary-Container">
 
-        <div class="cartListContainer">
+        <div class="cartListContainer" id="cart-items">
 
             <div class="cartProduct">
                 <div class="pic-and-info-in-cart">
@@ -97,15 +99,20 @@
                 <p>Shipping: <span class="item-summary">25 SR</span> <p>
                 <p>Discount: <span class="item-summary">25%</span> <p>
                 <hr style="border:0.5px solid #567C8D;">
-                <p>Total: <span class="item-summary">4404.75 SR</span> <p>
+                <p>Total: <span class="item-summary" id="total-price">0.00 SR</span> <p>
                 <div class="empty-check-align">
-                    <button class="empty">Empty Cart</button>
+                    <button class="empty" id="clear-cart">Empty Cart</button>
                 <form class="f" onsubmit="return showModal(event);">
-                    <button type="submit" class="checkout">Checkout </button>
+                    <button type="submit" class="checkout" id="checkout">Checkout </button>
 
                 </form>
             </div>
-
+                <!-- Modal for acknowledgment -->
+                <div id="acknowledgment-modal" style="display:none;">
+                    <p>Thank you for your purchase! Total cost: <span id="final-total"></span></p>
+                    <button onclick="window.location.href='evaluationPage.html';">Proceed to Evaluation</button>
+                    <button onclick="closeAcknowledgment()">Close</button>
+                </div>
                 <!-- First Modal -->
                 <div id="myModal" class="modal">
                     <div class="modal-content">
@@ -125,7 +132,7 @@
                     </div>
                 </div>
 
-                <script>
+               <!-- <script>
                     function showModal(event) {
                         event.preventDefault(); // Prevent the form from submitting
                         document.getElementById("myModal").style.display = "block"; // Show the first modal
@@ -157,7 +164,7 @@
                             closeConfirmModal();
                         }
                     }
-                </script>
+                </script>-->
 
 
 
