@@ -263,8 +263,8 @@ ul.breadcrumb  li.current a:hover{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /*grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));*/ /* Responsive columns */
-    gap: 50px; /* Space between each offer */
-    padding: 30px;
+    gap: 10%; /* Space between each offer */
+    padding: 70px;
 }
 
 .offer {
@@ -275,6 +275,7 @@ ul.breadcrumb  li.current a:hover{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     max-width: 100%;
+    padding-bottom: 25px;
 }
 
 .offer:hover {
@@ -303,18 +304,18 @@ ul.breadcrumb  li.current a:hover{
     border-radius: 5px;
 }
 .offer-description {
-    padding: 15px;
+    padding: 25px;
     text-align: center;
 }
 .offer-description p {
-    font-size: 14px;
-    /*color: #555;*/
+    font-size: 14px ;
     color:var(--offer-description-p);
-    margin: 20px 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 .more-button {
-display: block;
+    display: block;
     margin: 20px auto;
     padding: 8px 16px;
     font-size: 16px;
