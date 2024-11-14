@@ -2,146 +2,260 @@
 
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>Offer Collections</title>
-		<link rel="stylesheet" href="S.css">
-		<link rel="shortcut icon" type="x-icon" href="web_images/CartNoBackground.png">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--icons-->
-		<script  defer src="script.js"></script>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title>Offer Collections</title>
+	<link rel="stylesheet" href="S.css">
+	<link rel="shortcut icon" type="x-icon" href="web_images/CartNoBackground.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--icons-->
+	<script  defer src="script.js"></script>
+</head>
 
-	<body>
+<body>
 
-	<header>
-		<a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
-		<nav class="navigation" >
-			<ul>
-				<li> <a href="HomePage.html" accesskey="H"> Home </a> </li>
-				<li> <a href="ElectronicsPage.html"> Electronics </a> </li>
-				<li> <a href="FurniturePage.html"> Furniture </a> </li>
-				<li> <a href="SportPage.html"> Sport </a> </li>
-			</ul>
-		</nav>
-		<div class="cart">
-			<a href="CartPage.html" accesskey="C">
-				<i class="fas fa-shopping-cart" ></i>
-			</a>
-		</div>
-		<div class="user-type">
-			<h5> <a href="UserPage.html" id="customer" accesskey="U">Customer</a> <span id="headerSplit"> | </span>  <a href="sellerDashboard.html" id="seller" accesskey="S">Seller</a> </h5>
-		</div>
-	</header>
+<header>
+	<a href="HomePage.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
+	<nav class="navigation" >
+		<ul>
+			<li> <a href="HomePage.html" accesskey="H"> Home </a> </li>
+			<li> <a href="ElectronicsPage.html"> Electronics </a> </li>
+			<li> <a href="FurniturePage.html"> Furniture </a> </li>
+			<li> <a href="SportPage.html"> Sport </a> </li>
+		</ul>
+	</nav>
+	<div class="cart">
+		<a href="CartPage.html" accesskey="C">
+			<i class="fas fa-shopping-cart" ></i>
+		</a>
+	</div>
+	<div class="user-type">
+		<h5> <a href="UserPage.html" id="customer" accesskey="U">Customer</a> <span id="headerSplit"> | </span>  <a href="sellerDashboard.html" id="seller" accesskey="S">Seller</a> </h5>
+	</div>
+</header>
 
-		<nav aria-label="Breadcrumb">
-			<ul class="breadcrumb">
-				<li><a href="HomePage.html">Home</a></li>
-				<li><a href="sellerDashboard.html">Seller</a></li>
-				<li class = "current"><a href ="offerCollections.html">Offer Collections</a></li>
-			</ul>
-		</nav>
-		
-		<main>
-			<div class = "SD-content">
-				<section>
-					<button class="delete-offers-btn">Delete Selected Offers</button>
-					<h1>Offer Collection</h1>
-					<p class ="PageDiscr">Browse your offers and discounts! You can select offers to delete them if needed.</p>
+<nav aria-label="Breadcrumb">
+	<ul class="breadcrumb">
+		<li><a href="HomePage.html">Home</a></li>
+		<li><a href="sellerDashboard.html">Seller</a></li>
+		<li class = "current"><a href ="offerCollections.html">Offer Collections</a></li>
+	</ul>
+</nav>
 
-				</section>
+<main>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			let offers = [
+				{ id: 1, name: "Flash Sale", description: "Quick! This flash sale lasts for only a few hours.", image: "web_images/1offer.jpeg" },
+				{ id: 2, name: "Hot & Trending", description: "Check out our hot and trending items.", image: "web_images/2offer.jpeg" },
+				{ id: 3, name: "Seasonal Discount", description: "Celebrate the season with our exclusive discounts.", image: "web_images/3offer.jpeg" },
+				{ id: 4, name: "Only a Few Left!", description: "Limited quantities available!", image: "web_images/4,3offer.png" },
+				{ id: 5, name: "Save 20%", description: "Enjoy a straight 20% off your purchase.", image: "web_images/5offer.jpeg" },
+				{ id: 6, name: "Mystery Discount", description: "Unlock a mystery discount!", image: "web_images/6offer.jpeg" }
+			];
 
-				<section class="offers-section">
-					<div class="offer-box">
-						<div class="checkbox-container">
-							<input type="checkbox" class="offer-checkbox">
-						</div>
-						<h3>Flash Sale</h3>
-						<p>Quick! This flash sale lasts for only a few hours. Grab your favorites before they’re gone!</p>
-						<img src="web_images/1offer.jpeg" alt="Offer 1">
+			const offerList = document.getElementById("offerList");
+			const deleteButton = document.getElementById("deleteButton");
+
+			function renderOffers() {
+				offerList.innerHTML = "";
+				offers.forEach((offer) => {
+					const offerBox = document.createElement("div");
+					offerBox.classList.add("offer-box");
+					offerBox.dataset.offerId = offer.id;
+
+					const checkboxContainer = document.createElement("div");
+					checkboxContainer.classList.add("checkbox-container");
+					const checkbox = document.createElement("input");
+					checkbox.type = "checkbox";
+					checkbox.classList.add("offer-checkbox");
+					checkbox.dataset.offerId = offer.id;
+					checkboxContainer.appendChild(checkbox);
+					offerBox.appendChild(checkboxContainer);
+
+					const offerTitle = document.createElement("h3");
+					offerTitle.textContent = offer.name;
+					offerBox.appendChild(offerTitle);
+
+					const offerDesc = document.createElement("p");
+					offerDesc.textContent = offer.description;
+					offerBox.appendChild(offerDesc);
+
+					const offerImage = document.createElement("img");
+					offerImage.src = offer.image;
+					offerImage.alt = offer.name;
+					offerBox.appendChild(offerImage);
+
+					offerList.appendChild(offerBox);
+				});
+			}
+
+			renderOffers();
+
+			deleteButton.addEventListener("click", function() {
+				const selectedCheckboxes = document.querySelectorAll(".offer-checkbox:checked");
+
+				if (selectedCheckboxes.length === 0) {
+					alert("Please select at least one offer.");
+					return;
+				}
+
+				const confirmDelete = confirm("Are you sure you want to delete the selected offers?");
+				if (confirmDelete) {
+					const selectedIds = Array.from(selectedCheckboxes).map(checkbox => parseInt(checkbox.dataset.offerId));
+					offers = offers.filter(offer => !selectedIds.includes(offer.id));
+					renderOffers();
+				}
+			});
+
+			const newOfferForm = document.getElementById("newOfferForm");
+			newOfferForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+
+				const offerName = document.getElementById("offerName").value.trim();
+				const offerDescription = document.getElementById("offerDescription").value.trim();
+				const offerImageInput = document.getElementById("offerImage");
+
+				if (!offerName) {
+					alert("Please enter a valid Offer Name.");
+					return;
+				}
+
+				if (!offerDescription) {
+					alert("Please enter a valid Offer Description.");
+					return;
+				}
+
+				if (!offerImageInput.files.length) {
+					alert("Please upload an image for the offer.");
+					return;
+				}
+
+				const file = offerImageInput.files[0];
+				const validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
+				if (!validImageTypes.includes(file.type)) {
+					alert("Please upload a valid image file (JPEG, PNG, or JPG).");
+					return;
+				}
+
+				const newOfferId = offers.length ? offers[offers.length - 1].id + 1 : 1;
+
+				const newOffer = {
+					id: newOfferId,
+					name: offerName,
+					description: offerDescription,
+					image: URL.createObjectURL(file)
+				};
+				offers.push(newOffer);
+
+				renderOffers();
+				newOfferForm.reset();
+				alert("New offer added successfully!");
+			});
+		});
+
+
+	</script>
+	<div class = "SD-content">
+		<section>
+			<button id="deleteButton" class="delete-offers-btn">Delete Selected Offers</button>
+			<h1>Offer Collection</h1>
+			<p class ="PageDiscr">Browse your offers and discounts! You can select offers to delete them if needed.</p>
+
+		</section>
+		<div id="offerList">
+			<section class="offers-section">
+				<div class="offer-box">
+					<div class="checkbox-container">
+						<input type="checkbox" class="offer-checkbox">
 					</div>
-					<div class="offer-box">
-						<div class="checkbox-container">
-							<input type="checkbox" class="offer-checkbox">
-						</div>
-						<h3>Hot &amp; Trending</h3>
-						<p>Check out our hot and trending items that everyone is talking about. Don’t miss your chance to own them!</p>
-						<img src="web_images/2offer.jpeg" alt="Offer 2">
-					</div>
-					<div class="offer-box">
-						<div class="checkbox-container">
-						   <input type="checkbox" class="offer-checkbox">
-						</div>
-						<h3>Seasonal Discount</h3>
-						<p>Celebrate the season with our exclusive discounts. Perfect for refreshing your wardrobe or home!</p>
-						<img src="web_images/3offer.jpeg" alt="Offer 3">
-					</div>
-					<div class="offer-box">
-						<div class="checkbox-container">
-						   <input type="checkbox" class="offer-checkbox">
-						</div>
-						<h3>Only a Few Left!</h3>
-						<p>Limited quantities available! Grab your favorites before they’re gone for good</p>
-						<img src="web_images/4,3offer.png" alt="Offer 4">
-					</div>
-					<div class="offer-box">
-						<div class="checkbox-container">
-							<input type="checkbox" class="offer-checkbox">
-						</div>
-						<h3>Save 20%</h3>
-						<p>Enjoy a straight 20% off your purchase. It’s the perfect time to try something new!</p>
-						<img src="web_images/5offer.jpeg" alt="Offer 5">
-					</div>
-					<div class="offer-box">
-						<div class="checkbox-container">
-							<input type="checkbox" class="offer-checkbox">
-						</div>
-						<h3>Mystery Discount</h3>
-						<p>Unlock a mystery discount! Every purchase qualifies—find out how much you save at checkout!</p>
-						<img src="web_images/6offer.jpeg" alt="Offer 6">
-					</div>
-				</section>
-				<hr>
-				<section class="new-offer-section">
-					<h1>Create a New Offer</h1>
-					<form action="create_offer.php" method="post">
-						<fieldset>
-							<legend>Offer Information</legend>
-								<label for="offerName">Offer Name:</label>
-								<input type="text" id="offerName" name="offerName" required>
-								<label for="offerDescription">Offer Description:</label>
-								<textarea id="offerDescription" name="offerDescription" rows="4" required>Describe your product...</textarea>
-								<label for="offerImage">Upload Image:</label>
-								<input type="file" id="offerImage" name="offerImage" accept="image/*" required>
-								<button type="submit" class="add-offer-btn">Add Offer</button>
-						</fieldset>
-					</form>
-				</section>
-			</div>
-		</main>
-		
-		<footer>
-			<div class="footer-content">
-				<img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
-				<div class="contact-us">
-					<h4>Contact Us</h4>
-					<a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
-					<p> +123 456 789</p>
-					<p> +345 735 988</p>
+					<h3>Flash Sale</h3>
+					<p>Quick! This flash sale lasts for only a few hours. Grab your favorites before they’re gone!</p>
+					<img src="web_images/1offer.jpeg" alt="Offer 1">
 				</div>
-				<div class="find-us">
-					<h4>Find Us</h4>
-					<div id="apps-icons">
-						<i class="fa-brands fa-instagram" ></i>
-						<i class="fa-brands fa-linkedin-in"></i>
-						<i class="fa-brands fa-facebook-f"></i>
-						<i class="fa-brands fa-twitter"></i>
+				<div class="offer-box">
+					<div class="checkbox-container">
+						<input type="checkbox" class="offer-checkbox">
 					</div>
+					<h3>Hot &amp; Trending</h3>
+					<p>Check out our hot and trending items that everyone is talking about. Don’t miss your chance to own them!</p>
+					<img src="web_images/2offer.jpeg" alt="Offer 2">
 				</div>
+				<div class="offer-box">
+					<div class="checkbox-container">
+						<input type="checkbox" class="offer-checkbox">
+					</div>
+					<h3>Seasonal Discount</h3>
+					<p>Celebrate the season with our exclusive discounts. Perfect for refreshing your wardrobe or home!</p>
+					<img src="web_images/3offer.jpeg" alt="Offer 3">
+				</div>
+				<div class="offer-box">
+					<div class="checkbox-container">
+						<input type="checkbox" class="offer-checkbox">
+					</div>
+					<h3>Only a Few Left!</h3>
+					<p>Limited quantities available! Grab your favorites before they’re gone for good</p>
+					<img src="web_images/4,3offer.png" alt="Offer 4">
+				</div>
+				<div class="offer-box">
+					<div class="checkbox-container">
+						<input type="checkbox" class="offer-checkbox">
+					</div>
+					<h3>Save 20%</h3>
+					<p>Enjoy a straight 20% off your purchase. It’s the perfect time to try something new!</p>
+					<img src="web_images/5offer.jpeg" alt="Offer 5">
+				</div>
+				<div class="offer-box">
+					<div class="checkbox-container">
+						<input type="checkbox" class="offer-checkbox">
+					</div>
+					<h3>Mystery Discount</h3>
+					<p>Unlock a mystery discount! Every purchase qualifies—find out how much you save at checkout!</p>
+					<img src="web_images/6offer.jpeg" alt="Offer 6">
+				</div>
+			</section>
+		</div>
+		<hr>
+		<section class="new-offer-section">
+			<h1>Create a New Offer</h1>
+			<form id="newOfferForm" action="create_offer.php" method="post">
+				<fieldset>
+					<legend>Offer Information</legend>
+					<label for="offerName">Offer Name:</label>
+					<input type="text" id="offerName" name="offerName">
+					<label for="offerDescription">Offer Description:</label>
+					<textarea id="offerDescription" name="offerDescription" rows="4" required>Describe your product...</textarea>
+					<label for="offerImage">Upload Image:</label>
+					<input type="file" id="offerImage" name="offerImage" accept="image/*" >
+					<button type="submit" class="add-offer-btn">Add Offer</button>
+				</fieldset>
+			</form>
+		</section>
+	</div>
+</main>
+
+<footer>
+	<div class="footer-content">
+		<img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
+		<div class="contact-us">
+			<h4>Contact Us</h4>
+			<a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+			<p> +123 456 789</p>
+			<p> +345 735 988</p>
+		</div>
+		<div class="find-us">
+			<h4>Find Us</h4>
+			<div id="apps-icons">
+				<i class="fa-brands fa-instagram" ></i>
+				<i class="fa-brands fa-linkedin-in"></i>
+				<i class="fa-brands fa-facebook-f"></i>
+				<i class="fa-brands fa-twitter"></i>
 			</div>
-			<div id="watermark">
-				<p>&copy; 2024 TriCart Store</p>
-			</div>
-		</footer>
-	</body>
-	
+		</div>
+	</div>
+	<div id="watermark">
+		<p>&copy; 2024 TriCart Store</p>
+	</div>
+</footer>
+</body>
+
 </html>
