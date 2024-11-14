@@ -157,7 +157,6 @@ function showOffers () {
             allOffersShown = !allOffersShown;
         });
 }
-
 document.addEventListener("DOMContentLoaded", function() {
     let offers = [
         { id: 1, name: "Flash Sale", description: "Quick! This flash sale lasts for only a few hours.", image: "web_images/1offer.jpeg" },
@@ -167,14 +166,17 @@ document.addEventListener("DOMContentLoaded", function() {
         { id: 5, name: "Save 20%", description: "Enjoy a straight 20% off your purchase.", image: "web_images/5offer.jpeg" },
         { id: 6, name: "Mystery Discount", description: "Unlock a mystery discount!", image: "web_images/6offer.jpeg" }
     ];
+
     const offerList = document.getElementById("offerList");
     const deleteButton = document.getElementById("deleteButton");
+
     function renderOffers() {
         offerList.innerHTML = "";
         offers.forEach((offer) => {
             const offerBox = document.createElement("div");
             offerBox.classList.add("offer-box");
             offerBox.dataset.offerId = offer.id;
+
             const checkboxContainer = document.createElement("div");
             checkboxContainer.classList.add("checkbox-container");
             const checkbox = document.createElement("input");
@@ -183,26 +185,34 @@ document.addEventListener("DOMContentLoaded", function() {
             checkbox.dataset.offerId = offer.id;
             checkboxContainer.appendChild(checkbox);
             offerBox.appendChild(checkboxContainer);
+
             const offerTitle = document.createElement("h3");
             offerTitle.textContent = offer.name;
             offerBox.appendChild(offerTitle);
+
             const offerDesc = document.createElement("p");
             offerDesc.textContent = offer.description;
             offerBox.appendChild(offerDesc);
+
             const offerImage = document.createElement("img");
             offerImage.src = offer.image;
             offerImage.alt = offer.name;
             offerBox.appendChild(offerImage);
+
             offerList.appendChild(offerBox);
         });
     }
+
     renderOffers();
+
     deleteButton.addEventListener("click", function() {
         const selectedCheckboxes = document.querySelectorAll(".offer-checkbox:checked");
+
         if (selectedCheckboxes.length === 0) {
             alert("Please select at least one offer.");
             return;
         }
+
         const confirmDelete = confirm("Are you sure you want to delete the selected offers?");
         if (confirmDelete) {
             const selectedIds = Array.from(selectedCheckboxes).map(checkbox => parseInt(checkbox.dataset.offerId));
@@ -210,31 +220,41 @@ document.addEventListener("DOMContentLoaded", function() {
             renderOffers();
         }
     });
+
     const newOfferForm = document.getElementById("newOfferForm");
     newOfferForm.addEventListener("submit", function(event) {
         event.preventDefault();
+
         const offerName = document.getElementById("offerName").value.trim();
         const offerDescription = document.getElementById("offerDescription").value.trim();
         const offerImageInput = document.getElementById("offerImage");
+
+        // Validate each field with specific input type confirmation
         if (!offerName) {
             alert("Please enter a valid Offer Name.");
             return;
         }
+
         if (!offerDescription) {
             alert("Please enter a valid Offer Description.");
             return;
         }
+
+        // Check if an image file is uploaded and has an image file extension
         if (!offerImageInput.files.length) {
             alert("Please upload an image for the offer.");
             return;
         }
+
         const file = offerImageInput.files[0];
         const validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
         if (!validImageTypes.includes(file.type)) {
             alert("Please upload a valid image file (JPEG, PNG, or JPG).");
             return;
         }
+
         const newOfferId = offers.length ? offers[offers.length - 1].id + 1 : 1;
+
         const newOffer = {
             id: newOfferId,
             name: offerName,
@@ -242,9 +262,9 @@ document.addEventListener("DOMContentLoaded", function() {
             image: URL.createObjectURL(file)
         };
         offers.push(newOffer);
+
         renderOffers();
         newOfferForm.reset();
         alert("New offer added successfully!");
     });
 });
-
