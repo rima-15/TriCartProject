@@ -1,3 +1,22 @@
+// date in the home page
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the current date
+    const today = new Date();
+
+    // Calculate the current week's starting date (Sunday)
+    const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+    const sundayDate = new Date(today); // Clone today's date
+    sundayDate.setDate(today.getDate() - dayOfWeek); // Set to the previous Sunday
+
+    // Format the date as needed (e.g., "Sunday, 7 February")
+    const options = { weekday: 'long', day: 'numeric', month: 'long' };
+    const formattedDate = sundayDate.toLocaleDateString('en-US', options);
+
+    // Display the date in the HTML
+    document.getElementById('week-start-date').textContent = `Week starts on: ${formattedDate}`;
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     function validateForm(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -245,6 +264,24 @@ document.addEventListener("DOMContentLoaded", function() {
         renderOffers();
         newOfferForm.reset();
         alert("New offer added successfully!");
+    });
+});
+
+// reviews hover details
+
+document.addEventListener("DOMContentLoaded", function() {
+    const reviews = document.querySelectorAll('.review');
+
+    reviews.forEach(review => {
+        review.addEventListener('mouseenter', function() {
+            const additionalInfo = review.querySelector('.additional-info');
+            additionalInfo.style.display = 'block';
+        });
+
+        review.addEventListener('mouseleave', function() {
+            const additionalInfo = review.querySelector('.additional-info');
+            additionalInfo.style.display = 'none';
+        });
     });
 });
 
