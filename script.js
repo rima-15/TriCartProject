@@ -158,7 +158,6 @@ function showOffers () {
         });
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
     let offers = [
         { id: 1, name: "Flash Sale", description: "Quick! This flash sale lasts for only a few hours.", image: "web_images/1offer.jpeg" },
