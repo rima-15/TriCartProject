@@ -26,16 +26,23 @@ document.addEventListener("DOMContentLoaded", function() {
         const ratingSelect = document.querySelector(".rating-star");
 
         const selectedOrder = orderSelect.value;
-        const selectedProduct = productSelect.options[productSelect.selectedIndex].text; // Get product name
-        const selectedRating = ratingSelect.value; // Get rating value
+        const selectedProduct = productSelect.options[productSelect.selectedIndex].text; // Get the text of the selected product
+        const selectedProductValue = productSelect.value; // Get the value (ID) of the selected product
+        const selectedRating = ratingSelect.value; // Get the rating value
 
-        // Check if both order and rating are selected, and if a product is selected
-        if (!selectedOrder || !selectedProduct || !selectedRating) {
+        console.log('selectedOrder:', selectedOrder); // Debugging
+        console.log('selectedProduct:', selectedProduct); // Debugging
+        console.log('selectedProductValue:', selectedProductValue); // Debugging
+        console.log('selectedRating:', selectedRating); // Debugging
+
+        // Check if both order, product, and rating are selected
+        // Here, we're checking if the product value is not empty (to ensure a valid product is selected)
+        if (!selectedOrder || !selectedProductValue || !selectedRating) {
             showAlert("Please select an order and a rating.", false); // Validation message, no redirect
             return;
         }
 
-        // Display alert with feedback
+        // Display feedback message with the selected product name
         showAlert(`Thank you for your feedback!<br><br>Your rating for ${selectedProduct} is ${selectedRating} stars`, true); // Feedback message, trigger redirect
     }
 
@@ -60,6 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("form").addEventListener("submit", validateForm);
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const productName = document.getElementById("productName");
@@ -81,10 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
       showAlert("Product name should not start with a number.");
       return;
     }
-    if (isNaN(price.value) || isNaN(quantity.value)) {
-      showAlert("Price and quantity should be numbers.");
-      return;
+    if (Number.isNaN(parseFloat(price.value)) || Number.isNaN(parseFloat(quantity.value))) {
+        showAlert("Price and quantity should be numbers.");
+        return;
     }
+
 
     // Read the image file (if any)
     const imageFile = imageUpload.files[0];
