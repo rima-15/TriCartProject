@@ -1681,12 +1681,21 @@ textarea:focus {
     background-color:var(--SubmitActionButtonHoverPE);
 }
 
-.SD-content .offers-section {
+/*.SD-content .offers-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
 	padding: 0px;
+}*/
+
+#offerList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0px;
 }
 
 .SD-content .offer-box {
