@@ -339,7 +339,6 @@ function ProductFormHandler() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const productFormHandler = new ProductFormHandler();
-
     productFormHandler.init();
 });
 
