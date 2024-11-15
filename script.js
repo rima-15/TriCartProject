@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // Display the date in the HTML
     document.getElementById('week-start-date').textContent = `Week starts on: ${formattedDate}`;
 });
-
 document.addEventListener("DOMContentLoaded", function() {
     function validateForm(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -27,20 +26,34 @@ document.addEventListener("DOMContentLoaded", function() {
         const ratingSelect = document.querySelector(".rating-star");
 
         const selectedOrder = orderSelect.value;
-        const selectedProduct = productSelect.options[productSelect.selectedIndex].text;
-        const selectedRating = ratingSelect.value;
+        const selectedProduct = productSelect.options[productSelect.selectedIndex].text; // Get product name
+        const selectedRating = ratingSelect.value; // Get rating value
 
-        // Check if both order and rating are selected
-        if (!selectedOrder || !selectedRating) {
-            alert("Please select an order and a rating.");
+        // Check if both order and rating are selected, and if a product is selected
+        if (!selectedOrder || !selectedProduct || !selectedRating) {
+            showAlert("Please select an order and a rating.", false); // Validation message, no redirect
             return;
         }
 
         // Display alert with feedback
-        alert(`Thank you for your feedback!\n\nYour rating for ${selectedProduct} is ${selectedRating} stars`);
+        showAlert(`Thank you for your feedback!<br><br>Your rating for ${selectedProduct} is ${selectedRating} stars`, true); // Feedback message, trigger redirect
+    }
 
-        // Redirect to Home page
-        window.location.href = "HomePage.html";
+    // Function to display the custom alert
+    function showAlert(message, shouldRedirect) {
+        const alertMessage = document.getElementById("alertMessage");
+        alertMessage.innerHTML = message; // Set the message with HTML content (to support <br> tags)
+        const customAlert = document.getElementById("customAlert");
+
+        customAlert.style.display = "flex"; // Show the alert
+
+        // Close the alert and redirect to Home page when the button is clicked (if it's the feedback message)
+        document.getElementById("closeAlert").onclick = function() {
+            customAlert.style.display = "none"; // Hide the alert
+            if (shouldRedirect) {
+                window.location.href = "HomePage.html"; // Redirect to Home page after user clicks OK (only for feedback message)
+            }
+        };
     }
 
     // Attach the validateForm function to the form's submit event
@@ -54,43 +67,82 @@ document.addEventListener("DOMContentLoaded", function () {
   const price = document.getElementById("price");
   const quantity = document.getElementById("quantity");
   const description = document.getElementById("description");
+  const imageUpload = document.getElementById("imageUpload");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     // Validation
-    if (!productName.value.trim() || !category.value || !price.value  || !quantity.value  || !description.value.trim() || !imageUpload.files.length) {
-      alert("Please fill in all the fields.");
+    if (!productName.value.trim() || !category.value || !price.value || !quantity.value || !description.value.trim() || !imageUpload.files.length) {
+      showAlert("Please fill in all the fields.");
       return;
     }
     if (!isNaN(productName.value.charAt(0))) {
-      alert("Product name should not start with a number.");
+      showAlert("Product name should not start with a number.");
       return;
     }
     if (isNaN(price.value) || isNaN(quantity.value)) {
-      alert("Price and quantity should be numbers.");
+      showAlert("Price and quantity should be numbers.");
       return;
     }
 
-    // Product Object
-    const newProduct = {
-      name: productName.value,
-      category: category.value,
-      price: parseFloat(price.value),
-      quantity: parseInt(quantity.value, 10),
-      description: description.value
-    };
+    // Read the image file (if any)
+    const imageFile = imageUpload.files[0];
+    let imageDataUrl = "";
 
-    // Save to Local Storage
-    let products = JSON.parse(localStorage.getItem("products")) || [];
-    products.push(newProduct);
-    localStorage.setItem("products", JSON.stringify(products));
+    if (imageFile) {
+      const reader = new FileReader();
+      reader.onloadend = function () {
+        imageDataUrl = reader.result; // Base64 image data
+        saveProduct(imageDataUrl);
+      };
+      reader.readAsDataURL(imageFile); // Convert the image to Data URL
+    } else {
+      saveProduct(); // If no image, proceed without it
+    }
 
-    // Alert and Clear Form
-    alert(`Product "${productName.value}" has been added successfully.`);
-    form.reset();
+    // Function to save product data to local storage
+    function saveProduct(imageDataUrl = "") {
+      const newProduct = {
+        name: productName.value,
+        category: category.value,
+        price: parseFloat(price.value),
+        quantity: parseInt(quantity.value, 10),
+        description: description.value,
+        imageDataUrl: imageDataUrl // Save the image Data URL here
+      };
+
+      // Save to Local Storage
+      let products = JSON.parse(localStorage.getItem("products")) || [];
+      products.push(newProduct);
+      localStorage.setItem("products", JSON.stringify(products));
+
+      // Show custom success message without redirecting
+      showAlert(`Product "${productName.value}" has been added successfully.`);
+
+      // Clear the form
+      form.reset();
+    }
   });
+
+  // Function to display the custom alert
+  function showAlert(message) {
+    const alertMessage = document.getElementById("alertMessage");
+    const customAlert = document.getElementById("customAlert");
+
+    // Insert the message inside the alert
+    alertMessage.innerHTML = message;
+
+    // Ensure the modal is displayed
+    customAlert.style.display = "flex"; // Show the alert
+
+    // Close the alert when the "OK" button is clicked
+    document.getElementById("closeAlert").onclick = function() {
+      customAlert.style.display = "none"; // Hide the alert
+    };
+  }
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const productList = document.querySelector(".product-list");
 
@@ -102,12 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Retrieve products from local storage
   const products = JSON.parse(localStorage.getItem("products")) || [];
-
-  // Check if there are any products
-  if (products.length === 0) {
-    productList.innerHTML = "<p>No products added yet.</p>";
-    return;
-  }
 
   // Loop through each product and add it to the product-list div
   products.forEach((product) => {

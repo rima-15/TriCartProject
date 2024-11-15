@@ -124,6 +124,7 @@ color:var(--headerSplitColor);
     --selectFocusPE:#007bff;
     --ratingSelectPE:#567C8D;
     --SubmitActionButtonPE:white;
+    --SubmitActionButtonColorPE:#567C8D;
     --SubmitActionButtonHoverPE:#E87373;
     --footerContentBorderBottom:#444;
     --footerContentBorderColor:#808080;
@@ -710,7 +711,48 @@ fieldset {
 .rating .rating-star {
 font-size: 18px;
 }
+  /*Design Massage*/
 
+.custom-alert {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.custom-alert .alert-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert .alert-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.custom-alert .alert-content button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color:var(--SubmitActionButtonHoverPE);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-alert .alert-content button:hover {
+  background-color:var(--SubmitActionButtonColorPE);
+}
 /* Submit button */
 .SubmitAction {
     display: flex;
