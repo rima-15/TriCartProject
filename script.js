@@ -1,21 +1,20 @@
 // date in the home page
-
 document.addEventListener("DOMContentLoaded", function() {
     // Get the current date
     const today = new Date();
 
     // Calculate the current week's starting date (Sunday)
-    const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-    const sundayDate = new Date(today); // Clone today's date
+    const dayOfWeek = today.getDay(); // 0 = Sunday
+    const sundayDate = new Date(today);
     sundayDate.setDate(today.getDate() - dayOfWeek); // Set to the previous Sunday
 
-    // Format the date as needed (e.g., "Sunday, 7 February")
     const options = { weekday: 'long', day: 'numeric', month: 'long' };
     const formattedDate = sundayDate.toLocaleDateString('en-US', options);
 
-    // Display the date in the HTML
-    document.getElementById('week-start-date').textContent = `Week starts on: ${formattedDate}`;
+    // html display
+    document.getElementById('week-start-date').textContent = `Week starting : ${formattedDate}`;
 });
+
 document.addEventListener("DOMContentLoaded", function() {
     function validateForm(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -202,6 +201,7 @@ themeSwitch.addEventListener("click", () => {
     darkmode = localStorage.getItem('darkmode');
     darkmode !== "active" ? enableDarkmode() : disableDarkmode();
 });
+
 // offers full view button
 let allOffersShown = false; // Keep track of whether all offers are shown
 function showOffers () {
@@ -216,7 +216,6 @@ function showOffers () {
                 offersToShow.forEach(offer => {
                     offer.classList.remove('hidden'); // Show each hidden offer
                 });
-                // Change button text if no more hidden offers
                 if (hiddenOffers.length <= 3) {
                     button.textContent = 'Show Less Offers'; // Change button text
                 }
@@ -232,6 +231,7 @@ function showOffers () {
             allOffersShown = !allOffersShown;
         });
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     let offers = [
@@ -332,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function() {
         review.addEventListener('mouseenter', function() {
             const additionalInfo = review.querySelector('.additional-info');
             additionalInfo.style.display = 'block';
+            //additionalInfo.style.padding-left = '50%';
         });
 
         review.addEventListener('mouseleave', function() {
