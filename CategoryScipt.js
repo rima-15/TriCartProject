@@ -1,55 +1,10 @@
-function sortProducts() {
-    // Get the value selected in the dropdown
-    const sortOption = document.getElementById('sort').value;
-    const productsContainer = document.getElementById('productsList');
-    const products = Array.from(productsContainer.getElementsByClassName('product'));
-
-    let sortedProducts;
-
-    if (sortOption === 'priceAsc') {
-        // Sort by price ascending
-        sortedProducts = products.sort((a, b) => {
-            const priceA = parseFloat(a.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
-            const priceB = parseFloat(b.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
-            return priceA - priceB; // Ascending order
-        });
-    } else if (sortOption === 'priceDesc') {
-        // Sort by price descending
-        sortedProducts = products.sort((a, b) => {
-            const priceA = parseFloat(a.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
-            const priceB = parseFloat(b.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
-            return priceB - priceA; // Descending order
-        });
-    } else if (sortOption === 'nameAsc') {
-        // Sort by name A-Z
-        sortedProducts = products.sort((a, b) => {
-            const nameA = a.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
-            const nameB = b.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
-            return nameA.localeCompare(nameB); // A-Z
-        });
-    } else if (sortOption === 'nameDesc') {
-        // Sort by name Z-A
-        sortedProducts = products.sort((a, b) => {
-            const nameA = a.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
-            const nameB = b.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
-            return nameB.localeCompare(nameA); // Z-A
-        });
-    }
-
-    // Clear the products container and append sorted products
-    productsContainer.innerHTML = '';
-    sortedProducts.forEach(product => {
-        productsContainer.appendChild(product);
-    });
-}
-
-
 
 // Increase quantity
 document.querySelectorAll('.increase-quantity').forEach(button => {
     button.addEventListener('click', function() {
         let quantityInput = button.previousElementSibling; // Input element
         quantityInput.value = parseInt(quantityInput.value) + 1;
+
     });
 });
 
@@ -70,14 +25,14 @@ document.querySelectorAll('.addToCart').forEach(button => {
     button.addEventListener('click', function() {
         const productDiv = button.closest('.product');
         const productId = productDiv.getAttribute('data-product-id');
-        const productName = productDiv.querySelector('h2').innerText;
+        const cartProductName = productDiv.querySelector('h2').innerText;
         const productPrice = parseFloat(productDiv.querySelector('.category-product-price').innerText.replace('SR', ''));
         const productDescription = productDiv.querySelector('.infoOfProductDisc').innerText;
         const imageSrc = productDiv.querySelector('.category-product-img img').src;
 
         // Retrieve quantity from input
         const quantityInput = productDiv.querySelector('.quantity');
-        const quantity = parseInt(quantityInput ? quantityInput.value : 1); // Default to 1 if no input
+        const cartQuantity = parseInt(quantityInput ? quantityInput.value : 1); // Default to 1 if no input
 
         // Fetch the cart or initialize an empty array
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -86,16 +41,16 @@ document.querySelectorAll('.addToCart').forEach(button => {
         let productInCart = cart.find(item => item.productId === productId);
 
         if (productInCart) {
-            productInCart.quantity += quantity; // Increase quantity if it exists
+            productInCart.cartQuantity += cartQuantity; // Increase quantity if it exists
         } else {
             // Otherwise, add a new product entry with specified quantity
             cart.push({
                 productId,
-                productName,
+                cartProductName,
                 productPrice,
                 productDescription,
                 imageSrc,
-                quantity
+                cartQuantity
             });
         }
 
@@ -115,18 +70,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Checkout
-    document.querySelector('#checkout').addEventListener('click', function() {
-    if(cart.length === 0){
-                showModal(event)
-                document.getElementById("CartEmptyModal").style.display = "block"; // Show the confirmation modal
+document.getElementById("checkout").addEventListener("click", function (event) {
+    updateCartDisplay();
+    const updatedCart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    if (updatedCart.length === 0) {
+        showEmptyCartModal(event); // Show empty cart modal
     } else {
-         showAcknowledgmentModal(totalToPay);
-
+      /*  const totalToPay = updatedCart.reduce((total, item) => total + item.productPrice * item.quantity, 0) * 0.85 + 25;*/
+        showModal(event); // Show the confirmation modal with total price
     }
+});
 
 
-    });
 
     function updateCartDisplay() {
         cartItemsContainer.innerHTML = '';
@@ -135,7 +91,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
            if (updatedCart.length === 0) {
                     // Show "Cart is empty!" if no items in the cart
-                    cartItemsContainer.innerHTML = '<p class="PageDiscr">Cart is empty, no product added yet!</p>';
+
+                   document.getElementById("CartDiscr").textContent = "Cart is empty, no product added yet!";
+
+
                 } else {
 
         updatedCart.forEach(item => {
@@ -143,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
             itemDiv.classList.add('cartProduct');
             itemDiv.innerHTML = `
                 <div class="pic-and-info-in-cart">
-                    <img class="product-img" src="${item.imageSrc}" alt="${item.productName}" width="100" height="100">
+                    <img class="product-img" src="${item.imageSrc}" alt="${item.cartProductName}" width="100" height="100">
                     <div class="cartProductde-details">
                         <h2 class="infoOfProduct">${item.productName}</h2>
                         <p class="infoOfProductDisc">${item.productDescription}</p>
@@ -155,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="PruductControle">
                  <div class="cartCounter">
                      <span class="cart-decrease-quantity">-</span>
-                     <input type="number" class="cart-quantity" value="${item.quantity}" min="1" max="10" data-product-id="${item.productId}"  >
+                     <input type="number" class="cart-quantity" value="${item.cartQuantity}" min="1" max="10" data-product-id="${item.productId}"  >
                       <span class="cart-increase-quantity">+</span>
                               </div>
                     <button id="remove-item" data-product-id="${item.productId}">Remove</button>
@@ -164,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cartItemsContainer.appendChild(itemDiv);
 
             // Calculate the total price for the current item and add to the overall total
-            updatedTotal += item.productPrice * item.quantity;
+            updatedTotal += item.productPrice * item.cartQuantity;
         });
 
 
@@ -204,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Update the quantity in the cart array and localStorage
                 const cartItem = updatedCart.find(item => item.productId === productId);
-                cartItem.quantity = newQuantity;
+                cartItem.cartQuantity = newQuantity;
                 localStorage.setItem('cart', JSON.stringify(updatedCart));
 
                 // Recalculate and update the total price
@@ -234,34 +193,58 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function showModal(event) {
-                        event.preventDefault(); // Prevent the form from submitting
-                        document.getElementById("myModal").style.display = "block"; // Show the first modal
-                    }
+    const updatedCart = JSON.parse(localStorage.getItem('cart')) || [];
 
-                    function closeModal() {
-                        document.getElementById("myModal").style.display = "none"; // Hide the first modal
-                    }
+    if (updatedCart.length > 0) {
 
-                    function confirmCheckout() {
-                        closeModal(); // Hide the first modal
-                        document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
-                    }
+    event.preventDefault(); // Prevent form submission
+    const totalPrice = parseFloat(document.getElementById('total-price').textContent); // Get the total price
+    document.getElementById("confirm-total").textContent = totalPrice.toFixed(2) + " SR"; // Update confirmModal with the total*/
+    document.getElementById("myModal").style.display = "block"; // Show the first modal
+    /*document.getElementById("myModal").querySelector("p").textContent =
+        `Are you sure you want to confirm your order with total ${totalPrice.toFixed(2)} SR?`;*/
 
-                    function closeConfirmModal() {
-                        document.getElementsByClassName("normalPopup").style.display = "none"; // Hide the confirmation modal
-                    }
+        }
+}
 
-                    function goToHome() {
+function closeModal() {
+    document.getElementById("myModal").style.display = "none"; // Hide the first modal
+}
+
+function confirmCheckout() {
+    closeModal(); // Hide the first modal
+    document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
+    localStorage.removeItem("cart");
+    updateCartDisplay();
+}
+
+
+function closeConfirmModal() {
+    document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
+}
+
+
+function closeCartEmptyModal() {
+    document.getElementById("CartEmptyModal").style.display = "none"; // Close CartEmptyModal
+}
+
+function showEmptyCartModal() {
+    document.getElementById("CartEmptyModal").style.display = "block"; // Show the empty cart modal
+}
+
+ function goToProductEval() {
                         closeConfirmModal(); // Hide the confirmation modal
-                        window.location.href = "ProductEvalution.html"; // Redirect to home page
+                        window.location.href = "ProductEvaluation.html"; // Redirect to ProductEvaluation page
                     }
 
-                    // Close the modals if the user clicks outside of them
-                    window.onclick = function(event) {
-                        if (event.target == document.getElementById("myModal") ) {
-                            closeModal();
-                        } else if (event.target == document.getElementsByClassName("normalPopup")) {
-                            closeConfirmModal();
-                        }
-                    }
 
+
+window.onclick = function (event) {
+    const myModal = document.getElementById("myModal");
+    const confirmModal = document.getElementById("confirmModal");
+    const emptyCartModal = document.getElementById("CartEmptyModal");
+
+    if (event.target === myModal) closeModal();
+    if (event.target === confirmModal ) goToProductEval();
+    if(event.target === emptyCartModal) closeCartEmptyModal();
+};

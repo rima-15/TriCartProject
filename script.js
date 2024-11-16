@@ -451,4 +451,51 @@ document.addEventListener("DOMContentLoaded", function() {
 				alert("New offer added successfully!");
 			});
 		});
+// Cart and Category pages
+function sortProducts() {
+             // Get the value selected in the dropdown
+             const sortOption = document.getElementById('sort').value;
+             const productsContainer = document.getElementById('productsList');
+             const products = Array.from(productsContainer.getElementsByClassName('product'));
+
+             let sortedProducts;
+
+             if (sortOption === 'priceAsc') {
+                 // Sort by price ascending
+                 sortedProducts = products.sort((a, b) => {
+                     const priceA = parseFloat(a.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
+                     const priceB = parseFloat(b.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
+                     return priceA - priceB; // Ascending order
+                 });
+             } else if (sortOption === 'priceDesc') {
+                 // Sort by price descending
+                 sortedProducts = products.sort((a, b) => {
+                     const priceA = parseFloat(a.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
+                     const priceB = parseFloat(b.querySelector('.category-product-price').textContent.replace(' SR', '').trim());
+                     return priceB - priceA; // Descending order
+                 });
+             } else if (sortOption === 'nameAsc') {
+                 // Sort by name A-Z
+                 sortedProducts = products.sort((a, b) => {
+                     const nameA = a.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
+                     const nameB = b.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
+                     return nameA.localeCompare(nameB); // A-Z
+                 });
+             } else if (sortOption === 'nameDesc') {
+                 // Sort by name Z-A
+                 sortedProducts = products.sort((a, b) => {
+                     const nameA = a.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
+                     const nameB = b.querySelector('.infoOfProduct').textContent.trim().toLowerCase();
+                     return nameB.localeCompare(nameA); // Z-A
+                 });
+             }
+
+             // Clear the products container and append sorted products
+             productsContainer.innerHTML = '';
+             sortedProducts.forEach(product => {
+                 productsContainer.appendChild(product);
+             });
+         }
+
+
 

@@ -47,54 +47,10 @@
         <!-- Cart section -->
         <h1 class="CartName">My Cart</h1>
         <!--<p class ="CartDiscr">here is an amazing product that you chose! </p>-->
-
+        <p class="PageDiscr" id="CartDiscr"></p>
         <div class="cart-items-summary-Container">
 
         <div class="cartListContainer" id="cart-items">
-<!---
-            <div class="cartProduct">
-                <div class="pic-and-info-in-cart">
-                    <img class="product-img" src="products-images/matebook-d-16 (2).png" alt="computer" width="100px" height="100px">
-                    <div class="cartProductde-details">
-                        <h2 class="infoOfProduct"> HUAWEI MateBook D16</h2>
-                        <p class="infoOfProductDisc"> 16" Intel Core i5 8 GB RAM 512 GB Light Gray </p>
-                        <p class="category-product-price">2999.00 SR</p>
-                    </div>
-                </div>
-                <br>
-                <hr style="border:0.5px solid #567C8D;">
-                <div class="PruductControle" >
-                    <button class="remove"> <i class="fas fa-trash"></i></button>
-                    <input type="number" name="quantity" value="1" min="0" max="10" class="quantity"> --->
-                    <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
-                   <!-- <button class="add"> <i class="fas fa-plus"></i></button>
-                </div>
-            </div>
-
-            <div class="cartProduct">
-                <div class="pic-and-info-in-cart">
-                    <img class="product-img" src="products-images/Galaxy-S24-fe.png" alt="computer" width="100px" height="100px">
-                        <div class="cartProductde-details">
-                            <h2 class="infoOfProduct">Galaxy S24 FE</h2>
-                            <p class="infoOfProductDisc">256 GB 8 GB RAM Graphite 5G Exynos 2400 </p>
-                            <p class="category-product-price">2849.00 SR</p>
-                        </div>
-                </div>
-                <br>
-                <hr style="border:0.5px solid #567C8D;">
-                <div class="PruductControle" >
-                    <button class="remove"> <i class="fas fa-trash"></i></button>
-                    <input type="number" name="quantity" value="1" min="0" max="10" class="quantity"> -->
-                    <!-- <input type="text" name="quantity" value="1" minlength="0" maxlength="10" size="2">-->
-                <!--    <button class="add"> <i class="fas fa-plus"></i></button>
-                </div>
-            </div>-->
-
-
-
-
-
-
 
 
         </div>
@@ -112,72 +68,45 @@
 
                 </form>
             </div>
+            </div>
                 <!-- First Modal for Confirmation -->
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <span class="close" onclick="closeModal()">&times;</span>
-                        <p>Are you sure you want to confirm your order with total </p>
+                        <div class="modal-content-confMess">
+                        <p> Are you sure you want to confirm your order with total cost:</p>
+                        <p id="confirm-total" > </p>
+                        </div>
                         <button class="modal-button" onclick="confirmCheckout()">Yes</button>
                         <button class="modal-button" onclick="closeModal()">No</button>
                     </div>
                 </div>
 
                 <!-- Second Modal for Final Acknowledgment -->
-                <div id="confirmModal" class="modal normalPopup">
+                <div id="confirmModal" class="modal">
                     <div class="modal-content">
-                        <span class="close" onclick="closeConfirmModal()">&times;</span>
-                        <p>Your order is confirmed! Total cost: <span id="total-price"></span></p>
-                        <button class="modal-button" onclick="closeConfirmModal()">OK</button>
+                        <span class="close" onclick="goToProductEval()">&times;</span>
+                        <div class="modal-content-thankMess">
+                        <div class="confirmOrderCircule"> <i class="fas fa-check confirmOrdericon "></i> </div>
+                        <p id="thankMess" >Thank you for your purchase! </p>
+                        <p id="thankdircMess">you will be forwarded to product evaluation page. </p>
+
                     </div>
                 </div>
+                </div>
 
-                <div id="CartEmptyModal" class="modal normalPopup">
+
+                <div id="CartEmptyModal" class="modal">
                     <div class="modal-content">
-                        <span class="close" onclick="closeConfirmModal()">&times;</span>
+                        <span class="close" onclick="closeCartEmptyModal()">&times;</span>
                         <p>Cart is empty, no products added yet!</p>
-                        <button class="modal-button" onclick="closeConfirmModal()">OK</button>
+                        <button class="modal-button" onclick="closeCartEmptyModal()">OK</button>
                     </div>
                 </div>
-               <!-- <script>
-                    function showModal(event) {
-                        event.preventDefault(); // Prevent the form from submitting
-                        document.getElementById("myModal").style.display = "block"; // Show the first modal
-                    }
-
-                    function closeModal() {
-                        document.getElementById("myModal").style.display = "none"; // Hide the first modal
-                    }
-
-                    function confirmCheckout() {
-                        closeModal(); // Hide the first modal
-                        document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
-                    }
-
-                    function closeConfirmModal() {
-                        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
-                    }
-
-                    function goToHome() {
-                        closeConfirmModal(); // Hide the confirmation modal
-                        window.location.href = "HomePage.html"; // Redirect to home page
-                    }
-
-                    // Close the modals if the user clicks outside of them
-                    window.onclick = function(event) {
-                        if (event.target == document.getElementById("myModal")) {
-                            closeModal();
-                        } else if (event.target == document.getElementById("confirmModal")) {
-                            closeConfirmModal();
-                        }
-                    }
-                </script>-->
-
 
 
             </div>
-            </div>
 
-         </div>
         </main>
          <!--footer section -->
         <footer>
