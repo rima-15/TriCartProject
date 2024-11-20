@@ -55,7 +55,8 @@
 								<label for="productName">Product Name:</label>
 								<input type="text" id="productName" name="productName" >
 								<label for="category">Category:</label>
-								<select id="category" name="category" required>
+								<select id="category" name="category" >
+									<option value="" disabled selected>Select a category</option>
 									<option value="electronics">Electronics</option>
 									<option value="furniture">Furniture</option>
 									<option value="sports">Sports</option>
@@ -82,6 +83,12 @@
 						</div>
 					</fieldset>
 				</form>
+			</div>
+			<div id="customAlert" class="custom-alert">
+				<div class="alert-content">
+					<p id="alertMessage"></p>
+					<button id="closeAlert">OK</button>
+				</div>
 			</div>
 		</main>
 		

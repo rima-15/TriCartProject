@@ -46,6 +46,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     border-bottom-style: groove;
+    column-gap: 2%;
 }
 nav.navigation ul {
     display: flex;
@@ -124,6 +125,7 @@ color:var(--headerSplitColor);
     --selectFocusPE:#007bff;
     --ratingSelectPE:#567C8D;
     --SubmitActionButtonPE:white;
+    --SubmitActionButtonColorPE:#567C8D;
     --SubmitActionButtonHoverPE:#E87373;
     --footerContentBorderBottom:#444;
     --footerContentBorderColor:#808080;
@@ -260,16 +262,11 @@ ul.breadcrumb  li.current a:hover{
 }
 /* date styling */
 .date-display {
-    margin: 20px auto;
-    margin-bottom: 0 ;
-    padding: 10px;
-    max-width: 400px; /* Limit width for better presentation */
-    background-color: #e87373; /* Background color for the date display */
-    color: white; /* Text color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: center; /* Center the text */
-    font-size: 16px; /* Font size for the date */
+    padding: 10px 16px;
+    color: #e87373;
+    font-size: 16px;
+    font-weight: bold ;
+    background-color: var(--breadcrumbBackgroundColor);
 }
 
 .date-display::before {
@@ -289,7 +286,7 @@ ul.breadcrumb  li.current a:hover{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /*grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));*/ /* Responsive columns */
-    gap: 10%; /* Space between each offer */
+    gap: 12%; /* Space between each offer */
     padding:  35px 70px 70px 70px;
 
 }
@@ -297,7 +294,7 @@ ul.breadcrumb  li.current a:hover{
 .offer {
     position: relative;
     overflow: hidden; /* hide it if it was too big or bad for the container */
-    border: 1px solid var(--header-color);
+    border:  none; /*1px solid var(--header-color);*/
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -331,14 +328,15 @@ ul.breadcrumb  li.current a:hover{
     border-radius: 5px;
 }
 .offer-description {
-    padding: 25px;
+    padding: 40px;
+    display: flex;
     text-align: center;
+    padding-top: 10 ;
 }
 .offer-description p {
     font-size: 14px ;
     color:var(--offer-description-p);
-    padding-top: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .more-button {
@@ -474,12 +472,10 @@ ul.breadcrumb  li.current a:hover{
 .reviews-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grid layout for responsiveness */
-    gap: 20px; /* Space between the reviews */
+    row-gap: 20px;
     justify-items: center;
 }
 .review {
-    /*display: flex;
-    flex-direction: column;*/
     align-items: center;
     position: relative;
     border: 1px solid #ddd;
@@ -487,7 +483,6 @@ ul.breadcrumb  li.current a:hover{
     padding: 20px ;
     background-color: var(--box-background);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /*max-width: 300px;*/
     text-align: center;
 
 }
@@ -497,17 +492,13 @@ ul.breadcrumb  li.current a:hover{
     object-fit: cover;
     height: auto;
     max-width: 150px;
+   margin-bottom: 10px;
 }
-
-/*.review-details {
-    text-align: center;
-}*/
 .product-name {
     font-size: 14px;
     margin: 5px 0;
 }
 .rating-star {
-   /* color: #E87373; /* Star color */
     color:var(--ratingStarHP);
     font-size: 16px;
     margin: 5px 0;
@@ -519,6 +510,8 @@ ul.breadcrumb  li.current a:hover{
 }
 .additional-info {
     position: absolute;
+    left:10%;
+    right: 10%;
     background-color: rgba(255, 255, 255, 0.9);
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -530,6 +523,7 @@ ul.breadcrumb  li.current a:hover{
 .outside-star {
     position: absolute;
     bottom: 10px;
+
 }
 /*USER PAGE */
 /* Container for Flexbox */
@@ -575,7 +569,6 @@ ul.breadcrumb  li.current a:hover{
 }
 
 .Box i {
-   /*color: #E87373 ;*/
    color:var(--BoxIUP);
     font-size: 26px; /* Adjust size of the icon */
     margin-right:3px;
@@ -710,7 +703,48 @@ fieldset {
 .rating .rating-star {
 font-size: 18px;
 }
+  /*Design Massage*/
 
+.custom-alert {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.custom-alert .alert-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert .alert-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.custom-alert .alert-content button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color:var(--SubmitActionButtonHoverPE);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-alert .alert-content button:hover {
+  background-color:var(--SubmitActionButtonColorPE);
+}
 /* Submit button */
 .SubmitAction {
     display: flex;
@@ -886,6 +920,9 @@ footer {
         display: block;
         text-align: center;
     }
+    .offer-description p {
+    padding-bottom: 35px;
+    }
 
     .vision .name, .vision .Quote {
         justify-content: center;
@@ -895,6 +932,7 @@ footer {
     /* Categories section in body */
     .categories {
         grid-template-columns: 1fr;
+        padding-bottom: 180px;
     }
 
     /* Adjust the Box */
@@ -955,7 +993,9 @@ footer {
 }
 
 /*Cart page */
-
+img.product-img{
+    object-fit: contain;
+}
 p.CartDiscr{ /*???*/
     color:#9e9756;
     text-indent:5%;
@@ -1014,13 +1054,17 @@ p.CartDiscr{ /*???*/
 }
 
 .orderSummary {
-    height: 24em;
+
+    height: 400px;
     border: 1px solid var(--header-color);
     padding: 20px;
     margin-bottom: 100px ;
     margin-right: 20px ;
     background-color:var(--box-background);
     border-radius: 6px;
+    width: 100%; /* Default to full width */
+    max-width: 400px; /* Prevent it from being too wide on larger screens */
+    max-height: 500px;
     display:flex;
     flex-direction:column;
 }
@@ -1033,6 +1077,8 @@ p.CartDiscr{ /*???*/
     margin: 10px 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Allow content to wrap if it overflows */
+
 }
 button {
     padding: 10px;
@@ -1043,6 +1089,7 @@ button:hover{
 background-color:var(--SubmitActionButtonHoverPE);
 border-color: var(--SubmitActionButtonHoverPE);
 }
+
 .empty {
   background-color: var(--empty);
     border: 1px solid var(--header-color);
@@ -1142,6 +1189,9 @@ color:   var(--PruductControleRemoveAddIHover) ;
 }
 
 /* Modal Styles */ /* No Variable*/
+/* Modal Styles */
+
+/* Modal Styles */ /* No Variable*/
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -1153,29 +1203,35 @@ color:   var(--PruductControleRemoveAddIHover) ;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
     padding-top: 100px; /* Position the modal */
-    }
+}
+
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* Centered modal */
     padding: 20px;
     border: 1px solid #888;
-    width: 300px; /* Could be more or less, depending on screen size */
-    text-align: center;
+    width: 300px; /* Can be adjusted */
+    text-align: center; /* Center text */
     border-radius: 8px; /* Rounded corners */
+
 }
+
 .close {
     color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
+
 .modal-button {
     background-color: var(--header-color);
     color: white;
@@ -1184,11 +1240,80 @@ color:   var(--PruductControleRemoveAddIHover) ;
     border-radius: 5px;
     cursor: pointer;
 }
+
 .modal-button:hover {
     background-color: #E87373;
 }
+.modal-content-thankMess, .modal-content-confMess{
+display: flex; /* Use flex to center modal vertically and horizontally */
+justify-content: center; /* Center horizontally */
+align-items: center;
+flex-direction: column;
+}
+/* Center the confirmOrderCircule container */
+.confirmOrderCircule {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    align-self: center;
+    margin: 2em;
+    background-color: var(--textHeaderHover);
+    border-radius: 50%;
+    height: 4em;
+    width: 4em;
+}
+
+/* Center the icon within the circle */
+.confirmOrdericon {
+    font-size: 2em;
+    color: var(--PruductControleRemoveAddI);
+    font-weight: 400;
+}
+
+/* Ensure the text is centered */
+#thankMess, #thankdircMess {
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+/* Optional: Add margin between the icon and the messages */
+#thankMess {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+#thankdircMess {
+    margin-top: 0.5em;
+}
+#confirm-total{
+margin: .5em;
+font-weight:600;
+text-align: center;
+}
 .empty:hover{
 color: var(--emptyCartHover); /*white;*/
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .orderSummary {
+        width: 90%; /* Use most of the available width */
+        height: 30%;
+        margin: 10px auto; /* Reduce margin */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .orderSummary h2 {
+        font-size: 16px; /* Make the heading smaller */
+    }
+
+    .orderSummary p {
+        font-size: 12px; /* Adjust paragraph font size */
+    }
+
+    .empty-check-align {
+        flex-direction: column; /* Ensure buttons stack vertically */
+    }
 }
  /* end cart page a*/
 
