@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 	let offers = [
-		{ id: 1, name: "Flash Sale", description: "Quick! This flash sale lasts for only a few hours.", image: "web_images/1offer.jpeg" },
-		{ id: 2, name: "Hot & Trending", description: "Check out our hot and trending items.", image: "web_images/2offer.jpeg" },
-		{ id: 3, name: "Seasonal Discount", description: "Celebrate the season with our exclusive discounts.", image: "web_images/3offer.jpeg" },
-		{ id: 4, name: "Only a Few Left!", description: "Limited quantities available!", image: "web_images/4offer.png" },
-		{ id: 5, name: "Save 20%", description: "Enjoy a straight 20% off your purchase.", image: "web_images/5offer.jpeg" },
-		{ id: 6, name: "Mystery Discount", description: "Unlock a mystery discount!", image: "web_images/6offer.jpeg" }
+		{ id: 1, name: "Flash Sale", description: "Quick! This flash sale lasts for only a few hours. Grab your favorites before they’re gone!", image: "web_images/Offer.png" },
+		{ id: 2, name: "Hot & Trending", description: "Check out our hot and trending items that everyone is talking about. Don’t miss your chance to own them!", image: "web_images/Screenshot%20(92).png" },
+		{ id: 3, name: "Seasonal Discount", description: "Celebrate the season with our exclusive discounts. Perfect for refreshing your wardrobe or home!", image: "web_images/Screenshot%20(94).png" },
+		{ id: 4, name: "Only a Few Left!", description: "Limited quantities available! Grab your favorites before they’re gone for good!", image: "web_images/ONLYONE.jpg" },
+		{ id: 5, name: "Save 20%", description: "Enjoy a straight 20% off your purchase. It’s the perfect time to try something new!", image: "web_images/Screenshot%20(93).png" },
+		{ id: 6, name: "Mystery Discount", description: "Unlock a mystery discount! Every purchase qualifies—find out how much you save at checkout!", image: "web_images/Screenshot%20(95).png" }
 	];
 
 	const offerList = document.getElementById("offerList");
