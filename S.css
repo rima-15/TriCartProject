@@ -102,6 +102,7 @@ color:var(--headerSplitColor);
 :root {
     --background-color: #fff;
     --header-color : #567C8D;/*blue */
+    --header-color-hover : #3f5e6b;/*blue hover */
     --textHeader: #F6F6FB;
     --textHeaderHover: #E87373 ; /*pink */
     --box-background :#F3F3F3;
@@ -151,6 +152,7 @@ color:var(--headerSplitColor);
 .darkmode {
               --background-color: #fff;
               --header-color : #223037;/*blue */
+              --header-color-hover : #141d21;/*blue hove */
               --textHeader: #F6F6FB;
               --textHeaderHover: #E87373 ; /*pink */
               --box-background :#F3F3F3;
@@ -743,7 +745,7 @@ font-size: 18px;
 }
 
 .custom-alert .alert-content button:hover {
-  background-color:var(--SubmitActionButtonColorPE);
+  background-color:var(--RemoveProductHover);
 }
 /* Submit button */
 .SubmitAction {
@@ -1119,7 +1121,7 @@ border-color: var(--SubmitActionButtonHoverPE);
 
 
 #remove-item {
-    background-color: var(--PruductControleRemoveAddIHover) /*var(--header-color)*/;
+    background-color: var(--PruductControleRemoveAddIHover) ;
     color: var(--SubmitActionButtonPE);
     border: 1px solid var(--header-color);
     border-radius: 6px;
@@ -1233,7 +1235,6 @@ color:   var(--PruductControleRemoveAddIHover) ;
 }
 
 .modal-button {
-    background-color: var(--header-color);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -1241,9 +1242,20 @@ color:   var(--PruductControleRemoveAddIHover) ;
     cursor: pointer;
 }
 
-.modal-button:hover {
-    background-color: #E87373;
+.yes {
+    background-color: var(--header-color);
 }
+.no{
+    background-color: var(--PruductControleRemoveAddIHover)
+
+}
+.yes:hover{
+    background-color: var(--header-color-hover);
+}
+.no:hover{
+    background-color: var(--RemoveProductHover)
+ }
+
 .modal-content-thankMess, .modal-content-confMess{
 display: flex; /* Use flex to center modal vertically and horizontally */
 justify-content: center; /* Center horizontally */
@@ -1503,6 +1515,9 @@ color:   var(--PruductControleRemoveAddIHover) ;
 
 .addToCartIcon:hover{
 color: var(--RemoveProductHover);
+}
+.addToCartIcon:focus {
+    background-color: var(--header-color);
 }
 .addToCart i {
 font-size: 1.35rem; /* Adjust size of the icon */

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Display feedback message with the selected product name
-        showAlert(`Thank you for your feedback!<br><br>Your rating for ${selectedProduct} is ${selectedRating} stars`, true); // Feedback message, trigger redirect
+        successAlert(`Your rating for ${selectedProduct} is ${selectedRating} stars` ); // Feedback message, trigger redirect
     }
 
     // Function to display the custom alert
@@ -60,6 +60,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.href = "HomePage.html"; // Redirect to Home page after user clicks OK (only for feedback message)
             }
         };
+    }
+
+    function successAlert(message) {
+        const thankMess = document.getElementById("thankMess");
+        const thankdircMess = document.getElementById("thankdircMess");
+                    //const customAlert = document.getElementById("customAlert");
+
+        thankMess.innerHTML ="Thank you for your feedback!";
+        thankdircMess.innerHTML =message;
+        document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
+
+    }
+     function goToHomePage() {
+                            closeConfirmModal(); // Hide the confirmation modal
+                            window.location.href = "HomePage.html"; // Redirect to ProductEvaluation page
+                        }
+
+
+
+    function closeConfirmModal() {
+        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
     }
 
     // Attach the validateForm function to the form's submit event
@@ -119,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
             products.push(newProduct);
             localStorage.setItem("products", JSON.stringify(products));
 
-            showAlert(`Product "${productName.value}" has been added successfully.`);
+            successAlert(`Product "${productName.value}" has been added successfully.`);
 
             form.reset();
         }
@@ -137,6 +158,37 @@ document.addEventListener("DOMContentLoaded", function () {
             customAlert.style.display = "none";
         };
     }
+    function successAlert(message) {
+        const thankMess = document.getElementById("thankMess");
+        const thankdircMess = document.getElementById("thankdircMess");
+                    //const customAlert = document.getElementById("customAlert");
+
+        thankMess.innerHTML =message;
+        thankdircMess.innerHTML ="thanks to be part of us!";
+        document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
+                    document.getElementsByClassName("close").onclick = function() {
+                        customAlert.style.display = "none";
+                    };
+    }
+
+
+
+    function closeConfirmModal() {
+        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
+    }
+
+        /*function successAlert(message) {
+            const alertMessage = document.getElementById("alertMessage");
+            const customAlert = document.getElementById("customAlert");
+
+            alertMessage.innerHTML = message;
+
+            customAlert.style.display = "flex";
+
+            document.getElementById("closeAlert").onclick = function() {
+                customAlert.style.display = "none";
+            };
+        }*/
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -213,6 +213,12 @@ function closeModal() {
 
 function confirmCheckout() {
     closeModal(); // Hide the first modal
+    const thankMess = document.getElementById("thankMess");
+    const thankdircMess = document.getElementById("thankdircMess");
+                //const customAlert = document.getElementById("customAlert");
+
+    thankMess.innerHTML ="Thank you for your purchase!";
+    thankdircMess.innerHTML ="you will be forwarded to product evaluation page.";
     document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
     localStorage.removeItem("cart");
     updateCartDisplay();

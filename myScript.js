@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 
+
 	// Function to show custom alerts
 	function showCustomAlert(message) {
 		const alertMessage = document.getElementById("alertMessage");
@@ -167,6 +168,22 @@ document.addEventListener("DOMContentLoaded", function () {
 			customAlert.style.display = "none";
 		};
 	}
+
+	    function successAlert(message) {
+            const thankMess = document.getElementById("thankMess");
+            const thankdircMess = document.getElementById("thankdircMess");
+                        //const customAlert = document.getElementById("customAlert");
+
+            thankMess.innerHTML = message;
+            thankdircMess.innerHTML ="thank you to be part of us!";
+            document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
+
+                    /*document.getElementById("closeAlert").onclick = function() {
+                        customAlert.style.display = "none"; // Hide the alert
+
+                    };*/
+
+        }
 
 	// Function to show custom confirmation dialog
 	function showCustomConfirmation(message, onConfirm) {
@@ -202,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			const selectedIds = Array.from(selectedCheckboxes).map(checkbox => parseInt(checkbox.dataset.offerId));
 			offers = offers.filter(offer => !selectedIds.includes(offer.id));
 			renderOffers();
-			showCustomAlert("Selected offers have been deleted successfully.");
+			successAlert("Selected offers have been deleted successfully.");
 		});
 	});
 
@@ -245,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		offers.push(newOffer);
 		renderOffers(); // Refresh the offers list
 		newOfferForm.reset();
-		showCustomAlert("New offer added successfully!");
+		successAlert("New offer added successfully!");
 	});
 });
 
