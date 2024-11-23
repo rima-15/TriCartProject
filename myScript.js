@@ -107,9 +107,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Initialize or clear local storage if needed
-if (!localStorage.getItem("sellerProducts")) {
-	localStorage.setItem("sellerProducts", JSON.stringify([]));
-}
-
-let products = JSON.parse(localStorage.getItem("sellerProducts")) || [];

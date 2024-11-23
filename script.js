@@ -67,8 +67,132 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+// Task 3: "Add a New Product" Page
 document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+    const productName = document.getElementById("productName");
+    const category = document.getElementById("category");
+    const price = document.getElementById("price");
+    const quantity = document.getElementById("quantity");
+    const description = document.getElementById("description");
+    const imageUpload = document.getElementById("imageUpload");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Validation
+        if (!productName.value.trim() || !category.value || !price.value || !quantity.value || !description.value.trim() || !imageUpload.files.length) {
+            showAlert("Please fill in all the fields.");
+            return;
+        }
+        if (!isNaN(productName.value.charAt(0))) {
+            showAlert("Product name should not start with a number.");
+            return;
+        }
+        if (Number.isNaN(parseFloat(price.value)) || Number.isNaN(parseFloat(quantity.value))) {
+            showAlert("Price and quantity should be numbers.");
+            return;
+        }
+
+        // Read the image file (if any)
+        const imageFile = imageUpload.files[0];
+        let imageDataUrl = "";
+
+        if (imageFile) {
+            const reader = new FileReader();
+            reader.onloadend = function () {
+                imageDataUrl = reader.result; // Base64 image data
+                saveProduct(imageDataUrl);
+            };
+            reader.readAsDataURL(imageFile); // Convert the image to Data URL
+        } else {
+            saveProduct(); // If no image, proceed without it
+        }
+
+        // Function to save product data to local storage
+        function saveProduct(imageDataUrl = "") {
+            const newProduct = {
+                name: productName.value,
+                category: category.value,
+                price: parseFloat(price.value),
+                quantity: parseInt(quantity.value, 10),
+                description: description.value,
+                imageDataUrl: imageDataUrl // Save the image Data URL here
+            };
+
+            // Save to Local Storage
+            let products = JSON.parse(localStorage.getItem("products")) || [];
+            products.push(newProduct);
+            localStorage.setItem("products", JSON.stringify(products));
+
+            // Show custom success message without redirecting
+            showAlert(`Product "${productName.value}" has been added successfully.`);
+
+            // Clear the form
+            form.reset();
+        }
+    });
+
+    // Function to display the custom alert
+    function showAlert(message) {
+        const alertMessage = document.getElementById("alertMessage");
+        const customAlert = document.getElementById("customAlert");
+
+        // Insert the message inside the alert
+        alertMessage.innerHTML = message;
+
+        // Ensure the modal is displayed
+        customAlert.style.display = "flex"; // Show the alert
+
+        // Close the alert when the "OK" button is clicked
+        document.getElementById("closeAlert").onclick = function() {
+            customAlert.style.display = "none"; // Hide the alert
+        };
+    }
+});
+
+// Task 2: "Seller Dashboard" Page
+document.addEventListener("DOMContentLoaded", function () {
+    const productList = document.querySelector(".product-list");
+
+    // Ensure the product list container exists
+    if (!productList) {
+        console.error("Element with class 'product-list' not found in the DOM.");
+        return;
+    }
+
+    // Retrieve products from localStorage
+    const products = JSON.parse(localStorage.getItem("products")) || [];
+
+    // If there are no products in localStorage, display a message
+    if (products.length === 0) {
+        const noProductsMessage = document.createElement("p");
+        noProductsMessage.textContent = "No products available. Please add a product using the 'Add a New Product' page.";
+        noProductsMessage.classList.add("no-products-message");
+        productList.appendChild(noProductsMessage);
+        return; // Exit if there are no products
+    }
+
+    // Loop through each product and add it to the product-list div
+    products.forEach((product) => {
+        const productItem = document.createElement("div");
+        productItem.classList.add("product-item");
+
+        // Display only image, name, and description
+        productItem.innerHTML = `
+      <div class="category-product-img">
+          <img src="${product.imageDataUrl || 'https://via.placeholder.com/150'}" alt="${product.name}">
+      </div>
+      <h3>${product.name}</h3>
+      <p>${product.description}</p>
+    `;
+
+        productList.appendChild(productItem);
+    });
+});
+
+
+/*document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const productName = document.getElementById("productName");
   const category = document.getElementById("category");
@@ -180,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     productList.appendChild(productItem);
   });
-});
+});*/
 
 let darkmode = localStorage.getItem('darkmode');
 const themeSwitch = document.getElementById('theme-switch');
