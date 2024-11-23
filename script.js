@@ -69,12 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (!localStorage.getItem("sellerProducts")) {
-        localStorage.setItem("sellerProducts", JSON.stringify([]));
-    }
-
-    let products = JSON.parse(localStorage.getItem("sellerProducts")) || [];
-
   const form = document.querySelector("form");
   const productName = document.getElementById("productName");
   const category = document.getElementById("category");
