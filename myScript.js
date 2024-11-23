@@ -178,10 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
             thankdircMess.innerHTML ="thank you to be part of us!";
             document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
 
-                    /*document.getElementById("closeAlert").onclick = function() {
-                        customAlert.style.display = "none"; // Hide the alert
-
-                    };*/
 
         }
 
@@ -265,6 +261,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		successAlert("New offer added successfully!");
 	});
 });
+    function closeConfirmModal() {
+        console.log("closeConfirmModal invoked");
+
+        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
+    };
 
 
 

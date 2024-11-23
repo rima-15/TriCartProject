@@ -72,21 +72,11 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
 
     }
-     function goToHomePage() {
-                            closeConfirmModal(); // Hide the confirmation modal
-                            window.location.href = "HomePage.html"; // Redirect to ProductEvaluation page
-                        }
 
-
-
-    function closeConfirmModal() {
-        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
-    }
 
     // Attach the validateForm function to the form's submit event
     document.querySelector("form").addEventListener("submit", validateForm);
 });
-
 
 
 // Task 2 and 3:
@@ -166,29 +156,9 @@ document.addEventListener("DOMContentLoaded", function () {
         thankMess.innerHTML =message;
         thankdircMess.innerHTML ="thanks to be part of us!";
         document.getElementById("confirmModal").style.display = "block"; // Show the confirmation modal
-                    document.getElementsByClassName("close").onclick = function() {
-                        customAlert.style.display = "none";
-                    };
+
     }
 
-
-
-    function closeConfirmModal() {
-        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
-    }
-
-        /*function successAlert(message) {
-            const alertMessage = document.getElementById("alertMessage");
-            const customAlert = document.getElementById("customAlert");
-
-            alertMessage.innerHTML = message;
-
-            customAlert.style.display = "flex";
-
-            document.getElementById("closeAlert").onclick = function() {
-                customAlert.style.display = "none";
-            };
-        }*/
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -226,6 +196,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+    function closeConfirmModal() {
+        console.log("closeConfirmModal invoked");
+
+        document.getElementById("confirmModal").style.display = "none"; // Hide the confirmation modal
+    }
+     function goToHomePage() {
+                                closeConfirmModal(); // Hide the confirmation modal
+                                    console.log("goToHomePage invoked");
+
+                                window.location.href = "HomePage.html"; // Redirect to ProductEvaluation page
+                            };
 
 let darkmode = localStorage.getItem('darkmode');
 const themeSwitch = document.getElementById('theme-switch');
