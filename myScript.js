@@ -107,7 +107,6 @@
 	});
 });
 */
-
 document.addEventListener("DOMContentLoaded", function () {
 	let offers = [
 		{ id: 1, name: "Flash Sale", description: "Quick! This flash sale lasts for only a few hours. Grab your favorites before they’re gone!", image: "web_images/Offer.png" },
@@ -161,15 +160,31 @@ document.addEventListener("DOMContentLoaded", function () {
 		const alertMessage = document.getElementById("alertMessage");
 		const customAlert = document.getElementById("customAlert");
 
-		// Insert the message inside the alert
 		alertMessage.innerHTML = message;
-
-		// Display the custom alert
 		customAlert.style.display = "flex";
 
-		// Close the alert when the "OK" button is clicked
 		document.getElementById("closeAlert").onclick = function () {
 			customAlert.style.display = "none";
+		};
+	}
+
+	// Function to show custom confirmation dialog
+	function showCustomConfirmation(message, onConfirm) {
+		const confirmMessage = document.getElementById("confirmMessage");
+		const customConfirm = document.getElementById("customConfirm");
+
+		confirmMessage.innerHTML = message;
+		customConfirm.style.display = "flex";
+
+		// When Confirm is clicked
+		document.getElementById("confirmYes").onclick = function () {
+			customConfirm.style.display = "none";
+			onConfirm(); // Trigger the confirm action
+		};
+
+		// When Cancel is clicked
+		document.getElementById("confirmNo").onclick = function () {
+			customConfirm.style.display = "none";
 		};
 	}
 
@@ -183,13 +198,12 @@ document.addEventListener("DOMContentLoaded", function () {
 			return;
 		}
 
-		const confirmDelete = confirm("Are you sure you want to delete the selected offers?");
-		if (confirmDelete) {
+		showCustomConfirmation("Are you sure you want to delete the selected offers?", function () {
 			const selectedIds = Array.from(selectedCheckboxes).map(checkbox => parseInt(checkbox.dataset.offerId));
 			offers = offers.filter(offer => !selectedIds.includes(offer.id));
 			renderOffers();
 			showCustomAlert("Selected offers have been deleted successfully.");
-		}
+		});
 	});
 
 	const newOfferForm = document.getElementById("newOfferForm");
