@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
 	let offers = [
 		{ id: 1, name: "Flash Sale", description: "Quick! This flash sale lasts for only a few hours. Grab your favorites before they’re gone!", image: "web_images/Offer.png" },
@@ -105,5 +106,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		alert("New offer added successfully!");
 	});
 });
+
+
+
 
 
