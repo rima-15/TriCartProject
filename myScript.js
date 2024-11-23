@@ -106,46 +106,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-	// Get the saved products from local storage, or set an empty array if no products are found
-	let products = JSON.parse(localStorage.getItem("sellerProducts")) || [];
+// Initialize or clear local storage if needed
+if (!localStorage.getItem("sellerProducts")) {
+	localStorage.setItem("sellerProducts", JSON.stringify([]));
+}
 
-	// Get the product list container element
-	const productList = document.getElementById("productList");
-
-	// Check if there are any products
-	if (products.length === 0) {
-		// If no products, display a message
-		productList.innerHTML = "<p>No products available. Add some products!</p>";
-	} else {
-		// Otherwise, render the products
-		products.forEach((product) => {
-			const productBox = document.createElement("div");
-			productBox.classList.add("product-box");
-
-			const productName = document.createElement("h3");
-			productName.textContent = product.name;
-			productBox.appendChild(productName);
-
-			const productDescription = document.createElement("p");
-			productDescription.textContent = product.description;
-			productBox.appendChild(productDescription);
-
-			const productPrice = document.createElement("p");
-			productPrice.textContent = `Price: ${product.price} SAR`;
-			productBox.appendChild(productPrice);
-
-			const productQuantity = document.createElement("p");
-			productQuantity.textContent = `Quantity: ${product.quantity} pcs`;
-			productBox.appendChild(productQuantity);
-
-			const productImage = document.createElement("img");
-			productImage.src = product.image;
-			productImage.alt = product.name;
-			productBox.appendChild(productImage);
-
-			// Append the product box to the product list
-			productList.appendChild(productBox);
-		});
-	}
-});
+let products = JSON.parse(localStorage.getItem("sellerProducts")) || [];
