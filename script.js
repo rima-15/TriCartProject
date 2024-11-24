@@ -210,15 +210,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let darkmode = localStorage.getItem('darkmode');
 const themeSwitch = document.getElementById('theme-switch');
+const themeImage = document.getElementById('theme-image'); // The image element
 
 const enableDarkmode = () => {
     document.body.classList.add('darkmode');
     localStorage.setItem('darkmode', 'active');
+    themeImage.src = 'web_images/VpicDark.png'; // Change the image for dark mode
+
 };
 
 const disableDarkmode = () => {
     document.body.classList.remove('darkmode');
     localStorage.setItem('darkmode', null);
+    themeImage.src = 'web_images/Vpic3.png';
 };
 
 if (darkmode === "active") enableDarkmode();

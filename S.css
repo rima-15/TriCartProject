@@ -166,6 +166,7 @@ color:var(--headerSplitColor);
               --offerLabel :white;
               --offer-description-p:#555;
               --vision-section:white;
+
               --visioNameAfter:#e87373;
               --visioNameAfterHover:white;
               --QuoteHover:#e87373;
@@ -358,25 +359,24 @@ ul.breadcrumb  li.current a:hover{
 }
 /* Vision section styling */
 #vision-section {
-    background: linear-gradient(190deg, #567C8D, #d6e3f2); /* Gradient using header and logo colors */
-    padding: 60px 30px;
-    /*color: white;*/
+
     color: var(--vision-section);
     text-align: center;
     position: relative;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Adds slight shadow for depth */
     margin-left: 0px;
-    border-style: outset;
+    margin-left:0px;
+    border-style: none;
 }
 .vision {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     padding: 30px  0px;
-
+background-column=none;
 }
 .vision .name {
     font-family: Garamond;
