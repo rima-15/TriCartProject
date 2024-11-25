@@ -1002,8 +1002,22 @@ footer {
     }
 }
 @media (max-width: 600px) {
+    .user-type h5 a{
+    font-size: 14px;
+    }
+    .user-type h5 {
+    margin-left: 25px;
+    margin-bottom: 0 ;
+    }
+    .logo , .navigation , .cart , .user-type {
+    margin-bottom: 5px;
+    }
+    .date-display {
+    font-size: 12px;
+    }
     .offers-section {
     display: block ;
+    padding-bottom: 15px;
     }
     #theme-image{
     width: 75% ;
@@ -1014,12 +1028,41 @@ footer {
     nav.navigation ul {
     display: block;
     }
+    .PageDiscr {
+    width: 85%;
+    }
     nav.navigation ul li {
     margin-bottom: 15px;
+    font-size:16px
     }
     .logo {
     width: 50% ;
     }
+    h1 , .cat-header , .reviews-section h2 {
+    font-size: 20px;
+    }
+    #moreOffers {
+    font-size: 12px;
+    }
+
+    .categories {
+    padding-bottom: 80px
+    }
+    .reviews-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    padding-bottom: 15px;
+    }
+    .outside-star {
+    font-size: 10px;
+    }
+    .footer-content h4 {
+    font-size: 16px
+    }
+    .footer-content p , .footer-content a {
+    font-size: 12px;
+    }
+
     body {
         background-color: white;
     }
@@ -1381,7 +1424,7 @@ justify-content:center;
     width: 290px;
     height: 475px;
     text-align: left;
-    display: black;
+    display: block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
