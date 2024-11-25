@@ -1012,8 +1012,20 @@ footer {
     .logo , .navigation , .cart , .user-type {
     margin-bottom: 5px;
     }
+    ul.breadcrumb li {
+        font-size: 14px;
+    }
     .date-display {
     font-size: 12px;
+    }
+    .Box {
+    margin-left: 0 ;
+    }
+    .Box a {
+    font-size: 14px;
+    }
+    .Box p {
+        font-size: 14px;
     }
     .offers-section {
     display: block ;
