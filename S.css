@@ -1001,95 +1001,7 @@ footer {
     margin-left: 0px;
     }
 }
-@media (max-width: 600px) {
-    .user-type h5 a{
-    font-size: 14px;
-    }
-    .user-type h5 {
-    margin-left: 25px;
-    margin-bottom: 0 ;
-    margin-top: 5px;
-    }
-    .logo , .navigation , .cart , .user-type {
-    margin-bottom: 5px;
-    }
-    ul.breadcrumb li {
-        font-size: 14px;
-    }
-    .date-display {
-    font-size: 12px;
-    }
-    .Box {
-    margin-left: 0 ;
-    }
-    .Box a {
-    font-size: 14px;
-    }
-    .Box p {
-    font-size: 14px;
-    }
-    .Order-Box h3 {
-    font-size: 14px;
-    margin-bottom: 5px;
-    }
-    .Order-Box p {
-    font-size: 12px;
-    }
-    .Order-Box p {
-     font-size: 10px;
-    }
-    .offers-section {
-    display: block ;
-    padding-bottom: 15px;
-    }
-    #theme-image{
-    width: 75% ;
-    }
-    .offer {
-    margin-bottom: 25px;
-    }
-    nav.navigation ul {
-    display: block;
-    }
-    .PageDiscr {
-    width: 85%;
-    }
-    nav.navigation ul li {
-    margin-bottom: 15px;
-    font-size:16px
-    }
-    .logo {
-    width: 50% ;
-    }
-    h1 , .cat-header , .reviews-section h2 {
-    font-size: 20px;
-    }
-    #moreOffers {
-    font-size: 12px;
-    }
 
-    .categories {
-    padding-bottom: 80px
-    }
-    .reviews-container{
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5%;
-    padding-bottom: 15px;
-    }
-    .outside-star {
-    font-size: 10px;
-    }
-    .footer-content h4 {
-    font-size: 16px
-    }
-    .footer-content p , .footer-content a {
-    font-size: 12px;
-    }
-
-    body {
-        background-color: white;
-    }
-}
 /*Cart page */
 img.product-img{
     object-fit: contain;
@@ -1985,4 +1897,110 @@ textarea:focus {
     height: auto;
     border-radius: 5px;
 }
+@media (max-width: 600px) {
+    .user-type h5 a{
+    font-size: 14px;
+    }
+    .user-type h5 {
+    margin-left: 25px;
+    margin-bottom: 0 ;
+    margin-top: 5px;
+    }
+    .logo , .navigation , .cart , .user-type {
+    margin-bottom: 5px;
+    }
+    ul.breadcrumb li {
+        font-size: 14px;
+    }
+    .date-display {
+    font-size: 12px;
+    }
+    /* customer page */
+    .Box {
+    margin-left: 0 ;
+    }
+    .Box a {
+    font-size: 14px;
+    }
+    .Box p {
+    font-size: 14px;
+    }
+    /* orders page */
+    .Order-Box h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    }
+    .Order-Box p {
+    font-size: 12px;
+    }
+    .Order-Box p {
+     font-size: 10px;
+    }
+    /* product eval */
+    legend {
+    font-size: 16px
+    }
+    .evaluation-container label {
+    font-size: 12px;
+    }
+    .infoOfProduct {
+    font-size: 15px;
+    }
+    .product-details p {
+    font-size: 12px;
+    }
+    .feedback-section .rating span {
+    font-size: 12px;
+    }
+    .offers-section {
+    display: block ;
+    padding-bottom: 15px;
+    }
+    #theme-image{
+    width: 75% ;
+    }
+    .offer {
+    margin-bottom: 25px;
+    }
+    nav.navigation ul {
+    display: block;
+    }
+    .PageDiscr {
+    width: 85%;
+    }
+    nav.navigation ul li {
+    margin-bottom: 15px;
+    font-size:16px
+    }
+    .logo {
+    width: 50% ;
+    }
+    h1 , .cat-header , .reviews-section h2 {
+    font-size: 20px;
+    }
+    #moreOffers {
+    font-size: 12px;
+    }
 
+    .categories {
+    padding-bottom: 80px
+    }
+    .reviews-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    padding-bottom: 15px;
+    }
+    .outside-star {
+    font-size: 10px;
+    }
+    .footer-content h4 {
+    font-size: 16px
+    }
+    .footer-content p , .footer-content a {
+    font-size: 12px;
+    }
+
+    body {
+        background-color: white;
+    }
+}
