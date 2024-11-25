@@ -1946,10 +1946,10 @@ textarea:focus {
      font-size: 10px;
     }
     /* product eval */
-    legend {
+    legend , .SD-content legend {
     font-size: 16px
     }
-    .evaluation-container label {
+    .evaluation-container label , .SD-content label {
     font-size: 12px;
     }
     .infoOfProduct {
@@ -1971,6 +1971,25 @@ textarea:focus {
     }
     .no-products-message{
     font-size: 14px;
+    }
+    /* Offers collection */
+    #offerList {
+    display: flex ;
+    }
+    .SD-content .offer-box {
+    width: calc(40% - 7px);
+    }
+    .SD-content .offer-box h3 {
+    font-size : 16px;
+    }
+    .SD-content .offer-box p {
+    font-size: 12px;
+    }
+    .SD-content .offer-box img {
+    margin-bottom: auto;
+    }
+    .SD-content .add-offer-btn , #deleteButton{
+    font-size: 12px;
     }
     .offers-section {
     display: block ;
