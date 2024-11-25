@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 closeConfirmModal(); // Hide the confirmation modal
                                     console.log("goToHomePage invoked");
 
-                                window.location.href = "HomePage.html"; // Redirect to ProductEvaluation page
+                                window.location.href = "index.html"; // Redirect to ProductEvaluation page
                             };
 
 let darkmode = localStorage.getItem('darkmode');
