@@ -1559,6 +1559,14 @@ align-items:center;
     display: inline-block;
 }
 
+.addToCartIcon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.addToCartIcon.fa-check-circle {
+    color:  var(--textHeaderHover); /* Success green color */
+    transform: scale(1.2); /* Slightly enlarge */
+}
 .infoOfProduct{
 font-family: 'Quicksand', sans-serif;
 font-size:19px;

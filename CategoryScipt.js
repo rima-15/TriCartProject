@@ -55,6 +55,19 @@ document.querySelectorAll('.addToCart').forEach(button => {
         }
 
         localStorage.setItem('cart', JSON.stringify(cart)); // Update the cart in localStorage
+           // Show feedback
+
+
+                             // Change the icon to a success icon
+                             const icon = button.querySelector('.addToCartIcon');
+                             icon.classList.remove('fa-cart-plus');
+                             icon.classList.add('fa-check-circle'); // Replace with your desired success icon
+
+                             // Revert the icon back to 'fa-cart-plus' after 2 seconds
+                             setTimeout(() => {
+                                 icon.classList.remove('fa-check-circle');
+                                 icon.classList.add('fa-cart-plus'); // Revert to original icon
+                             }, 1100);
     });
 });
 
