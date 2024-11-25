@@ -1008,6 +1008,7 @@ footer {
     .user-type h5 {
     margin-left: 25px;
     margin-bottom: 0 ;
+    margin-top: 5px;
     }
     .logo , .navigation , .cart , .user-type {
     margin-bottom: 5px;
@@ -1025,7 +1026,17 @@ footer {
     font-size: 14px;
     }
     .Box p {
-        font-size: 14px;
+    font-size: 14px;
+    }
+    .Order-Box h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    }
+    .Order-Box p {
+    font-size: 12px;
+    }
+    .Order-Box p {
+     font-size: 10px;
     }
     .offers-section {
     display: block ;
