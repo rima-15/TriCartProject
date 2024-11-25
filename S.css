@@ -993,7 +993,29 @@ footer {
     margin-left: 0px;
     }
 }
-
+@media (max-width: 600px) {
+    .offers-section {
+    display: block ;
+    }
+    #theme-image{
+    width: 75% ;
+    }
+    .offer {
+    margin-bottom: 25px;
+    }
+    nav.navigation ul {
+    display: block;
+    }
+    nav.navigation ul li {
+    margin-bottom: 15px;
+    }
+    .logo {
+    width: 50% ;
+    }
+    body {
+        background-color: white;
+    }
+}
 /*Cart page */
 img.product-img{
     object-fit: contain;
