@@ -1003,6 +1003,15 @@ footer {
     .offer {
     margin-bottom: 25px;
     }
+    nav.navigation ul {
+    display: block;
+    }
+    nav.navigation ul li {
+    margin-bottom: 15px;
+    }
+    .logo {
+    width: 50% ;
+    }
     body {
         background-color: white;
     }
