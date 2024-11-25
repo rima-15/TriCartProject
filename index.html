@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriCart</title>
+    <link rel="shortcut icon" type="x-icon" href="web_images/CartNoBackground.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!--icons-->
+    <link href="S.css" rel="stylesheet">
+    <!--<script  defer src="script.js"></script>-->
+</head>
+<body>
+<header>
+    <a href="index.html"><img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="230px"></a>
+    <nav class="navigation" >
+        <ul>
+            <li> <a href="index.html" accesskey="H"> Home </a> </li>
+            <li> <a href="ElectronicsPage.html"> Electronics </a> </li>
+            <li> <a href="FurniturePage.html"> Furniture </a> </li>
+            <li> <a href="SportPage.html"> Sport </a> </li>
+        </ul>
+    </nav>
+    <div class="cart">
+        <a href="CartPage.html" accesskey="C">
+            <i class="fas fa-shopping-cart" ></i>
+        </a>
+    </div>
+    <div class="user-type">
+        <h5> <a href="UserPage.html" id="customer" accesskey="U">Customer</a> <span id="headerSplit"> | </span>  <a href="sellerDashboard.html" id="seller" accesskey="S">Seller</a> </h5>
+    </div>
+
+
+    <div id="theme-switch">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+</header>
+<main>
+    <div id="week-start-date" class="date-display"></div>
+    <!-- Offers section -->
+    <div class="offers-section">
+        <div class="offer">
+            <div class="offer-image">
+                <img src="web_images/Offer.png" alt="Offer 1">
+                <div class="offer-label">Flash Sale</div>
+            </div>
+            <div class="offer-description">
+                <p>Quick! This flash sale lasts for only a few hours.
+                    Grab your favorites before they’re gone!</p>
+            </div>
+        </div>
+        <div class="offer">
+            <div class="offer-image">
+                <img src="web_images/Screenshot%20(92).png" alt="Offer 2">
+                <div class="offer-label">Hot & Trending</div>
+            </div>
+            <div class="offer-description">
+                <p>Check out our hot and trending items that everyone is
+                    talking about. Don’t miss your chance to own them!</p>
+            </div>
+        </div>
+        <div class="offer">
+            <div class="offer-image">
+                <img src="web_images/Screenshot%20(94).png" alt="Offer 3">
+                <div class="offer-label">Seasonal Discount</div>
+            </div>
+            <div class="offer-description">
+                <p>Celebrate the season with our exclusive discounts.
+                    Perfect for refreshing your wardrobe or home!</p>
+            </div>
+        </div>
+        <div class="offer hidden">
+            <div class="offer-image">
+                <img src="web_images/ONLYONE.jpg" alt="Offer 4">
+                <div class="offer-label">Only a Few Left!</div>
+            </div>
+            <div class="offer-description">
+                <p>Limited quantities available! Grab your
+                    favorites before they’re gone for good!</p>
+            </div>
+        </div>
+        <div class="offer hidden">
+            <div class="offer-image">
+                <img src="web_images/Screenshot%20(93).png" alt="Offer 5">
+                <div class="offer-label">Save 20%</div>
+            </div>
+            <div class="offer-description">
+                <p>Enjoy a straight 20% off your purchase.
+                    It’s the perfect time to try something new!</p>
+            </div>
+        </div>
+        <div class="offer hidden">
+            <div class="offer-image">
+                <img src="web_images/Screenshot%20(95).png" alt="Offer 6">
+                <div class="offer-label">Mystery Discount</div>
+            </div>
+            <div class="offer-description">
+                <p>Unlock a mystery discount! Every purchase
+                    qualifies—find out how much you save at checkout!</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="moreOffers" class="more-button" onclick="showOffers()">More Offers</button>
+
+    <!-- vision -->
+    <section id="vision-section">
+        <div class="vision">
+            <img id="theme-image" src="web_images/Vpic3.png" alt="our vision" >
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <p class="cat-header"> Shop By Category </p>
+    <div class="categories">
+        <a href="ElectronicsPage.html">
+            <div class="category-types">
+                <img src="web_images/ElecNewCircle.png" alt="Electronics" >
+                <div class="category-name"><h4>Electronics</h4></div>
+            </div>
+        </a>
+        <a href="FurniturePage.html"><div class="category-types">
+            <img src="web_images/FurnetureNewCircle.png" alt="Furniture" >
+            <div class="category-name"><h4>Furniture</h4></div>
+        </div></a>
+        <a href="SportPage.html"><div class="category-types">
+            <img src="web_images/sportCircle.png" alt="Sports" >
+            <div class="category-name"><h4>Sports</h4></div>
+        </div></a>
+    </div>
+    <!-- Reviews section -->
+    <div class="reviews-section">
+        <h2>What Customers think about us !!</h2>
+
+        <div class="reviews-container">
+            <div class="review">
+                <div class="product-image">
+                    <img src="products-images/Elite%20Boxing%20Gloves.png" alt="Kids' Boxing Gloves" width="10%">
+                </div>
+                <div class="review-details">
+                    <div class="rating-star outside-star">Rating: ★★★★☆</div>
+                    <div class="additional-info" style="display: none;">
+                        <p>John Doe</p>
+                        <p class="product-name"> Kids' Boxing Gloves</p>
+                        <p class="rating-star inside-star "> ★★★★☆</p>
+                        <p class="feedback"> Amazing find! The product is top-notch.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="product-image">
+                    <img src="products-images/huaweiTablet.png" alt="HUAWEI MatePad 12 X">
+                </div>
+                <div class="review-details">
+                    <div class="rating-star outside-star">Rating: ★★★★☆</div>
+                    <div class="additional-info" style="display: none;">
+                        <p>Lucas Lee</p>
+                        <p class="product-name"> HUAWEI MatePad 12 X</p>
+                        <p class="rating-star inside-star"> ★★★★☆</p>
+                        <p class="feedback">Very pleased! The item was exactly what I needed, though the delivery took a bit longer than expected.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review">
+                <div class="product-image">
+                    <img src="products-images/WhiteRug.png" alt="Modern Style Rug">
+                </div>
+                <div class="review-details">
+                    <div class="rating-star outside-star">Rating: ★★★★★</div>
+                    <div class="additional-info" style="display: none;">
+                        <p>Emily Harris</p>
+                        <p class="product-name"> Modern Style Rug</p>
+                        <p class="rating-star inside-star"> ★★★★★</p>
+                        <p class="feedback">Great experience! The item was as described, and shipping was prompt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="product-image">
+                    <img src="products-images/galax-buds3-pro.png" alt="galaxy buds3 pro">
+                </div>
+                <div class="review-details">
+                    <div class="rating-star outside-star">Rating: ★★★☆☆</div>
+                    <div class="additional-info" style="display: none;">
+                        <p>Alexander Adams</p>
+                        <p class="product-name"> Galaxy Buds3 Pro</p>
+                        <p class="rating-star inside-star"> ★★★☆☆</p>
+                        <p class="feedback"> Great value! A few quirks, but I’m happy with it</p>
+                    </div>
+                </div>
+            </div>
+            <div class="review">
+                <div class="product-image">
+                    <img src="products-images/CharlangDresser.png" alt="galaxy buds3 pro">
+                </div>
+                <div class="review-details">
+                    <div class="rating-star outside-star">Rating: ★★★★★</div>
+                    <div class="additional-info" style="display: none;">
+                        <p>Ethan Hall</p>
+                        <p class="product-name"> Charlang Dresser</p>
+                        <p class="rating-star inside-star"> ★★★★★</p>
+                        <p class="feedback"> The design fits beautifully with my room decor. Assembly was straightforward, and the quality is top-notch. </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+<!-- Footer section  -->
+<footer>
+    <div class="footer-content">
+        <img class="logo" src="web_images/LOGOTricart2.png" alt="TriCart" width="15%">
+        <div class="contact-us">
+            <h4>Contact Us</h4>
+            <a href="mailto:TriCart@gmail.com" >TriCart@gmail.com</a>
+            <p> +123 456 789</p>
+            <p> +345 735 988</p>
+        </div>
+        <div class="find-us">
+            <h4>Find Us</h4>
+            <div id="apps-icons">
+                <i class="fa-brands fa-instagram" ></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+    <div id="watermark">
+        <p>&copy; 2024 TriCart Store</p>
+    </div>
+</footer>
+<script  defer src="script.js"></script>
+</body>
+
+</html>
