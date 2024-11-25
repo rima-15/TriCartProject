@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const options = { weekday: 'long', day: 'numeric', month: 'long' };
     const formattedDate = sundayDate.toLocaleDateString('en-US', options);
 
-    // html display
+
     document.getElementById('week-start-date').textContent = `Week starting : ${formattedDate}`;
 });
 
