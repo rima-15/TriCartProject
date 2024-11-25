@@ -101,8 +101,8 @@ color:var(--headerSplitColor);
 
 :root {
     --background-color: #fff;
-    --header-color : #567C8D;/*blue */
-    --header-color-hover : #3f5e6b;/*blue hover */
+    --header-color : #567C8D;
+    --header-color-hover : #3f5e6b;
     --textHeader: #F6F6FB;
     --textHeaderHover: #E87373 ; /*pink */
     --box-background :#F3F3F3;
