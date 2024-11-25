@@ -1413,7 +1413,6 @@ text-indent:1%;
 
 p.PageDiscr{
    font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
     font-weight: 600;
     line-height: 1.5;
     padding: 1.3rem 0;
@@ -1988,7 +1987,21 @@ textarea:focus {
     .SD-content .offer-box img {
     margin-bottom: auto;
     }
-    .SD-content .add-offer-btn , #deleteButton{
+    .SD-content .add-offer-btn , #deleteButton , .SD-content .add-product-btn{
+    font-size: 12px;
+    }
+    /* Add new product */
+    .SD-content .form-container {
+    display: block;
+    }
+    .SD-content .left-half, .right-half {
+    width: auto;
+    padding : 20px 0 ;
+    }
+    #product-information legend {
+    font-size: 15.5px;
+    }
+    .SD-content .input .sign {
     font-size: 12px;
     }
     .offers-section {
