@@ -1987,7 +1987,7 @@ textarea:focus {
     .SD-content .offer-box img {
     margin-bottom: auto;
     }
-    .SD-content .add-offer-btn , #deleteButton , .SD-content .add-product-btn{
+    .SD-content .add-offer-btn , #deleteButton , .SD-content .add-product-btn , #remove-item , .empty , .checkout{
     font-size: 12px;
     }
     /* Add new product */
@@ -2003,6 +2003,29 @@ textarea:focus {
     }
     .SD-content .input .sign {
     font-size: 12px;
+    }
+    /* Cart page */
+    .cart-items-summary-Container {
+    display: block;
+    }
+    .infoOfProductDisc {
+    font-size: 13px;
+    }
+    .category-product-price {
+    font-size: 14px;
+    }
+    .cartCounter {
+    width: 5em;
+    }
+    .cart-quantity {
+    font-size: 12px;
+    }
+    .cartCounter span  {
+    font-size: 14px;
+    }
+
+    .cartListContainer {
+    margin-right : 3% ;
     }
     .offers-section {
     display: block ;
