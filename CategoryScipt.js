@@ -117,7 +117,7 @@ document.getElementById("checkout").addEventListener("click", function (event) {
                 <div class="pic-and-info-in-cart">
                     <img class="product-img" src="${item.imageSrc}" alt="${item.cartProductName}" width="100" height="100">
                     <div class="cartProductde-details">
-                        <h2 class="infoOfProduct">${item.productName}</h2>
+                        <h2 class="infoOfProduct">${item.cartProductName}</h2>
                         <p class="infoOfProductDisc">${item.productDescription}</p>
                         <p class="category-product-price">${item.productPrice.toFixed(2)} SR</p>
                     </div>
